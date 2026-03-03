@@ -1,307 +1,746 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Victorious Pilgrim Ministries | VPM | Serving South Africa for 20 Years</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Inter:wght@400;500;600&display=swap');
-        :root { --primary: #1e3a8a; }
-        .hero-bg { 
-            background-image: linear-gradient(rgba(30,58,138,0.75), rgba(30,58,138,0.85)), 
-            url('https://images.unsplash.com/photo-1582213782179-1d2c8b6f2f3f?ixlib=rb-4.0.3&auto=format&fit=crop&q=80'); 
-            background-size: cover; 
-            background-position: center; 
-        }
-        .section-header { font-family: 'Playfair Display', serif; }
-        .nav-link { transition: all 0.3s; }
-        .nav-link:hover { color: #1e3a8a; transform: translateY(-2px); }
-        .stat-number { font-family: 'Playfair Display', serif; }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Victorious Pilgrim Ministries | Gospel & Welfare in South Africa Since 2004</title>
+  <meta name="description" content="Victorious Pilgrim Ministries (VPM) — Wellington, Western Cape nonprofit serving communities with Bible distribution, food parcels, clothing and health outreach since 2004.">
+  <meta name="keywords" content="Victorious Pilgrim Ministries, VPM, Wellington South Africa, Christian ministry, SDA outreach, food parcels, Bible distribution, Western Cape charity">
+  <meta property="og:title" content="Victorious Pilgrim Ministries | 20 Years Serving South Africa">
+  <meta property="og:description" content="Gospel, food, clothing and hope across the Western Cape. Partner with VPM today.">
+  <meta property="og:type" content="website">
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NGO","name":"Victorious Pilgrim Ministries","foundingDate":"2004","telephone":"+27725952922","email":"v.p.m@mweb.co.za","address":{"@type":"PostalAddress","postalCode":"7655","addressLocality":"Wellington","addressRegion":"Western Cape","addressCountry":"ZA"}}</script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Inter:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <style>
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{font-family:'Inter',sans-serif;color:#1a1a2e;background:#fff;overflow-x:hidden}
+    img{max-width:100%;display:block}
+    a{text-decoration:none;color:inherit}
+    :root{
+      --navy:#0f2352;--navy-dark:#081840;--navy-mid:#1a3a6e;
+      --gold:#c8922a;--gold-light:#f0b429;--gold-pale:#fef3e2;
+      --gray-light:#f7f8fc;--gray:#6b7280;
+      --font-serif:'Playfair Display',Georgia,serif;
+      --r:16px;--rlg:28px;
+      --shadow:0 4px 32px rgba(15,35,82,.10);
+      --shadow-lg:0 16px 64px rgba(15,35,82,.18);
+      --trans:all .3s cubic-bezier(.4,0,.2,1)
+    }
+    .pad{padding:96px 0}.con{max-width:1200px;margin:0 auto;padding:0 24px}
+    .tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);border:1.5px solid var(--gold);border-radius:50px;padding:5px 16px;margin-bottom:16px}
+    .h2{font-family:var(--font-serif);font-size:clamp(1.9rem,3.8vw,3rem);color:var(--navy-dark);line-height:1.2}
+    .sub{font-size:1.05rem;color:var(--gray);line-height:1.75;margin-top:14px}
+    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border-radius:50px;font-size:.93rem;font-weight:600;cursor:pointer;transition:var(--trans);border:none;font-family:'Inter',sans-serif}
+    .btn-gold{background:var(--gold);color:#fff;box-shadow:0 4px 20px rgba(200,146,42,.4)}
+    .btn-gold:hover{background:#a87420;transform:translateY(-2px);box-shadow:0 8px 30px rgba(200,146,42,.5)}
+    .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.65)}
+    .btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff}
+    .g2{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
+    .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+    .g4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+    .tc{text-align:center}
+
+    /* NAV */
+    #nav{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(15,35,82,.08);transition:var(--trans)}
+    .ni{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1200px;margin:0 auto}
+    .logo{display:flex;align-items:center;gap:13px}
+    .logo-i{width:50px;height:50px;background:linear-gradient(135deg,var(--navy),var(--navy-mid));border-radius:13px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--font-serif);font-size:1.55rem;font-weight:700;flex-shrink:0}
+    .logo-t h1{font-family:var(--font-serif);font-size:1.1rem;color:var(--navy-dark);line-height:1.2}
+    .logo-t p{font-size:.67rem;color:var(--gold);font-weight:600;letter-spacing:.05em;margin-top:1px}
+    .nl{display:flex;align-items:center;gap:28px;list-style:none}
+    .nl a{font-size:.86rem;font-weight:500;color:#444;transition:var(--trans);position:relative;padding-bottom:3px}
+    .nl a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--gold);border-radius:2px;transition:var(--trans)}
+    .nl a:hover{color:var(--navy-dark)}.nl a:hover::after{width:100%}
+    .nav-cta{background:var(--navy)!important;color:#fff!important;padding:10px 22px;border-radius:50px;font-weight:600!important}
+    .nav-cta:hover{background:var(--gold)!important}.nav-cta::after{display:none!important}
+    .hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
+    .hbg span{display:block;width:24px;height:2px;background:var(--navy-dark);border-radius:2px;transition:var(--trans)}
+
+    /* ANNOUNCE */
+    .abar{background:var(--navy);color:rgba(255,255,255,.85);text-align:center;padding:10px 20px;font-size:.8rem;letter-spacing:.02em}
+    .abar strong{color:var(--gold-light)}
+
+    /* HERO */
+    #hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+    .hbg-img{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80') center/cover no-repeat}
+    .hov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(8,24,64,.9) 0%,rgba(15,35,82,.78) 55%,rgba(200,146,42,.18) 100%)}
+    .hc{position:relative;z-index:2;text-align:center;color:#fff;padding:120px 24px 80px;max-width:880px;margin:0 auto}
+    .hbadge{display:inline-flex;align-items:center;gap:8px;background:rgba(200,146,42,.18);border:1px solid rgba(200,146,42,.45);color:var(--gold-light);padding:7px 20px;border-radius:50px;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:26px}
+    .ht{font-family:var(--font-serif);font-size:clamp(2.8rem,7vw,5.4rem);line-height:1.08;margin-bottom:22px}
+    .ht em{font-style:italic;color:var(--gold-light);display:block}
+    .hsub{font-size:clamp(.95rem,1.8vw,1.18rem);color:rgba(255,255,255,.82);line-height:1.75;max-width:620px;margin:0 auto 14px}
+    .hverse{font-style:italic;color:rgba(255,255,255,.55);font-size:.88rem;margin-bottom:40px}
+    .hbtns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:64px}
+    .hstats{display:flex;flex-wrap:wrap;justify-content:center;border-top:1px solid rgba(255,255,255,.13);padding-top:44px;gap:0}
+    .hst{flex:1;min-width:130px;padding:0 20px;border-right:1px solid rgba(255,255,255,.13)}
+    .hst:last-child{border-right:none}
+    .hst-n{font-family:var(--font-serif);font-size:2rem;color:var(--gold-light);font-weight:700}
+    .hst-l{font-size:.75rem;color:rgba(255,255,255,.65);margin-top:4px;letter-spacing:.05em}
+    .scroll-d{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:2;color:rgba(255,255,255,.45);animation:bob 2s infinite}
+    @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(9px)}}
+
+    /* ABOUT */
+    #about{background:#fff}
+    .aiwrap{position:relative}
+    .aiwrap img{border-radius:var(--rlg);width:100%;height:500px;object-fit:cover;box-shadow:var(--shadow-lg)}
+    .abadge{position:absolute;bottom:-18px;right:-16px;background:var(--gold);color:#fff;border-radius:var(--r);padding:18px 26px;text-align:center;box-shadow:0 8px 28px rgba(200,146,42,.4)}
+    .abadge .n{font-family:var(--font-serif);font-size:2.6rem;font-weight:700;line-height:1}
+    .abadge .l{font-size:.75rem;opacity:.9;margin-top:3px}
+    .atxt p{color:#4a5568;line-height:1.82;font-size:1rem;margin-bottom:18px}
+    .qb{background:var(--gray-light);border-left:4px solid var(--gold);border-radius:0 var(--r) var(--r) 0;padding:22px 26px;margin:24px 0}
+    .qb p{font-style:italic;color:var(--navy-mid);font-size:1rem;line-height:1.7}
+    .qb cite{display:block;margin-top:9px;font-size:.82rem;font-weight:700;color:var(--gold);font-style:normal}
+    .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
+    .chip{display:inline-flex;align-items:center;gap:6px;background:var(--gray-light);color:var(--navy-mid);font-size:.8rem;font-weight:500;padding:7px 15px;border-radius:50px}
+    .chip i{color:var(--gold)}
+
+    /* MISSION STRIP */
+    .mstrip{background:linear-gradient(135deg,var(--navy-dark),var(--navy-mid));padding:64px 0}
+    .mstrip .con{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+    .mi{text-align:center;padding:20px 22px;border-right:1px solid rgba(255,255,255,.1);color:#fff}
+    .mi:last-child{border-right:none}
+    .mi i{font-size:2.1rem;color:var(--gold-light);margin-bottom:12px}
+    .mi h4{font-family:var(--font-serif);font-size:1.1rem;margin-bottom:7px}
+    .mi p{font-size:.83rem;color:rgba(255,255,255,.68);line-height:1.6}
+
+    /* MINISTRIES */
+    #ministries{background:var(--gray-light)}
+    .mc{background:#fff;border-radius:var(--rlg);overflow:hidden;box-shadow:var(--shadow);transition:var(--trans)}
+    .mc:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
+    .mc img{height:250px;object-fit:cover;width:100%}
+    .mcb{padding:34px}
+    .mc-icon{width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:18px}
+    .ic-b{background:#e8f0fe;color:var(--navy)}.ic-g{background:var(--gold-pale);color:var(--gold)}
+    .mcb h3{font-family:var(--font-serif);font-size:1.55rem;color:var(--navy-dark);margin-bottom:18px}
+    .ml{list-style:none;display:flex;flex-direction:column;gap:11px}
+    .ml li{display:flex;align-items:flex-start;gap:11px;font-size:.93rem;color:#4a5568;line-height:1.5}
+    .ml li i{color:var(--gold);margin-top:2px;flex-shrink:0}
+
+    /* OUTREACH */
+    #outreach{background:#fff}
+    .tpills{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px}
+    .pill{background:var(--navy);color:#fff;padding:9px 18px;border-radius:50px;font-size:.83rem;font-weight:500;display:flex;align-items:center;gap:6px;transition:var(--trans);cursor:default}
+    .pill:hover{background:var(--gold);transform:scale(1.04)}
+    .pill i{font-size:.72rem;color:var(--gold-light)}
+    .pill:hover i{color:#fff}
+    .oimg{border-radius:var(--rlg);width:100%;height:430px;object-fit:cover;box-shadow:var(--shadow-lg)}
+
+    /* PROJECTS */
+    #projects{background:var(--navy-dark)}
+    #projects .h2{color:#fff}
+    #projects .sub{color:rgba(255,255,255,.6)}
+    .pc{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.11);border-radius:var(--rlg);padding:34px;transition:var(--trans);position:relative;overflow:hidden}
+    .pc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));transform:scaleX(0);transform-origin:left;transition:var(--trans)}
+    .pc:hover{background:rgba(255,255,255,.12);transform:translateY(-4px)}.pc:hover::before{transform:scaleX(1)}
+    .pd{font-size:.7rem;font-weight:700;letter-spacing:.15em;color:var(--gold-light);text-transform:uppercase;margin-bottom:10px}
+    .pc h4{font-family:var(--font-serif);font-size:1.35rem;color:#fff;margin-bottom:14px}
+    .pc p{font-size:.88rem;color:rgba(255,255,255,.68);line-height:1.72}
+    .ptags{margin-top:18px;display:flex;flex-wrap:wrap;gap:7px}
+    .ptag{background:rgba(200,146,42,.2);border:1px solid rgba(200,146,42,.3);color:var(--gold-light);font-size:.76rem;font-weight:600;padding:4px 11px;border-radius:50px}
+
+    /* IMPACT */
+    #impact{background:#fff}
+    .sc{background:var(--gray-light);border-radius:var(--rlg);padding:42px 26px;text-align:center;transition:var(--trans)}
+    .sc:hover{background:var(--navy-dark)}
+    .sc:hover .sn,.sc:hover .sl{color:#fff}
+    .sc:hover .sd{color:rgba(255,255,255,.55)}
+    .sn{font-family:var(--font-serif);font-size:3.2rem;font-weight:700;color:var(--navy-dark);line-height:1;transition:var(--trans)}
+    .sc:hover .sn{color:var(--gold-light)}
+    .sl{font-size:.95rem;font-weight:600;color:var(--navy-mid);margin-top:9px;transition:var(--trans)}
+    .sd{font-size:.8rem;color:var(--gray);margin-top:7px;transition:var(--trans)}
+    .fc{display:flex;gap:18px;padding:28px;background:var(--gray-light);border-radius:var(--rlg);align-items:flex-start;transition:var(--trans)}
+    .fc:hover{background:var(--navy-dark)}
+    .fc:hover h4,.fc:hover p{color:rgba(255,255,255,.9)}
+    .fi{width:50px;height:50px;background:var(--navy);border-radius:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:var(--trans)}
+    .fi i{font-size:1.2rem;color:var(--gold-light)}
+    .fc:hover .fi{background:var(--gold)}
+    .fc h4{font-family:var(--font-serif);font-size:1.1rem;color:var(--navy-dark);margin-bottom:7px;transition:var(--trans)}
+    .fc p{font-size:.88rem;color:var(--gray);line-height:1.62;transition:var(--trans)}
+
+    /* TESTIMONIALS */
+    #test{background:linear-gradient(135deg,var(--navy-dark),var(--navy-mid));padding:96px 0}
+    .tc-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:var(--rlg);padding:42px;position:relative}
+    .tq{font-family:var(--font-serif);font-size:5rem;color:var(--gold);position:absolute;top:8px;left:26px;line-height:1;opacity:.45}
+    .tt{font-size:1rem;color:rgba(255,255,255,.88);line-height:1.82;font-style:italic;margin-top:18px}
+    .ta{margin-top:22px;display:flex;align-items:center;gap:13px}
+    .tav{width:46px;height:46px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.15rem;color:#fff;font-weight:700;flex-shrink:0}
+    .tai h5{color:#fff;font-size:.93rem;font-weight:600}.tai p{color:rgba(255,255,255,.5);font-size:.8rem}
+
+    /* DONATE */
+    #donate{background:var(--gray-light)}
+    .dcard{background:#fff;border-radius:var(--rlg);padding:54px;box-shadow:var(--shadow-lg)}
+    .dcard h2{font-family:var(--font-serif);font-size:1.9rem;color:var(--navy-dark);margin-bottom:6px}
+    .dcard .dsub{color:var(--gray);margin-bottom:36px;font-size:.93rem}
+    .btbl{width:100%;border-collapse:collapse}
+    .btbl tr{border-bottom:1px solid #f0f0f0}
+    .btbl td{padding:13px 0;vertical-align:top}
+    .btbl td:first-child{font-size:.73rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.08em;width:42%}
+    .btbl td:last-child{font-weight:600;color:var(--navy-dark)}
+    .bacct{font-size:1.4rem!important;color:var(--navy)!important;font-family:var(--font-serif)!important}
+    .durg{background:var(--gold-pale);border:1px solid rgba(200,146,42,.28);border-radius:var(--r);padding:18px 22px;margin-top:30px;font-size:.88rem;color:#7a5c1a;line-height:1.65}
+    .durg strong{color:var(--gold)}
+    .dcta{background:var(--navy-dark);border-radius:var(--rlg);padding:46px;text-align:center;color:#fff}
+    .dcta h3{font-family:var(--font-serif);font-size:1.75rem;margin-bottom:10px}
+    .dcta p{color:rgba(255,255,255,.68);margin-bottom:26px;font-size:.92rem}
+    .gitem{display:flex;gap:11px;align-items:center;background:rgba(255,255,255,.08);border-radius:12px;padding:13px 16px;margin-bottom:12px}
+    .gitem i{color:var(--gold-light);font-size:1.1rem;flex-shrink:0}
+    .gitem span{font-size:.88rem;color:rgba(255,255,255,.8)}
+    .gitem strong{color:#fff}
+
+    /* CONTACT */
+    #contact{background:#fff}
+    .cr{display:flex;gap:16px;align-items:flex-start}
+    .cr .ci{width:46px;height:46px;background:var(--navy-dark);border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
+    .cr .ci i{color:var(--gold-light);font-size:1rem}
+    .cr h4{font-weight:600;color:var(--navy-dark);font-size:.88rem;margin-bottom:4px}
+    .cr a,.cr p{color:var(--gray);font-size:.93rem;transition:var(--trans)}
+    .cr a:hover{color:var(--gold)}
+    .cform{background:var(--navy-dark);border-radius:var(--rlg);padding:46px}
+    .cform h3{font-family:var(--font-serif);font-size:1.55rem;color:#fff;margin-bottom:26px}
+    .fg{margin-bottom:18px}
+    .fr{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
+    label{display:block;font-size:.76rem;font-weight:600;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.08em;margin-bottom:7px}
+    input,textarea,select{width:100%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:#fff;border-radius:var(--r);padding:13px 16px;font-size:.93rem;font-family:'Inter',sans-serif;transition:var(--trans);outline:none}
+    input::placeholder,textarea::placeholder{color:rgba(255,255,255,.3)}
+    select option{background:var(--navy-dark);color:#fff}
+    input:focus,textarea:focus,select:focus{border-color:var(--gold);background:rgba(255,255,255,.12)}
+    textarea{resize:vertical;min-height:130px}
+    .fsub{width:100%;background:var(--gold);color:#fff;border:none;padding:16px;border-radius:50px;font-size:.97rem;font-weight:700;cursor:pointer;transition:var(--trans);font-family:'Inter',sans-serif;display:flex;align-items:center;justify-content:center;gap:8px}
+    .fsub:hover{background:#a87420;transform:translateY(-2px)}
+
+    /* FOOTER */
+    footer{background:var(--navy-dark);color:rgba(255,255,255,.72)}
+    .ftop{padding:76px 0 46px}
+    .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px}
+    .flogo{display:flex;align-items:center;gap:11px;margin-bottom:18px}
+    .flogo .fi2{width:46px;height:46px;background:rgba(255,255,255,.1);border-radius:11px;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.4rem;color:#fff;font-weight:700}
+    .flogo-t h3{font-family:var(--font-serif);font-size:.97rem;color:#fff}
+    .flogo-t p{font-size:.68rem;color:var(--gold-light)}
+    .fdesc{font-size:.85rem;line-height:1.72;margin-bottom:22px}
+    .fsoc{display:flex;gap:9px}
+    .fsoc a{width:36px;height:36px;background:rgba(255,255,255,.08);border-radius:9px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.55);font-size:.88rem;transition:var(--trans)}
+    .fsoc a:hover{background:var(--gold);color:#fff;transform:translateY(-3px)}
+    footer h4{font-family:var(--font-serif);font-size:.97rem;color:#fff;margin-bottom:18px}
+    .flinks{list-style:none;display:flex;flex-direction:column;gap:9px}
+    .flinks a{font-size:.85rem;transition:var(--trans)}
+    .flinks a:hover{color:var(--gold-light);padding-left:4px}
+    .fbot{border-top:1px solid rgba(255,255,255,.08);padding:26px 0;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;font-size:.78rem}
+
+    /* BACK TO TOP */
+    #btt{position:fixed;bottom:26px;right:26px;width:46px;height:46px;background:var(--gold);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.05rem;box-shadow:0 4px 20px rgba(200,146,42,.5);opacity:0;transition:var(--trans);z-index:999;transform:translateY(18px)}
+
+    /* RESPONSIVE */
+    @media(max-width:1024px){
+      .g4{grid-template-columns:repeat(2,1fr)}
+      .fgrid{grid-template-columns:1fr 1fr}
+      .mstrip .con{grid-template-columns:repeat(2,1fr)}
+      .mi{border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
+    }
+    @media(max-width:768px){
+      .pad{padding:70px 0}
+      .g2,.g3,.g4{grid-template-columns:1fr}
+      .fgrid{grid-template-columns:1fr}
+      .mstrip .con{grid-template-columns:1fr 1fr}
+      .abadge{right:0;bottom:-12px}
+      .atxt{padding-left:0!important}
+      .nl{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:12px 0;box-shadow:0 8px 32px rgba(0,0,0,.1)}
+      .nl.open{display:flex}
+      .nl a{padding:13px 22px;font-size:.93rem}
+      .nl a::after{display:none}
+      .hbg{display:flex}
+      .hstats{gap:12px}
+      .hst{border-right:none;border-bottom:1px solid rgba(255,255,255,.12);padding:13px 10px;min-width:120px}
+      .hst:last-child{border-bottom:none}
+      .fr{grid-template-columns:1fr}
+      .dcard{padding:34px 26px}
+      .cform{padding:30px 22px}
+      .dcta{padding:36px 22px}
+    }
+    @media(max-width:480px){
+      .mstrip .con{grid-template-columns:1fr}
+      .mi{border-bottom:1px solid rgba(255,255,255,.1)}
+      .ht{font-size:2.3rem}
+      .hbtns .btn{padding:12px 22px;font-size:.88rem}
+    }
+  </style>
 </head>
-<body class="font-sans text-gray-800">
-    <!-- NAVBAR -->
-    <nav class="bg-white shadow-md fixed w-full z-50">
-        <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
-            <div class="flex items-center gap-3">
-                <!-- YOUR NEW LOGO IMAGE (as requested) -->
-                <img src="images/4.jpeg" alt="Victorious Pilgrim Ministries Logo" class="h-12">
-                <div>
-                    <h1 class="text-2xl font-bold tracking-tight text-blue-950">Victorious Pilgrim Ministries</h1>
-                    <p class="text-xs text-blue-700 -mt-1">Est. 2004 | Wellington, South Africa</p>
-                </div>
-            </div>
-            <div class="hidden md:flex gap-8 text-sm font-medium">
-                <a href="#about" class="nav-link">About</a>
-                <a href="#ministries" class="nav-link">Ministries</a>
-                <a href="#projects" class="nav-link">2024 Projects</a>
-                <a href="#impact" class="nav-link">Impact</a>
-                <a href="#donate" class="nav-link">Donate</a>
-                <a href="#contact" class="nav-link">Contact</a>
-            </div>
-            <a href="#donate" class="bg-amber-500 hover:bg-amber-600 text-white px-6 py-3 rounded-full text-sm font-semibold transition">DONATE NOW</a>
-        </div>
-    </nav>
+<body>
 
-    <!-- HERO -->
-    <header class="hero-bg h-screen flex items-center text-white pt-16">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <div class="inline-block bg-white/90 text-blue-950 px-6 py-2 rounded-full text-sm font-medium mb-6">20th Anniversary • 2004–2024</div>
-            <h1 class="text-6xl md:text-7xl font-bold leading-tight section-header">Serving the Lord<br>by Serving Others</h1>
-            <p class="mt-6 text-xl max-w-2xl mx-auto">Victorious Pilgrim Ministries brings the Gospel and practical help to communities across the Western Cape and beyond. “As my Father hath sent me, even so send I you.” – John 20:21</p>
-            <div class="mt-10 flex flex-wrap gap-4 justify-center">
-                <a href="#donate" class="bg-white text-blue-950 hover:bg-amber-400 hover:text-white px-10 py-5 rounded-full font-semibold text-lg transition shadow-xl">Partner With Us</a>
-                <a href="#projects" class="border-2 border-white hover:bg-white hover:text-blue-950 px-10 py-5 rounded-full font-semibold text-lg transition">See Our Work</a>
-            </div>
-            <div class="mt-16 text-sm flex items-center justify-center gap-8">
-                <div><i class="fa-solid fa-book-open text-2xl"></i><br><span class="block text-xs mt-1">7,109 Books</span></div>
-                <div><i class="fa-solid fa-bible text-2xl"></i><br><span class="block text-xs mt-1">280 Bibles</span></div>
-                <div><i class="fa-solid fa-heart text-2xl"></i><br><span class="block text-xs mt-1">Thousands Fed</span></div>
-            </div>
-        </div>
-    </header>
+<!-- ANNOUNCE BAR -->
+<div class="abar">
+  <strong>🕊️ Celebrating 20 Years of Ministry (2004–2024)</strong> — Thank you to every volunteer, donor and partner. <strong>Join us for the next chapter →</strong>
+</div>
 
-    <!-- ABOUT -->
-    <section id="about" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-12 gap-16 items-center">
-                <div class="md:col-span-7">
-                    <div class="text-amber-500 font-medium tracking-widest">VICTORIOUS PILGRIM MINISTRIES • REG. 2004/028180/08</div>
-                    <h2 class="section-header text-5xl text-blue-950 mt-3">20 Years of Faith in Action</h2>
-                    <div class="prose mt-8 text-lg leading-relaxed">
-                        <p>Founded in 2004 in Wellington, Western Cape, Victorious Pilgrim Ministries exists to obey the Great Commission. Under the leadership of Chairman <strong>Ashwell W. Beaton</strong> and Welfare Director <strong>Wendy Beaton</strong>, we combine evangelism with practical mercy ministry.</p>
-                        <p class="mt-6 italic">"Where God guides, He will provide. If it is God’s will, it becomes His bill."</p>
-                        <p class="mt-6">We worship and serve alongside local SDA congregations while reaching the wider community with the love of Jesus — through literature, health education, food parcels, clothing and much more.</p>
-                    </div>
-                    <div class="mt-12 bg-blue-50 p-8 rounded-2xl border-l-4 border-blue-900">
-                        <p class="text-blue-900">"We would like to thank each individual for their sacrifice, time, talent, expertise and financial support. You have made a valuable contribution in spreading the gospel throughout South Africa and beyond."</p>
-                        <p class="mt-4 text-sm text-blue-700 font-medium">— Ashwell W. Beaton, VPM Chairman</p>
-                    </div>
-                </div>
-                <div class="md:col-span-5">
-                    <!-- YOUR REQUESTED IMAGE 1.jpeg -->
-                    <img src="images/1.jpeg" alt="VPM Team during 2024 Outreach" class="rounded-3xl shadow-2xl">
-                    <div class="mt-6 text-center text-sm text-gray-500">Spreading the Word in communities across the Western Cape</div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- NAV -->
+<nav id="nav">
+  <div class="ni">
+    <a href="#hero" class="logo">
+      <div class="logo-i">V</div>
+      <div class="logo-t">
+        <h1>Victorious Pilgrim Ministries</h1>
+        <p>Est. 2004 · Wellington, South Africa</p>
+      </div>
+    </a>
+    <ul class="nl" id="nl">
+      <li><a href="#about">About</a></li>
+      <li><a href="#ministries">Ministries</a></li>
+      <li><a href="#outreach">Outreach</a></li>
+      <li><a href="#projects">2024</a></li>
+      <li><a href="#impact">Impact</a></li>
+      <li><a href="#donate">Donate</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#donate" class="nav-cta">Give Now</a></li>
+    </ul>
+    <button class="hbg" id="hbg" aria-label="Menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</nav>
 
-    <!-- MINISTRIES -->
-    <section id="ministries" class="py-24 bg-gradient-to-b from-blue-50 to-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="text-amber-500 uppercase tracking-widest font-medium">What We Do</span>
-                <h2 class="section-header text-5xl text-blue-950 mt-3">Two Arms • One Mission</h2>
-            </div>
-            <div class="grid md:grid-cols-2 gap-12">
-                <!-- Evangelism -->
-                <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
-                    <div class="h-72 bg-cover" style="background-image: url('https://images.unsplash.com/photo-1606491956689-2ea866880c84?ixlib=rb-4.0.3&auto=format&fit=crop&q=80')"></div>
-                    <div class="p-10">
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-book-bible text-4xl text-blue-900"></i>
-                            <h3 class="text-3xl font-semibold">Evangelism</h3>
-                        </div>
-                        <ul class="mt-8 space-y-4 text-lg">
-                            <li class="flex gap-3"><span class="text-green-500 font-bold">✓</span> 7,109 books &amp; 280 Bibles distributed</li>
-                            <li class="flex gap-3"><span class="text-green-500 font-bold">✓</span> 42 house visits • 47 Bible studies</li>
-                            <li class="flex gap-3"><span class="text-green-500 font-bold">✓</span> 210 tracts • 160 DVDs • 36 counselling sessions</li>
-                            <li class="flex gap-3"><span class="text-green-500 font-bold">✓</span> Outreach in 23 towns including Oudtshoorn, Paarl, Vredendal &amp; Montagu</li>
-                        </ul>
-                    </div>
-                </div>
-                <!-- Welfare -->
-                <div class="bg-white rounded-3xl shadow-xl overflow-hidden">
-                    <div class="h-72 bg-cover" style="background-image: url('https://images.unsplash.com/photo-1594737625785-a866b5f7f8a4?ixlib=rb-4.0.3&auto=format&fit=crop&q=80')"></div>
-                    <div class="p-10">
-                        <div class="flex items-center gap-3">
-                            <i class="fa-solid fa-hands-holding-child text-4xl text-amber-600"></i>
-                            <h3 class="text-3xl font-semibold">Welfare &amp; Health</h3>
-                        </div>
-                        <ul class="mt-8 space-y-4 text-lg">
-                            <li class="flex gap-3"><span class="text-green-500 font-bold">✓</span> 8,500+ pieces of clothing • 210 food parcels</li>
-                            <li class="flex gap-3"><span class="text-green-500 font-bold">✓</span> 1540 plates of food • 130L soup • Fresh fruit &amp; veg</li>
-                            <li class="flex gap-3"><span class="text-green-500 font-bold">✓</span> BMI, blood pressure &amp; health talks • Haircuts • Massages</li>
-                            <li class="flex gap-3"><span class="text-green-500 font-bold">✓</span> Daily sandwiches, pies, muffins &amp; hygiene packs</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<!-- HERO -->
+<header id="hero">
+  <div class="hbg-img"></div>
+  <div class="hov"></div>
+  <div class="hc">
+    <div class="hbadge"><i class="fa-solid fa-star"></i> 20th Anniversary · 2004–2024</div>
+    <h1 class="ht">Serving the Lord<br><em>by Serving Others</em></h1>
+    <p class="hsub">Victorious Pilgrim Ministries brings the Gospel, practical mercy and lasting hope to communities across the Western Cape and beyond.</p>
+    <p class="hverse">"As my Father hath sent me, even so send I you." — John 20:21</p>
+    <div class="hbtns">
+      <a href="#donate" class="btn btn-gold"><i class="fa-solid fa-heart"></i> Partner With Us</a>
+      <a href="#projects" class="btn btn-ghost"><i class="fa-solid fa-play"></i> See Our Work</a>
+    </div>
+    <div class="hstats">
+      <div class="hst"><div class="hst-n">7,109</div><div class="hst-l">Books Distributed</div></div>
+      <div class="hst"><div class="hst-n">280</div><div class="hst-l">Bibles Given</div></div>
+      <div class="hst"><div class="hst-n">8,500+</div><div class="hst-l">Clothing Items</div></div>
+      <div class="hst"><div class="hst-n">210</div><div class="hst-l">Food Parcels</div></div>
+      <div class="hst"><div class="hst-n">23</div><div class="hst-l">Towns Reached</div></div>
+    </div>
+  </div>
+  <div class="scroll-d"><i class="fa-solid fa-chevron-down fa-2x"></i></div>
+</header>
 
-    <!-- 2024 PROJECTS -->
-    <section id="projects" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <span class="px-5 py-1 bg-amber-100 text-amber-700 rounded-full text-sm font-medium">VPM 20TH ANNIVERSARY SPECIAL PROJECTS</span>
-                <h2 class="section-header text-5xl text-blue-950 mt-6">2024 Outreach Highlights</h2>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-blue-50 p-8 rounded-3xl hover:shadow-2xl transition">
-                    <div class="text-xs uppercase tracking-widest text-blue-700">March 2024</div>
-                    <h4 class="font-semibold text-2xl mt-2">Robertson &amp; Montagu</h4>
-                    <p class="mt-6 text-sm leading-relaxed">Youth Week of Prayer, Sabbath School, preaching, 1,260 books &amp; 14 Bibles distributed, counselling and community health talk. Served 500+ people.</p>
-                </div>
-                <div class="bg-blue-50 p-8 rounded-3xl hover:shadow-2xl transition">
-                    <div class="text-xs uppercase tracking-widest text-blue-700">June 2024</div>
-                    <h4 class="font-semibold text-2xl mt-2">Follow-up Montagu</h4>
-                    <p class="mt-6 text-sm leading-relaxed">Sabbath School leadership, preaching by Pastor Ashwin Beaton, 600 books donated and community fellowship.</p>
-                </div>
-                <div class="bg-blue-50 p-8 rounded-3xl hover:shadow-2xl transition">
-                    <div class="text-xs uppercase tracking-widest text-blue-700">Sept 2024</div>
-                    <h4 class="font-semibold text-2xl mt-2">Riviersonderend</h4>
-                    <p class="mt-6 text-sm leading-relaxed">Sabbath fellowship, health talk &amp; demonstrations, Sunday public outreach in community hall — 500 people served, 1,600 books &amp; 10 Bibles.</p>
-                </div>
-                <div class="bg-blue-50 p-8 rounded-3xl hover:shadow-2xl transition">
-                    <div class="text-xs uppercase tracking-widest text-blue-700">Nov 2024</div>
-                    <h4 class="font-semibold text-2xl mt-2">Vredendal</h4>
-                    <p class="mt-6 text-sm leading-relaxed">Worship with Vredendal North congregation, open-air service, Sunday outreach at Vergenoeg Primary School — 800 books distributed.</p>
-                </div>
-            </div>
-            <div class="text-center mt-12 text-sm text-gray-500">“We thank the Lord for His sustaining grace during this great work done.”</div>
+<!-- ABOUT -->
+<section id="about" class="pad">
+  <div class="con">
+    <div class="g2">
+      <div class="aiwrap">
+        <img src="https://images.unsplash.com/photo-1593113598332-cd288d649433?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="VPM community outreach volunteers serving families" loading="lazy">
+        <div class="abadge"><div class="n">20</div><div class="l">Years of<br>Service</div></div>
+      </div>
+      <div class="atxt" style="padding-left:20px">
+        <span class="tag">Who We Are</span>
+        <h2 class="h2">Faith in Action Since 2004</h2>
+        <p style="color:var(--gold);font-size:.82rem;font-weight:600;margin:6px 0 20px;letter-spacing:.04em">REG. NO. 2004/028180/08 · WELLINGTON, WESTERN CAPE</p>
+        <p>Founded in 2004 in Wellington, Western Cape, Victorious Pilgrim Ministries exists to obey the Great Commission. Under the leadership of Chairman <strong>Ashwell W. Beaton</strong> and Welfare Director <strong>Wendy Beaton</strong>, VPM combines bold evangelism with practical mercy ministry.</p>
+        <p>We worship and serve alongside local SDA congregations while reaching the wider community with the love of Jesus — through literature, health education, food parcels, clothing and much more. Over two decades, our team has touched thousands of lives across 23 towns in South Africa.</p>
+        <div class="qb">
+          <p>"Where God guides, He will provide. If it is God's will, it becomes His bill."</p>
+          <cite>— Ashwell W. Beaton, VPM Chairman</cite>
         </div>
-    </section>
-
-    <!-- IMPACT -->
-    <section id="impact" class="py-24 bg-blue-950 text-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="grid md:grid-cols-3 gap-12 text-center">
-                <div>
-                    <div class="stat-number text-7xl font-bold text-amber-400">7,109</div>
-                    <div class="text-2xl mt-2">Books Distributed</div>
-                    <div class="h-px w-16 bg-amber-400 mx-auto mt-8"></div>
-                </div>
-                <div>
-                    <div class="stat-number text-7xl font-bold text-amber-400">280</div>
-                    <div class="text-2xl mt-2">Bibles Given</div>
-                    <div class="h-px w-16 bg-amber-400 mx-auto mt-8"></div>
-                </div>
-                <div>
-                    <div class="stat-number text-7xl font-bold text-amber-400">15,000+</div>
-                    <div class="text-2xl mt-2">Meals &amp; Parcels</div>
-                    <div class="h-px w-16 bg-amber-400 mx-auto mt-8"></div>
-                </div>
-            </div>
-            <div class="mt-20 grid md:grid-cols-12 gap-8">
-                <div class="md:col-span-4 bg-white/10 backdrop-blur rounded-3xl p-8">
-                    <i class="fa-solid fa-hand-holding-heart text-5xl text-amber-300"></i>
-                    <h4 class="mt-6 text-2xl font-medium">Daily Welfare</h4>
-                    <p class="mt-4 text-sm opacity-90">210 sandwiches, 230 plates of food, 180 fruit &amp; veg parcels, medical advice, hygiene packs and more — every month across Wellington and beyond.</p>
-                </div>
-                <div class="md:col-span-4 bg-white/10 backdrop-blur rounded-3xl p-8">
-                    <i class="fa-solid fa-church text-5xl text-amber-300"></i>
-                    <h4 class="mt-6 text-2xl font-medium">Church Partnership</h4>
-                    <p class="mt-4 text-sm opacity-90">We worship and serve alongside SDA congregations in every town we visit — strengthening the body of Christ while reaching the lost.</p>
-                </div>
-                <div class="md:col-span-4 bg-white/10 backdrop-blur rounded-3xl p-8">
-                    <i class="fa-solid fa-users text-5xl text-amber-300"></i>
-                    <h4 class="mt-6 text-2xl font-medium">Volunteer Powered</h4>
-                    <p class="mt-4 text-sm opacity-90">Volunteers from 12 to 20 per project — young people giving haircuts, serving food, singing, and sharing testimonies. God always provides the hands.</p>
-                </div>
-            </div>
+        <div class="chips">
+          <div class="chip"><i class="fa-solid fa-map-pin"></i> Wellington, Western Cape</div>
+          <div class="chip"><i class="fa-solid fa-calendar"></i> Est. 2004</div>
+          <div class="chip"><i class="fa-solid fa-registered"></i> Reg. 2004/028180/08</div>
+          <div class="chip"><i class="fa-solid fa-church"></i> SDA-aligned</div>
+          <div class="chip"><i class="fa-solid fa-users"></i> 12–20 Volunteers per project</div>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- DONATE -->
-    <section id="donate" class="py-24 bg-white">
-        <div class="max-w-4xl mx-auto px-6 text-center">
-            <h2 class="section-header text-5xl">Help Us Hasten the Lord’s Return</h2>
-            <p class="mt-6 max-w-md mx-auto">Your gift feeds the hungry, clothes the naked, and places the Word of God into searching hearts. Every rand counts in these last days.</p>
-           
-            <div class="mt-16 bg-gradient-to-br from-blue-50 to-amber-50 rounded-3xl p-12 border border-blue-200">
-                <div class="text-3xl font-semibold text-blue-950 mb-2">Banking Details</div>
-                <div class="mt-8 grid md:grid-cols-2 gap-y-8 text-left max-w-sm mx-auto">
-                    <div>
-                        <div class="text-xs text-gray-500">ACCOUNT NAME</div>
-                        <div class="font-medium">Victorious Pilgrim Ministries</div>
-                    </div>
-                    <div>
-                        <div class="text-xs text-gray-500">BANK</div>
-                        <div class="font-medium">The Standard Bank of South Africa Ltd</div>
-                        <div class="text-xs">Paarl Branch</div>
-                    </div>
-                    <div>
-                        <div class="text-xs text-gray-500">ACCOUNT NUMBER</div>
-                        <div class="font-medium text-xl text-blue-900">072 346 809</div>
-                    </div>
-                    <div>
-                        <div class="text-xs text-gray-500">REFERENCE</div>
-                        <div class="font-medium">Your Name + Donation</div>
-                    </div>
-                </div>
-                <div class="mt-12 text-sm text-gray-600">PO Box 789, Wellington 7655 • +27 72 595 2922 • v.p.m@mweb.co.za</div>
-            </div>
-           
-            <p class="mt-12 text-sm max-w-xs mx-auto text-gray-500">All donations are tax-deductible where applicable. Thank you for standing with us!</p>
+<!-- MISSION STRIP -->
+<div class="mstrip">
+  <div class="con">
+    <div class="mi"><i class="fa-solid fa-book-bible"></i><h4>Evangelism</h4><p>Placing God's Word into searching hearts through books, Bibles, tracts and personal counselling.</p></div>
+    <div class="mi"><i class="fa-solid fa-hands-holding-heart"></i><h4>Welfare</h4><p>Feeding the hungry, clothing the naked and bringing dignity to every person we meet.</p></div>
+    <div class="mi"><i class="fa-solid fa-stethoscope"></i><h4>Health</h4><p>BMI screening, blood pressure checks, medical advice and health education talks.</p></div>
+    <div class="mi"><i class="fa-solid fa-handshake"></i><h4>Community</h4><p>Partnering with local churches and schools to build lasting relationships and Gospel hope.</p></div>
+  </div>
+</div>
+
+<!-- MINISTRIES -->
+<section id="ministries" class="pad">
+  <div class="con">
+    <div class="tc" style="margin-bottom:56px">
+      <span class="tag">What We Do</span>
+      <h2 class="h2">Two Arms · One Mission</h2>
+      <p class="sub" style="margin:12px auto 0;max-width:560px">Everything we do flows from a single calling: to be the hands and feet of Jesus to those in need.</p>
+    </div>
+    <div class="g2" style="align-items:stretch">
+      <div class="mc">
+        <img src="https://images.unsplash.com/photo-1524069290683-0457abfe42c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Volunteers distributing Bibles and Christian literature" loading="lazy">
+        <div class="mcb">
+          <div class="mc-icon ic-b"><i class="fa-solid fa-book-bible"></i></div>
+          <h3>Evangelism Ministry</h3>
+          <ul class="ml">
+            <li><i class="fa-solid fa-check"></i><span>7,109 books &amp; 280 Bibles distributed across South Africa</span></li>
+            <li><i class="fa-solid fa-check"></i><span>42 house visits and 47 personal Bible studies conducted</span></li>
+            <li><i class="fa-solid fa-check"></i><span>210 gospel tracts, 160 DVDs and 36 counselling sessions</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Preaching, Sabbath School leadership and youth evangelism</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Open-air services in schools, halls and public spaces</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Outreach in 23 towns: Oudtshoorn, Paarl, Vredendal, Montagu &amp; more</span></li>
+          </ul>
         </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="py-24 bg-blue-950 text-white">
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-16">
-            <div class="md:col-span-5">
-                <h2 class="section-header text-5xl">Get In Touch</h2>
-                <div class="mt-10 space-y-8">
-                    <div class="flex gap-6">
-                        <i class="fa-solid fa-phone text-3xl text-amber-400 mt-1"></i>
-                        <div>
-                            <div class="font-medium">Phone</div>
-                            <a href="tel:+27725952922" class="text-xl">+27 72 595 2922</a>
-                        </div>
-                    </div>
-                    <div class="flex gap-6">
-                        <i class="fa-solid fa-envelope text-3xl text-amber-400 mt-1"></i>
-                        <div>
-                            <div class="font-medium">Email</div>
-                            <a href="mailto:v.p.m@mweb.co.za" class="text-xl">v.p.m@mweb.co.za</a>
-                        </div>
-                    </div>
-                    <div class="flex gap-6">
-                        <i class="fa-solid fa-location-dot text-3xl text-amber-400 mt-1"></i>
-                        <div>
-                            <div class="font-medium">Postal Address</div>
-                            <div class="text-lg leading-tight">PO Box 789<br>Wellington 7655<br>Republic of South Africa</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-           
-            <div class="md:col-span-7 bg-white text-blue-950 rounded-3xl p-10">
-                <form action="https://formsubmit.co/v.p.m@mweb.co.za" method="POST" class="space-y-6">
-                    <div class="grid grid-cols-2 gap-6">
-                        <input type="text" name="name" placeholder="Your name" required class="w-full px-6 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:border-amber-500">
-                        <input type="email" name="email" placeholder="Email address" required class="w-full px-6 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:border-amber-500">
-                    </div>
-                    <input type="text" name="subject" placeholder="Subject" class="w-full px-6 py-4 border border-gray-300 rounded-2xl focus:outline-none focus:border-amber-500">
-                    <textarea name="message" rows="6" placeholder="How can we pray for you or how would you like to partner?" required class="w-full px-6 py-4 border border-gray-300 rounded-3xl focus:outline-none focus:border-amber-500"></textarea>
-                    <button type="submit" class="w-full bg-amber-500 hover:bg-amber-600 text-white py-6 rounded-3xl font-semibold text-lg transition">Send Message — We Will Reply Soon</button>
-                </form>
-            </div>
+      </div>
+      <div class="mc">
+        <img src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Volunteers preparing food and care packages for the community" loading="lazy">
+        <div class="mcb">
+          <div class="mc-icon ic-g"><i class="fa-solid fa-heart"></i></div>
+          <h3>Welfare &amp; Health Ministry</h3>
+          <ul class="ml">
+            <li><i class="fa-solid fa-check"></i><span>8,500+ clothing items donated to those in need</span></li>
+            <li><i class="fa-solid fa-check"></i><span>210 food parcels, 1,540 plates served &amp; 130L of soup distributed</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Daily sandwiches, pies, muffins, fresh fruit &amp; vegetable parcels</span></li>
+            <li><i class="fa-solid fa-check"></i><span>BMI testing, blood pressure monitoring &amp; health education talks</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Haircuts, massages and personal hygiene pack distribution</span></li>
+            <li><i class="fa-solid fa-check"></i><span>Medical referrals and ongoing welfare support for families</span></li>
+          </ul>
         </div>
-    </section>
+      </div>
+    </div>
+  </div>
+</section>
 
-    <!-- FOOTER -->
-    <footer class="bg-blue-950 text-white py-16">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <div class="flex justify-center gap-3 mb-8">
-                <div class="w-14 h-14 bg-white text-blue-950 rounded-2xl flex items-center justify-center text-5xl font-bold">V</div>
-            </div>
-            <p class="text-sm opacity-75">Victorious Pilgrim Ministries © 2025 | Registration No. 2004/028180/08</p>
-            <p class="text-xs mt-8 opacity-50">“I shall pass through this world but once. If there is any good deed that I can do, let me do it now...”</p>
-            <div class="mt-12 text-[10px] opacity-30">Built with love to glorify God • One page • One mission</div>
+<!-- OUTREACH -->
+<section id="outreach" class="pad">
+  <div class="con">
+    <div class="g2">
+      <div>
+        <span class="tag">Our Reach</span>
+        <h2 class="h2">23 Towns &amp; Growing</h2>
+        <p class="sub">From the Winelands to the Karoo, VPM has taken the Gospel and practical care across the Western Cape — and beyond South Africa's borders.</p>
+        <div class="tpills">
+          <div class="pill"><i class="fa-solid fa-location-dot"></i>Wellington</div>
+          <div class="pill"><i class="fa-solid fa-location-dot"></i>Paarl</div>
+          <div class="pill"><i class="fa-solid fa-location-dot"></i>Oudtshoorn</div>
+          <div class="pill"><i class="fa-solid fa-location-dot"></i>Montagu</div>
+          <div class="pill"><i class="fa-solid fa-location-dot"></i>Robertson</div>
+          <div class="pill"><i class="fa-solid fa-location-dot"></i>Vredendal</div>
+          <div class="pill"><i class="fa-solid fa-location-dot"></i>Riviersonderend</div>
+          <div class="pill"><i class="fa-solid fa-location-dot"></i>Swellendam</div>
+          <div class="pill"><i class="fa-solid fa-location-dot"></i>George</div>
+          <div class="pill"><i class="fa-solid fa-location-dot"></i>Stellenbosch</div>
+          <div class="pill"><i class="fa-solid fa-location-dot"></i>Worcester</div>
+          <div class="pill"><i class="fa-solid fa-location-dot"></i>Ceres</div>
+          <div class="pill"><i class="fa-solid fa-location-dot"></i>Tulbagh</div>
+          <div class="pill"><i class="fa-solid fa-location-dot"></i>Franschhoek</div>
+          <div class="pill"><i class="fa-solid fa-location-dot"></i>Hermanus</div>
+          <div class="pill"><i class="fa-solid fa-location-dot"></i>Bredasdorp</div>
+          <div class="pill"><i class="fa-solid fa-location-dot"></i>Bonnievale</div>
+          <div class="pill"><i class="fa-solid fa-location-dot"></i>Ladismith</div>
+          <div class="pill"><i class="fa-solid fa-location-dot"></i>Calitzdorp</div>
+          <div class="pill"><i class="fa-solid fa-location-dot"></i>Mossel Bay</div>
+          <div class="pill"><i class="fa-solid fa-location-dot"></i>Knysna</div>
+          <div class="pill"><i class="fa-solid fa-location-dot"></i>De Doorns</div>
+          <div class="pill"><i class="fa-solid fa-location-dot"></i>+ More</div>
         </div>
-    </footer>
+      </div>
+      <div>
+        <img class="oimg" src="https://images.unsplash.com/photo-1574282096195-2660ef4c0a21?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Western Cape landscape representing communities VPM serves" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
 
-    <script>
-        function init() {
-            console.log('%c✅ Victorious Pilgrim Ministries website ready!', 'color:#1e3a8a; font-weight:bold');
-        }
-        window.onload = init;
-    </script>
+<!-- 2024 PROJECTS -->
+<section id="projects" class="pad">
+  <div class="con">
+    <div class="tc" style="margin-bottom:56px">
+      <span class="tag" style="border-color:rgba(200,146,42,.5)">VPM 20th Anniversary Year</span>
+      <h2 class="h2">2024 Outreach Highlights</h2>
+      <p class="sub" style="margin:12px auto 0;max-width:540px">A landmark year of celebration and service — four major projects, thousands of lives impacted for the Kingdom.</p>
+    </div>
+    <div class="g4">
+      <div class="pc">
+        <div class="pd">March 2024</div>
+        <h4>Robertson &amp; Montagu</h4>
+        <p>Youth Week of Prayer, Sabbath School leadership, preaching and community health talk. The team served 500+ people with love and the Word.</p>
+        <div class="ptags"><span class="ptag">1,260 Books</span><span class="ptag">14 Bibles</span><span class="ptag">500+ Served</span></div>
+      </div>
+      <div class="pc">
+        <div class="pd">June 2024</div>
+        <h4>Follow-Up Montagu</h4>
+        <p>Sabbath School leadership, preaching by Pastor Ashwin Beaton, 600 books donated and rich community fellowship with local believers.</p>
+        <div class="ptags"><span class="ptag">600 Books</span><span class="ptag">Fellowship</span><span class="ptag">Follow-up</span></div>
+      </div>
+      <div class="pc">
+        <div class="pd">September 2024</div>
+        <h4>Riviersonderend</h4>
+        <p>Sabbath fellowship, health demonstrations and Sunday public outreach in the community hall — 500 people served with food and the Gospel.</p>
+        <div class="ptags"><span class="ptag">1,600 Books</span><span class="ptag">10 Bibles</span><span class="ptag">500 Served</span></div>
+      </div>
+      <div class="pc">
+        <div class="pd">November 2024</div>
+        <h4>Vredendal</h4>
+        <p>Worship with Vredendal North congregation, open-air service, Sunday outreach at Vergenoeg Primary School with 800 books distributed.</p>
+        <div class="ptags"><span class="ptag">800 Books</span><span class="ptag">School Outreach</span><span class="ptag">Open-air</span></div>
+      </div>
+    </div>
+    <p class="tc" style="margin-top:44px;color:rgba(255,255,255,.45);font-style:italic;font-size:.92rem">"We thank the Lord for His sustaining grace during this great work done."</p>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<section id="impact" class="pad">
+  <div class="con">
+    <div class="tc" style="margin-bottom:56px">
+      <span class="tag">20 Years of Impact</span>
+      <h2 class="h2">The Numbers Behind the Mission</h2>
+      <p class="sub" style="margin:12px auto 0;max-width:520px">Every number represents a life touched, a family fed, a soul introduced to the hope of Jesus Christ.</p>
+    </div>
+    <div class="g4" id="statGrid">
+      <div class="sc"><div class="sn" data-target="7109">7,109</div><div class="sl">Books Distributed</div><div class="sd">Christian literature across the Western Cape</div></div>
+      <div class="sc"><div class="sn" data-target="280">280</div><div class="sl">Bibles Given Away</div><div class="sd">God's Word gifted to individuals seeking truth</div></div>
+      <div class="sc"><div class="sn" data-target="8500">8,500+</div><div class="sl">Clothing Items</div><div class="sd">Warm, dignified clothing to those in hardship</div></div>
+      <div class="sc"><div class="sn" data-target="15000">15,000+</div><div class="sl">Meals &amp; Parcels</div><div class="sd">Hot meals, food parcels and soup for families</div></div>
+    </div>
+    <div class="g3" style="margin-top:48px">
+      <div class="fc"><div class="fi"><i class="fa-solid fa-hand-holding-heart"></i></div><div><h4>Daily Welfare</h4><p>210 sandwiches, 230 plates, 180 fruit &amp; veg parcels, hygiene packs — every month across Wellington and beyond.</p></div></div>
+      <div class="fc"><div class="fi"><i class="fa-solid fa-church"></i></div><div><h4>Church Partnership</h4><p>VPM worships alongside SDA congregations in every town — strengthening the body of Christ while reaching the lost.</p></div></div>
+      <div class="fc"><div class="fi"><i class="fa-solid fa-users"></i></div><div><h4>Volunteer Powered</h4><p>12–20 volunteers per project — giving haircuts, serving food, singing and sharing testimonies of grace.</p></div></div>
+      <div class="fc"><div class="fi"><i class="fa-solid fa-child"></i></div><div><h4>Youth Engagement</h4><p>Week of Prayer events, youth services and school outreaches investing in the next generation of faith leaders.</p></div></div>
+      <div class="fc"><div class="fi"><i class="fa-solid fa-heartbeat"></i></div><div><h4>Health Screenings</h4><p>Regular BMI and blood pressure checks, health talks and medical referrals — physical needs met alongside spiritual ones.</p></div></div>
+      <div class="fc"><div class="fi"><i class="fa-solid fa-book-open-reader"></i></div><div><h4>Bible Studies</h4><p>47 structured Bible studies and 36 personal counselling sessions — nurturing spiritual growth long after each outreach.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="test">
+  <div class="con">
+    <div class="tc" style="margin-bottom:54px">
+      <span class="tag" style="border-color:rgba(200,146,42,.5);color:var(--gold-light)">Voices of Faith</span>
+      <h2 class="h2" style="color:#fff">What Partners &amp; Beneficiaries Say</h2>
+    </div>
+    <div class="g3">
+      <div class="tc-card"><div class="tq">"</div><p class="tt">We would like to thank each individual for their sacrifice, time, talent, expertise and financial support. You have made a valuable contribution in spreading the gospel throughout South Africa and beyond.</p><div class="ta"><div class="tav">A</div><div class="tai"><h5>Ashwell W. Beaton</h5><p>Chairman, Victorious Pilgrim Ministries</p></div></div></div>
+      <div class="tc-card"><div class="tq">"</div><p class="tt">The outreach in our community hall was a blessing we will never forget. The food, the music, the Word of God — everything was given with such love. Our congregation was deeply strengthened.</p><div class="ta"><div class="tav">R</div><div class="tai"><h5>Pastor, Riviersonderend</h5><p>SDA Church Partner — September 2024</p></div></div></div>
+      <div class="tc-card"><div class="tq">"</div><p class="tt">Receiving a food parcel and a Bible on the same day was something I will always remember. The volunteers treated us with so much respect and dignity. God bless VPM and all their donors.</p><div class="ta"><div class="tav">M</div><div class="tai"><h5>Community Member</h5><p>Montagu Outreach Beneficiary</p></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- DONATE -->
+<section id="donate" class="pad">
+  <div class="con">
+    <div class="tc" style="margin-bottom:54px">
+      <span class="tag">Give &amp; Partner</span>
+      <h2 class="h2">Help Us Hasten the Lord's Return</h2>
+      <p class="sub" style="margin:12px auto 0;max-width:520px">Your gift feeds the hungry, clothes the naked and places God's Word into searching hearts. Every rand counts.</p>
+    </div>
+    <div class="g2" style="gap:28px;align-items:start">
+      <div class="dcard">
+        <h2>Bank Transfer (EFT)</h2>
+        <p class="dsub">Donate directly via secure EFT — quick and easy.</p>
+        <table class="btbl">
+          <tr><td>Account Name</td><td>Victorious Pilgrim Ministries</td></tr>
+          <tr><td>Bank</td><td>Standard Bank of South Africa<br><small style="color:#888;font-size:.78rem">Paarl Branch</small></td></tr>
+          <tr><td>Account Number</td><td class="bacct">072 346 809</td></tr>
+          <tr><td>Branch Code</td><td>051 001</td></tr>
+          <tr><td>Reference</td><td>Your Name + Donation</td></tr>
+        </table>
+        <div class="durg"><strong>Tax Deductible:</strong> All donations are tax-deductible where applicable. Keep your proof of payment as your receipt. Contact us for Section 18A certificates.</div>
+        <div style="margin-top:24px;text-align:center;padding:18px;background:var(--gray-light);border-radius:var(--r)">
+          <p style="font-size:.83rem;color:#666;margin-bottom:10px">Questions about donating?</p>
+          <a href="mailto:v.p.m@mweb.co.za" class="btn btn-gold" style="font-size:.88rem"><i class="fa-solid fa-envelope"></i> Email Us</a>
+        </div>
+      </div>
+      <div>
+        <div class="dcta">
+          <i class="fa-solid fa-heart fa-3x" style="color:var(--gold-light);margin-bottom:14px"></i>
+          <h3>What Your Gift Does</h3>
+          <p>Even a small monthly gift transforms communities for eternity.</p>
+          <div class="gitem"><i class="fa-solid fa-bread-slice"></i><span><strong>R50/month</strong> — provides 5 food parcels for hungry families</span></div>
+          <div class="gitem"><i class="fa-solid fa-bible"></i><span><strong>R100/month</strong> — sponsors Bibles &amp; literature for outreach</span></div>
+          <div class="gitem"><i class="fa-solid fa-van-shuttle"></i><span><strong>R500/month</strong> — helps fund transport for a full outreach mission</span></div>
+          <div class="gitem"><i class="fa-solid fa-shirt"></i><span><strong>Clothing donations</strong> — collected year-round in Wellington</span></div>
+          <a href="tel:+27725952922" class="btn btn-gold" style="width:100%;justify-content:center;margin-top:8px"><i class="fa-solid fa-phone"></i> Call To Discuss</a>
+        </div>
+        <div style="background:#fff;border-radius:var(--rlg);padding:30px;margin-top:22px;box-shadow:var(--shadow)">
+          <h4 style="font-family:var(--font-serif);font-size:1.15rem;color:var(--navy-dark);margin-bottom:14px">Direct Contact</h4>
+          <div style="display:flex;flex-direction:column;gap:12px">
+            <a href="tel:+27725952922" style="display:flex;gap:9px;align-items:center;color:#4a5568;font-size:.92rem;transition:var(--trans)" onmouseover="this.style.color='#c8922a'" onmouseout="this.style.color='#4a5568'"><i class="fa-solid fa-phone" style="color:var(--gold)"></i>+27 72 595 2922</a>
+            <a href="mailto:v.p.m@mweb.co.za" style="display:flex;gap:9px;align-items:center;color:#4a5568;font-size:.92rem;transition:var(--trans)" onmouseover="this.style.color='#c8922a'" onmouseout="this.style.color='#4a5568'"><i class="fa-solid fa-envelope" style="color:var(--gold)"></i>v.p.m@mweb.co.za</a>
+            <div style="display:flex;gap:9px;align-items:flex-start;color:#4a5568;font-size:.92rem"><i class="fa-solid fa-location-dot" style="color:var(--gold);margin-top:2px"></i>PO Box 789, Wellington 7655, South Africa</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="pad">
+  <div class="con">
+    <div class="g2">
+      <div>
+        <span class="tag">Get In Touch</span>
+        <h2 class="h2">Let's Connect &amp; Partner</h2>
+        <p class="sub">Whether you want to donate, volunteer, request prayer or partner your church with VPM — we'd love to hear from you.</p>
+        <div style="display:flex;flex-direction:column;gap:24px;margin-top:40px">
+          <div class="cr"><div class="ci"><i class="fa-solid fa-phone"></i></div><div><h4>Phone</h4><a href="tel:+27725952922">+27 72 595 2922</a></div></div>
+          <div class="cr"><div class="ci"><i class="fa-solid fa-envelope"></i></div><div><h4>Email</h4><a href="mailto:v.p.m@mweb.co.za">v.p.m@mweb.co.za</a></div></div>
+          <div class="cr"><div class="ci"><i class="fa-solid fa-location-dot"></i></div><div><h4>Postal Address</h4><p>PO Box 789, Wellington 7655<br>Republic of South Africa</p></div></div>
+          <div class="cr"><div class="ci"><i class="fa-solid fa-registered"></i></div><div><h4>Registration</h4><p>2004/028180/08</p></div></div>
+        </div>
+        <div style="margin-top:36px;background:var(--gold-pale);border:1px solid rgba(200,146,42,.25);border-radius:var(--r);padding:22px 26px">
+          <p style="font-size:.87rem;color:#7a5c1a;line-height:1.7"><strong style="color:var(--gold)">Want to volunteer?</strong><br>We welcome individuals and teams from all backgrounds. Whether you can cook, preach, give haircuts or simply serve — there is a place for you in VPM's next outreach mission.</p>
+        </div>
+      </div>
+      <div class="cform">
+        <h3>Send Us a Message</h3>
+        <form action="https://formsubmit.co/v.p.m@mweb.co.za" method="POST">
+          <input type="hidden" name="_subject" value="New message from VPM Website">
+          <input type="hidden" name="_captcha" value="false">
+          <div class="fr">
+            <div class="fg"><label for="nm">Your Name *</label><input type="text" id="nm" name="name" placeholder="John Smith" required autocomplete="name"></div>
+            <div class="fg"><label for="em">Email *</label><input type="email" id="em" name="email" placeholder="john@email.com" required autocomplete="email"></div>
+          </div>
+          <div class="fg"><label for="ph">Phone Number</label><input type="tel" id="ph" name="phone" placeholder="+27 xx xxx xxxx" autocomplete="tel"></div>
+          <div class="fg">
+            <label for="sb">I want to...</label>
+            <select id="sb" name="subject">
+              <option value="" disabled selected>Select a reason</option>
+              <option value="donate">Make a donation</option>
+              <option value="volunteer">Volunteer with VPM</option>
+              <option value="partner">Partner my church</option>
+              <option value="prayer">Request prayer</option>
+              <option value="other">Other enquiry</option>
+            </select>
+          </div>
+          <div class="fg"><label for="msg">Your Message *</label><textarea id="msg" name="message" placeholder="How can we help or pray for you?" required></textarea></div>
+          <button type="submit" class="fsub"><i class="fa-solid fa-paper-plane"></i> Send Message — We Will Reply Soon</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ftop">
+    <div class="con">
+      <div class="fgrid">
+        <div>
+          <div class="flogo">
+            <div class="fi2">V</div>
+            <div class="flogo-t"><h3>Victorious Pilgrim Ministries</h3><p>Wellington, South Africa · Est. 2004</p></div>
+          </div>
+          <p class="fdesc">"I shall pass through this world but once. If there is any good deed that I can do, let me do it now — for I shall not pass this way again."</p>
+          <div class="fsoc">
+            <a href="mailto:v.p.m@mweb.co.za" title="Email VPM"><i class="fa-solid fa-envelope"></i></a>
+            <a href="tel:+27725952922" title="Call VPM"><i class="fa-solid fa-phone"></i></a>
+            <a href="#donate" title="Donate"><i class="fa-solid fa-heart"></i></a>
+          </div>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul class="flinks">
+            <li><a href="#about">About VPM</a></li>
+            <li><a href="#ministries">Our Ministries</a></li>
+            <li><a href="#outreach">Outreach Towns</a></li>
+            <li><a href="#projects">2024 Projects</a></li>
+            <li><a href="#impact">Our Impact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Get Involved</h4>
+          <ul class="flinks">
+            <li><a href="#donate">Make a Donation</a></li>
+            <li><a href="#contact">Volunteer</a></li>
+            <li><a href="#contact">Partner a Church</a></li>
+            <li><a href="#contact">Request Prayer</a></li>
+            <li><a href="#contact">Contact Us</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact</h4>
+          <ul class="flinks">
+            <li><a href="tel:+27725952922">+27 72 595 2922</a></li>
+            <li><a href="mailto:v.p.m@mweb.co.za">v.p.m@mweb.co.za</a></li>
+            <li style="color:rgba(255,255,255,.5);font-size:.85rem">PO Box 789, Wellington 7655</li>
+            <li style="color:rgba(255,255,255,.5);font-size:.85rem">Republic of South Africa</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="con">
+    <div class="fbot">
+      <p>© 2025 Victorious Pilgrim Ministries · Reg. 2004/028180/08 · Wellington, Western Cape, South Africa</p>
+      <p style="color:rgba(255,255,255,.3)">Built to Glorify God · One Page · One Mission</p>
+    </div>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<a href="#hero" id="btt" title="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
+
+<script>
+  // Mobile nav toggle
+  const hbg=document.getElementById('hbg'),nl=document.getElementById('nl');
+  hbg.addEventListener('click',()=>{
+    const o=nl.classList.toggle('open');
+    hbg.setAttribute('aria-expanded',o);
+    const s=hbg.querySelectorAll('span');
+    s[0].style.transform=o?'rotate(45deg) translate(5px,5px)':'';
+    s[1].style.opacity=o?'0':'1';
+    s[2].style.transform=o?'rotate(-45deg) translate(5px,-5px)':'';
+  });
+  nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
+    nl.classList.remove('open');
+    hbg.setAttribute('aria-expanded','false');
+    hbg.querySelectorAll('span').forEach(s=>{s.style.transform='';s.style.opacity='';});
+  }));
+
+  // Navbar shadow on scroll
+  const nav=document.getElementById('nav');
+  window.addEventListener('scroll',()=>{nav.style.boxShadow=scrollY>60?'0 4px 28px rgba(15,35,82,.13)':''});
+
+  // Back to top
+  const btt=document.getElementById('btt');
+  window.addEventListener('scroll',()=>{
+    if(scrollY>400){btt.style.opacity='1';btt.style.transform='translateY(0)'}
+    else{btt.style.opacity='0';btt.style.transform='translateY(18px)'}
+  });
+
+  // Scroll-in animations
+  const obs=new IntersectionObserver(es=>{
+    es.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';obs.unobserve(e.target)}})
+  },{threshold:.08});
+  document.querySelectorAll('.sc,.fc,.mc,.pc,.tc-card,.cr').forEach(el=>{
+    el.style.opacity='0';el.style.transform='translateY(22px)';el.style.transition='opacity .6s ease, transform .6s ease';obs.observe(el);
+  });
+
+  // Counter animation
+  function countUp(el,target,sfx){
+    let s=0,dur=2200;
+    const step=ts=>{
+      if(!s)s=ts;
+      const p=Math.min((ts-s)/dur,1),ease=1-Math.pow(1-p,3);
+      el.textContent=Math.floor(ease*target).toLocaleString()+sfx;
+      if(p<1)requestAnimationFrame(step);
+    };requestAnimationFrame(step);
+  }
+  const cobs=new IntersectionObserver(es=>{
+    es.forEach(e=>{
+      if(e.isIntersecting){
+        e.target.querySelectorAll('.sn').forEach(n=>{
+          const t=parseInt(n.dataset.target);
+          const sfx=n.textContent.includes('+')?'+':'';
+          if(!isNaN(t))countUp(n,t,sfx);
+        });
+        cobs.unobserve(e.target);
+      }
+    });
+  },{threshold:.2});
+  const sg=document.getElementById('statGrid');
+  if(sg)cobs.observe(sg);
+</script>
 </body>
 </html>
-
