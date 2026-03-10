@@ -264,6 +264,56 @@
       .ht{font-size:2.3rem}
       .hbtns .btn{padding:12px 22px;font-size:.88rem}
     }
+/* Container for the 3 squares */
+.p-gallery {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Square thumbnail styling */
+.p-img-wrap {
+  flex: 1;
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+
+.p-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Keeps them as perfect squares */
+  transition: transform 0.3s ease;
+  border-radius: 4px;
+}
+
+/* Hide the checkbox */
+.p-img-wrap input {
+  display: none;
+}
+
+/* The "Enlarge" Effect when clicked */
+.p-img-wrap input:checked + img {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1.5);
+  width: 90vw;
+  height: auto;
+  aspect-ratio: auto;
+  z-index: 1000;
+  box-shadow: 0 0 100px rgba(0,0,0,0.8);
+}
+
+/* Darken background when an image is enlarged */
+.p-img-wrap input:checked::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 999;
+}
   </style>
 </head>
 <body>
@@ -296,7 +346,7 @@
       <li><a href="#impact">Impact</a></li>
       <li><a href="#donate">Donate</a></li>
       <li><a href="#contact">Contact</a></li>
-      <li><a href="#donate" class="nav-cta">Give Now</a></li>
+      
     </ul>
     <button class="hbg" id="hbg" aria-label="Menu" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -466,18 +516,61 @@
         <h4>Robertson &amp; Montagu</h4>
         <p>Youth Week of Prayer, Sabbath School leadership, preaching and community health talk. The team served 500+ people with love and the Word.</p>
         <div class="ptags"><span class="ptag">1,260 Books</span><span class="ptag">14 Bibles</span><span class="ptag">500+ Served</span></div>
-      </div>
+<div class="p-gallery">
+  <label class="p-img-wrap">
+    <input type="checkbox">
+    <img src="Robertson1.jpg" alt="Outreach 1">
+  </label>
+  <label class="p-img-wrap">
+    <input type="checkbox">
+    <img src="Robertson2.jpg" alt="Outreach 2">
+  </label>
+  <label class="p-img-wrap">
+    <input type="checkbox">
+    <img src="Robertson3.jpg" alt="Outreach 3">
+  </label>
+</div>
+      
+</div>
       <div class="pc">
         <div class="pd">June 2024</div>
         <h4>Follow-Up Montagu</h4>
         <p>Sabbath School leadership, preaching by Pastor Ashwin Beaton, 600 books donated and rich community fellowship with local believers.</p>
         <div class="ptags"><span class="ptag">600 Books</span><span class="ptag">Fellowship</span><span class="ptag">Follow-up</span></div>
-      </div>
+<div class="p-gallery">
+  <label class="p-img-wrap">
+    <input type="checkbox">
+    <img src="Montagu1.jpg" alt="Outreach 1">
+  </label>
+  <label class="p-img-wrap">
+    <input type="checkbox">
+    <img src="Montagu2.jpg" alt="Outreach 2">
+  </label>
+  <label class="p-img-wrap">
+    <input type="checkbox">
+    <img src="Montagu3.jpg" alt="Outreach 3">
+  </label>
+</div>     
+ </div>
       <div class="pc">
         <div class="pd">September 2024</div>
         <h4>Riviersonderend</h4>
         <p>Sabbath fellowship, health demonstrations and Sunday public outreach in the community hall — 500 people served with food and the Gospel.</p>
         <div class="ptags"><span class="ptag">1,600 Books</span><span class="ptag">10 Bibles</span><span class="ptag">500 Served</span></div>
+<div class="p-gallery">
+  <label class="p-img-wrap">
+    <input type="checkbox">
+    <img src="Riviersonderend1.jpeg" alt="Outreach 1">
+  </label>
+  <label class="p-img-wrap">
+    <input type="checkbox">
+    <img src="Riviersonderend2.jpeg" alt="Outreach 2">
+  </label>
+  <label class="p-img-wrap">
+    <input type="checkbox">
+    <img src="Riviersonderend3.jpeg" alt="Outreach 3">
+  </label>
+</div>
       </div>
       <div class="pc">
         <div class="pd">November 2024</div>
@@ -571,7 +664,7 @@
           <div style="display:flex;flex-direction:column;gap:12px">
             <a href="tel:+27725952922" style="display:flex;gap:9px;align-items:center;color:#4a5568;font-size:.92rem;transition:var(--trans)" onmouseover="this.style.color='#c8922a'" onmouseout="this.style.color='#4a5568'"><i class="fa-solid fa-phone" style="color:var(--gold)"></i>+27 72 595 2922</a>
             <a href="mailto:v.p.m@mweb.co.za" style="display:flex;gap:9px;align-items:center;color:#4a5568;font-size:.92rem;transition:var(--trans)" onmouseover="this.style.color='#c8922a'" onmouseout="this.style.color='#4a5568'"><i class="fa-solid fa-envelope" style="color:var(--gold)"></i>v.p.m@mweb.co.za</a>
-            <div style="display:flex;gap:9px;align-items:flex-start;color:#4a5568;font-size:.92rem"><i class="fa-solid fa-location-dot" style="color:var(--gold);margin-top:2px"></i>PO Box 789, Wellington 7655, South Africa</div>
+            <div style="display:flex;gap:9px;align-items:flex-start;color:#4a5568;font-size:.92rem"><i class="fa-solid fa-location-dot" style="color:var(--gold);margin-top:2px"></i>7 Buitekant street, newton, Wellington 7655</div>
           </div>
         </div>
       </div>
@@ -590,7 +683,7 @@
         <div style="display:flex;flex-direction:column;gap:24px;margin-top:40px">
           <div class="cr"><div class="ci"><i class="fa-solid fa-phone"></i></div><div><h4>Phone</h4><a href="tel:+27725952922">+27 72 595 2922</a></div></div>
           <div class="cr"><div class="ci"><i class="fa-solid fa-envelope"></i></div><div><h4>Email</h4><a href="mailto:v.p.m@mweb.co.za">v.p.m@mweb.co.za</a></div></div>
-          <div class="cr"><div class="ci"><i class="fa-solid fa-location-dot"></i></div><div><h4>Postal Address</h4><p>PO Box 789, Wellington 7655<br>Republic of South Africa</p></div></div>
+          <div class="cr"><div class="ci"><i class="fa-solid fa-location-dot"></i></div><div><h4>Postal Address</h4><p>7 Buitekant street, newton, Wellington 7655<br>Republic of South Africa</p></div></div>
           <div class="cr"><div class="ci"><i class="fa-solid fa-registered"></i></div><div><h4>Registration</h4><p>2004/028180/08</p></div></div>
         </div>
         <div style="margin-top:36px;background:var(--gold-pale);border:1px solid rgba(200,146,42,.25);border-radius:var(--r);padding:22px 26px">
@@ -668,7 +761,7 @@
           <ul class="flinks">
             <li><a href="tel:+27725952922">+27 72 595 2922</a></li>
             <li><a href="mailto:v.p.m@mweb.co.za">v.p.m@mweb.co.za</a></li>
-            <li style="color:rgba(255,255,255,.5);font-size:.85rem">PO Box 789, Wellington 7655</li>
+            <li style="color:rgba(255,255,255,.5);font-size:.85rem">7 Buitekant street, newton, Wellington 7655</li>
             <li style="color:rgba(255,255,255,.5);font-size:.85rem">Republic of South Africa</li>
           </ul>
         </div>
