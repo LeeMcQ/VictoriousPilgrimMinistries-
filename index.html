@@ -1,859 +1,1955 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-ZA">
 <head>
+  <!-- ═══════════════════════════════════════════════
+       CHARSET & VIEWPORT — must be first two tags
+  ═══════════════════════════════════════════════ -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Victorious Pilgrim Ministries | Gospel & Welfare in South Africa Since 2004</title>
+
+  <!-- ═══════════════════════════════════════════════
+       SECURITY — Content Security Policy
+  ═══════════════════════════════════════════════ -->
+  <meta http-equiv="Content-Security-Policy" content="
+    default-src 'self';
+    script-src 'self' 'unsafe-inline';
+    style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com;
+    font-src https://fonts.gstatic.com https://cdnjs.cloudflare.com;
+    img-src 'self' data:;
+    form-action https://formsubmit.co;
+    connect-src 'self';
+    frame-ancestors 'none'
+  ">
+  <meta http-equiv="X-Content-Type-Options" content="nosniff">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+
+  <!-- ═══════════════════════════════════════════════
+       PRIMARY SEO META
+  ═══════════════════════════════════════════════ -->
+  <title>Victorious Pilgrim Ministries | Gospel &amp; Welfare in South Africa Since 2004</title>
   <meta name="description" content="Victorious Pilgrim Ministries (VPM) — Wellington, Western Cape nonprofit serving communities with Bible distribution, food parcels, clothing and health outreach since 2004.">
   <meta name="keywords" content="Victorious Pilgrim Ministries, VPM, Wellington South Africa, Christian ministry, SDA outreach, food parcels, Bible distribution, Western Cape charity">
+  <meta name="author" content="Victorious Pilgrim Ministries">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://leemcq.github.io/VictoriousPilgrimMinistries-/">
+
+  <!-- ═══════════════════════════════════════════════
+       OPEN GRAPH — Facebook, WhatsApp, LinkedIn
+  ═══════════════════════════════════════════════ -->
   <meta property="og:title" content="Victorious Pilgrim Ministries | 20 Years Serving South Africa">
-  <meta property="og:description" content="Gospel, food, clothing and hope across the Western Cape. Partner with VPM today.">
+  <meta property="og:description" content="Gospel, food, clothing and hope across the Western Cape since 2004. Partner with VPM — donate, volunteer or request prayer today.">
   <meta property="og:type" content="website">
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"NGO","name":"Victorious Pilgrim Ministries","foundingDate":"2004","telephone":"+27725952922","email":"v.p.m@mweb.co.za","address":{"@type":"PostalAddress","postalCode":"7655","addressLocality":"Wellington","addressRegion":"Western Cape","addressCountry":"ZA"}}</script>
+  <meta property="og:url" content="https://leemcq.github.io/VictoriousPilgrimMinistries-/">
+  <meta property="og:image" content="https://leemcq.github.io/VictoriousPilgrimMinistries-/love.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="VPM volunteers serving communities in the Western Cape">
+  <meta property="og:locale" content="en_ZA">
+  <meta property="og:site_name" content="Victorious Pilgrim Ministries">
+
+  <!-- ═══════════════════════════════════════════════
+       TWITTER / X CARD
+  ═══════════════════════════════════════════════ -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Victorious Pilgrim Ministries | 20 Years Serving South Africa">
+  <meta name="twitter:description" content="Gospel, food, clothing and hope across the Western Cape since 2004. Partner with VPM today.">
+  <meta name="twitter:image" content="https://leemcq.github.io/VictoriousPilgrimMinistries-/love.jpg">
+  <meta name="twitter:image:alt" content="VPM volunteers serving communities in the Western Cape">
+
+  <!-- ═══════════════════════════════════════════════
+       ANDROID / PWA
+  ═══════════════════════════════════════════════ -->
+  <meta name="theme-color" content="#0f2352">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="VPM">
+  <!-- Inline PWA manifest as data URI (single-file constraint) -->
+  <link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22Victorious%20Pilgrim%20Ministries%22%2C%22short_name%22%3A%22VPM%22%2C%22start_url%22%3A%22.%2F%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23ffffff%22%2C%22theme_color%22%3A%22%230f2352%22%2C%22description%22%3A%22Gospel%20and%20welfare%20ministry%20serving%20South%20Africa%20since%202004%22%7D">
+
+  <!-- ═══════════════════════════════════════════════
+       PERFORMANCE — Preconnect & Preload
+  ═══════════════════════════════════════════════ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <!-- Preload LCP hero image -->
+  <link rel="preload" as="image" href="love.jpg" fetchpriority="high">
+
+  <!-- ═══════════════════════════════════════════════
+       FONTS & ICONS
+  ═══════════════════════════════════════════════ -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,800;1,700&family=Inter:wght@300;400;500;600;700&display=swap">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous">
+
+  <!-- ═══════════════════════════════════════════════
+       STRUCTURED DATA — Schema.org NGO
+  ═══════════════════════════════════════════════ -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NGO",
+    "name": "Victorious Pilgrim Ministries",
+    "alternateName": "VPM",
+    "url": "https://leemcq.github.io/VictoriousPilgrimMinistries-/",
+    "logo": "https://leemcq.github.io/VictoriousPilgrimMinistries-/4.jpeg",
+    "foundingDate": "2004",
+    "description": "Wellington Western Cape nonprofit distributing Bibles, food parcels, clothing and health outreach across 23 South African towns since 2004.",
+    "telephone": "+27725952922",
+    "email": "v.p.m@mweb.co.za",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "7 Buitekant Street, Newton",
+      "postalCode": "7655",
+      "addressLocality": "Wellington",
+      "addressRegion": "Western Cape",
+      "addressCountry": "ZA"
+    },
+    "areaServed": "South Africa",
+    "nonprofitStatus": "Nonprofit501c3",
+    "sameAs": []
+  }
+  </script>
+
   <style>
-    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-    html{scroll-behavior:smooth}
-    body{font-family:'Inter',sans-serif;color:#1a1a2e;background:#fff;overflow-x:hidden}
-    img{max-width:100%;display:block}
-    a{text-decoration:none;color:inherit}
-    :root{
-      --navy:#0f2352;--navy-dark:#081840;--navy-mid:#1a3a6e;
-      --gold:#c8922a;--gold-light:#f0b429;--gold-pale:#fef3e2;
-      --gray-light:#f7f8fc;--gray:#6b7280;
-      --font-serif:'Playfair Display',Georgia,serif;
-      --r:16px;--rlg:28px;
-      --shadow:0 4px 32px rgba(15,35,82,.10);
-      --shadow-lg:0 16px 64px rgba(15,35,82,.18);
-      --trans:all .3s cubic-bezier(.4,0,.2,1)
+    /* ═══════════════════════════════════════════════
+       RESET & BASE
+    ═══════════════════════════════════════════════ */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      font-size: 16px;
+      color: #1a1a2e;
+      background: #fff;
+      overflow-x: hidden;
     }
-    .pad{padding:96px 0}.con{max-width:1200px;margin:0 auto;padding:0 24px}
-    .tag{display:inline-block;font-size:.7rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);border:1.5px solid var(--gold);border-radius:50px;padding:5px 16px;margin-bottom:16px}
-    .h2{font-family:var(--font-serif);font-size:clamp(1.9rem,3.8vw,3rem);color:var(--navy-dark);line-height:1.2}
-    .sub{font-size:1.05rem;color:var(--gray);line-height:1.75;margin-top:14px}
-    .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 30px;border-radius:50px;font-size:.93rem;font-weight:600;cursor:pointer;transition:var(--trans);border:none;font-family:'Inter',sans-serif}
-    .btn-gold{background:var(--gold);color:#fff;box-shadow:0 4px 20px rgba(200,146,42,.4)}
-    .btn-gold:hover{background:#a87420;transform:translateY(-2px);box-shadow:0 8px 30px rgba(200,146,42,.5)}
-    .btn-ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.65)}
-    .btn-ghost:hover{background:rgba(255,255,255,.12);border-color:#fff}
-    .g2{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-    .g3{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-    .g4{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
-    .tc{text-align:center}
+    img { max-width: 100%; display: block; }
+    a { text-decoration: none; color: inherit; }
 
-    /* NAV */
-    #nav{position:fixed;top:0;left:0;width:100%;z-index:1000;background:rgba(255,255,255,.97);backdrop-filter:blur(12px);border-bottom:1px solid rgba(15,35,82,.08);transition:var(--trans)}
-    .ni{display:flex;align-items:center;justify-content:space-between;padding:14px 24px;max-width:1200px;margin:0 auto}
-    .logo{display:flex;align-items:center;gap:13px}
-    .logo-i{width:50px;height:50px;background:linear-gradient(135deg,var(--navy),var(--navy-mid));border-radius:13px;display:flex;align-items:center;justify-content:center;color:#fff;font-family:var(--font-serif);font-size:1.55rem;font-weight:700;flex-shrink:0}
-    .logo-t h1{font-family:var(--font-serif);font-size:1.1rem;color:var(--navy-dark);line-height:1.2}
-    .logo-t p{font-size:.67rem;color:var(--gold);font-weight:600;letter-spacing:.05em;margin-top:1px}
-    .nl{display:flex;align-items:center;gap:28px;list-style:none}
-    .nl a{font-size:.86rem;font-weight:500;color:#444;transition:var(--trans);position:relative;padding-bottom:3px}
-    .nl a::after{content:'';position:absolute;bottom:0;left:0;width:0;height:2px;background:var(--gold);border-radius:2px;transition:var(--trans)}
-    .nl a:hover{color:var(--navy-dark)}.nl a:hover::after{width:100%}
-    .nav-cta{background:var(--navy)!important;color:#fff!important;padding:10px 22px;border-radius:50px;font-weight:600!important}
-    .nav-cta:hover{background:var(--gold)!important}.nav-cta::after{display:none!important}
-    .hbg{display:none;flex-direction:column;gap:5px;cursor:pointer;padding:6px;background:none;border:none}
-    .hbg span{display:block;width:24px;height:2px;background:var(--navy-dark);border-radius:2px;transition:var(--trans)}
+    /* Touch & tap optimisations for Android Chrome */
+    a, button, input, select, textarea { touch-action: manipulation; }
+    a, button { -webkit-tap-highlight-color: transparent; }
 
-    /* ANNOUNCE */
-    .abar{background:var(--navy);color:rgba(255,255,255,.85);text-align:center;padding:10px 20px;font-size:.8rem;letter-spacing:.02em}
-    .abar strong{color:var(--gold-light)}
-
-    /* HERO */
-    #hero{min-height:100vh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
-    .hbg-img{position:absolute;inset:0;background:url('3.jpeg') center/contain no-repeat}
-    .hov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(8,24,64,.9) 0%,rgba(15,35,82,.78) 55%,rgba(200,146,42,.18) 100%)}
-    .hc{position:relative;z-index:2;text-align:center;color:#fff;padding:120px 24px 80px;max-width:880px;margin:0 auto}
-    .hbadge{display:inline-flex;align-items:center;gap:8px;background:rgba(200,146,42,.18);border:1px solid rgba(200,146,42,.45);color:var(--gold-light);padding:7px 20px;border-radius:50px;font-size:.78rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;margin-bottom:26px}
-    .ht{font-family:var(--font-serif);font-size:clamp(2.8rem,7vw,5.4rem);line-height:1.08;margin-bottom:22px}
-    .ht em{font-style:italic;color:var(--gold-light);display:block}
-    .hsub{font-size:clamp(.95rem,1.8vw,1.18rem);color:rgba(255,255,255,.82);line-height:1.75;max-width:620px;margin:0 auto 14px}
-    .hverse{font-style:italic;color:rgba(255,255,255,.55);font-size:.88rem;margin-bottom:40px}
-    .hbtns{display:flex;flex-wrap:wrap;gap:14px;justify-content:center;margin-bottom:64px}
-    .hstats{display:flex;flex-wrap:wrap;justify-content:center;border-top:1px solid rgba(255,255,255,.13);padding-top:44px;gap:0}
-    .hst{flex:1;min-width:130px;padding:0 20px;border-right:1px solid rgba(255,255,255,.13)}
-    .hst:last-child{border-right:none}
-    .hst-n{font-family:var(--font-serif);font-size:2rem;color:var(--gold-light);font-weight:700}
-    .hst-l{font-size:.75rem;color:rgba(255,255,255,.65);margin-top:4px;letter-spacing:.05em}
-    .scroll-d{position:absolute;bottom:28px;left:50%;transform:translateX(-50%);z-index:2;color:rgba(255,255,255,.45);animation:bob 2s infinite}
-    @keyframes bob{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(9px)}}
-
-    /* ABOUT */
-    #about{background:#fff}
-    .aiwrap{position:relative}
-    .aiwrap img{border-radius:var(--rlg);width:100%;height:500px;object-fit:cover;box-shadow:var(--shadow-lg)}
-    .abadge{position:absolute;bottom:-18px;right:-16px;background:var(--gold);color:#fff;border-radius:var(--r);padding:18px 26px;text-align:center;box-shadow:0 8px 28px rgba(200,146,42,.4)}
-    .abadge .n{font-family:var(--font-serif);font-size:2.6rem;font-weight:700;line-height:1}
-    .abadge .l{font-size:.75rem;opacity:.9;margin-top:3px}
-    .atxt p{color:#4a5568;line-height:1.82;font-size:1rem;margin-bottom:18px}
-    .qb{background:var(--gray-light);border-left:4px solid var(--gold);border-radius:0 var(--r) var(--r) 0;padding:22px 26px;margin:24px 0}
-    .qb p{font-style:italic;color:var(--navy-mid);font-size:1rem;line-height:1.7}
-    .qb cite{display:block;margin-top:9px;font-size:.82rem;font-weight:700;color:var(--gold);font-style:normal}
-    .chips{display:flex;flex-wrap:wrap;gap:9px;margin-top:26px}
-    .chip{display:inline-flex;align-items:center;gap:6px;background:var(--gray-light);color:var(--navy-mid);font-size:.8rem;font-weight:500;padding:7px 15px;border-radius:50px}
-    .chip i{color:var(--gold)}
-
-    /* MISSION STRIP */
-    .mstrip{background:linear-gradient(135deg,var(--navy-dark),var(--navy-mid));padding:64px 0}
-    .mstrip .con{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
-    .mi{text-align:center;padding:20px 22px;border-right:1px solid rgba(255,255,255,.1);color:#fff}
-    .mi:last-child{border-right:none}
-    .mi i{font-size:2.1rem;color:var(--gold-light);margin-bottom:12px}
-    .mi h4{font-family:var(--font-serif);font-size:1.1rem;margin-bottom:7px}
-    .mi p{font-size:.83rem;color:rgba(255,255,255,.68);line-height:1.6}
-
-    /* MINISTRIES */
-    #ministries{background:var(--gray-light)}
-    .mc{background:#fff;border-radius:var(--rlg);overflow:hidden;box-shadow:var(--shadow);transition:var(--trans)}
-    .mc:hover{transform:translateY(-6px);box-shadow:var(--shadow-lg)}
-    .mc img{height:250px;object-fit:cover;width:100%}
-    .mcb{padding:34px}
-    .mc-icon{width:52px;height:52px;border-radius:13px;display:flex;align-items:center;justify-content:center;font-size:1.4rem;margin-bottom:18px}
-    .ic-b{background:#e8f0fe;color:var(--navy)}.ic-g{background:var(--gold-pale);color:var(--gold)}
-    .mcb h3{font-family:var(--font-serif);font-size:1.55rem;color:var(--navy-dark);margin-bottom:18px}
-    .ml{list-style:none;display:flex;flex-direction:column;gap:11px}
-    .ml li{display:flex;align-items:flex-start;gap:11px;font-size:.93rem;color:#4a5568;line-height:1.5}
-    .ml li i{color:var(--gold);margin-top:2px;flex-shrink:0}
-
-    /* OUTREACH */
-    #outreach{background:#fff}
-    .tpills{display:flex;flex-wrap:wrap;gap:10px;margin-top:36px}
-    .pill{background:var(--navy);color:#fff;padding:9px 18px;border-radius:50px;font-size:.83rem;font-weight:500;display:flex;align-items:center;gap:6px;transition:var(--trans);cursor:default}
-    .pill:hover{background:var(--gold);transform:scale(1.04)}
-    .pill i{font-size:.72rem;color:var(--gold-light)}
-    .pill:hover i{color:#fff}
-    .oimg{border-radius:var(--rlg);width:100%;height:430px;object-fit:cover;box-shadow:var(--shadow-lg)}
-
-    /* PROJECTS */
-    #projects{background:var(--navy-dark)}
-    #projects .h2{color:#fff}
-    #projects .sub{color:rgba(255,255,255,.6)}
-    .pc{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.11);border-radius:var(--rlg);padding:34px;transition:var(--trans);position:relative;overflow:hidden}
-    .pc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--gold),var(--gold-light));transform:scaleX(0);transform-origin:left;transition:var(--trans)}
-    .pc:hover{background:rgba(255,255,255,.12);transform:translateY(-4px)}.pc:hover::before{transform:scaleX(1)}
-    .pd{font-size:.7rem;font-weight:700;letter-spacing:.15em;color:var(--gold-light);text-transform:uppercase;margin-bottom:10px}
-    .pc h4{font-family:var(--font-serif);font-size:1.35rem;color:#fff;margin-bottom:14px}
-    .pc p{font-size:.88rem;color:rgba(255,255,255,.68);line-height:1.72}
-    .ptags{margin-top:18px;display:flex;flex-wrap:wrap;gap:7px}
-    .ptag{background:rgba(200,146,42,.2);border:1px solid rgba(200,146,42,.3);color:var(--gold-light);font-size:.76rem;font-weight:600;padding:4px 11px;border-radius:50px}
-
-    /* IMPACT */
-    #impact{background:#fff}
-    .sc{background:var(--gray-light);border-radius:var(--rlg);padding:42px 26px;text-align:center;transition:var(--trans)}
-    .sc:hover{background:var(--navy-dark)}
-    .sc:hover .sn,.sc:hover .sl{color:#fff}
-    .sc:hover .sd{color:rgba(255,255,255,.55)}
-    .sn{font-family:var(--font-serif);font-size:3.2rem;font-weight:700;color:var(--navy-dark);line-height:1;transition:var(--trans)}
-    .sc:hover .sn{color:var(--gold-light)}
-    .sl{font-size:.95rem;font-weight:600;color:var(--navy-mid);margin-top:9px;transition:var(--trans)}
-    .sd{font-size:.8rem;color:var(--gray);margin-top:7px;transition:var(--trans)}
-    .fc{display:flex;gap:18px;padding:28px;background:var(--gray-light);border-radius:var(--rlg);align-items:flex-start;transition:var(--trans)}
-    .fc:hover{background:var(--navy-dark)}
-    .fc:hover h4,.fc:hover p{color:rgba(255,255,255,.9)}
-    .fi{width:50px;height:50px;background:var(--navy);border-radius:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:var(--trans)}
-    .fi i{font-size:1.2rem;color:var(--gold-light)}
-    .fc:hover .fi{background:var(--gold)}
-    .fc h4{font-family:var(--font-serif);font-size:1.1rem;color:var(--navy-dark);margin-bottom:7px;transition:var(--trans)}
-    .fc p{font-size:.88rem;color:var(--gray);line-height:1.62;transition:var(--trans)}
-
-    /* TESTIMONIALS */
-    #test{background:linear-gradient(135deg,var(--navy-dark),var(--navy-mid));padding:96px 0}
-    .tc-card{background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.12);border-radius:var(--rlg);padding:42px;position:relative}
-    .tq{font-family:var(--font-serif);font-size:5rem;color:var(--gold);position:absolute;top:8px;left:26px;line-height:1;opacity:.45}
-    .tt{font-size:1rem;color:rgba(255,255,255,.88);line-height:1.82;font-style:italic;margin-top:18px}
-    .ta{margin-top:22px;display:flex;align-items:center;gap:13px}
-    .tav{width:46px;height:46px;border-radius:50%;background:var(--gold);display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.15rem;color:#fff;font-weight:700;flex-shrink:0}
-    .tai h5{color:#fff;font-size:.93rem;font-weight:600}.tai p{color:rgba(255,255,255,.5);font-size:.8rem}
-
-    /* DONATE */
-    #donate{background:var(--gray-light)}
-    .dcard{background:#fff;border-radius:var(--rlg);padding:54px;box-shadow:var(--shadow-lg)}
-    .dcard h2{font-family:var(--font-serif);font-size:1.9rem;color:var(--navy-dark);margin-bottom:6px}
-    .dcard .dsub{color:var(--gray);margin-bottom:36px;font-size:.93rem}
-    .btbl{width:100%;border-collapse:collapse}
-    .btbl tr{border-bottom:1px solid #f0f0f0}
-    .btbl td{padding:13px 0;vertical-align:top}
-    .btbl td:first-child{font-size:.73rem;font-weight:700;color:var(--gray);text-transform:uppercase;letter-spacing:.08em;width:42%}
-    .btbl td:last-child{font-weight:600;color:var(--navy-dark)}
-    .bacct{font-size:1.4rem!important;color:var(--navy)!important;font-family:var(--font-serif)!important}
-    .durg{background:var(--gold-pale);border:1px solid rgba(200,146,42,.28);border-radius:var(--r);padding:18px 22px;margin-top:30px;font-size:.88rem;color:#7a5c1a;line-height:1.65}
-    .durg strong{color:var(--gold)}
-    .dcta{background:var(--navy-dark);border-radius:var(--rlg);padding:46px;text-align:center;color:#fff}
-    .dcta h3{font-family:var(--font-serif);font-size:1.75rem;margin-bottom:10px}
-    .dcta p{color:rgba(255,255,255,.68);margin-bottom:26px;font-size:.92rem}
-    .gitem{display:flex;gap:11px;align-items:center;background:rgba(255,255,255,.08);border-radius:12px;padding:13px 16px;margin-bottom:12px}
-    .gitem i{color:var(--gold-light);font-size:1.1rem;flex-shrink:0}
-    .gitem span{font-size:.88rem;color:rgba(255,255,255,.8)}
-    .gitem strong{color:#fff}
-
-    /* CONTACT */
-    #contact{background:#fff}
-    .cr{display:flex;gap:16px;align-items:flex-start}
-    .cr .ci{width:46px;height:46px;background:var(--navy-dark);border-radius:11px;display:flex;align-items:center;justify-content:center;flex-shrink:0}
-    .cr .ci i{color:var(--gold-light);font-size:1rem}
-    .cr h4{font-weight:600;color:var(--navy-dark);font-size:.88rem;margin-bottom:4px}
-    .cr a,.cr p{color:var(--gray);font-size:.93rem;transition:var(--trans)}
-    .cr a:hover{color:var(--gold)}
-    .cform{background:var(--navy-dark);border-radius:var(--rlg);padding:46px}
-    .cform h3{font-family:var(--font-serif);font-size:1.55rem;color:#fff;margin-bottom:26px}
-    .fg{margin-bottom:18px}
-    .fr{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px}
-    label{display:block;font-size:.76rem;font-weight:600;color:rgba(255,255,255,.55);text-transform:uppercase;letter-spacing:.08em;margin-bottom:7px}
-    input,textarea,select{width:100%;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);color:#fff;border-radius:var(--r);padding:13px 16px;font-size:.93rem;font-family:'Inter',sans-serif;transition:var(--trans);outline:none}
-    input::placeholder,textarea::placeholder{color:rgba(255,255,255,.3)}
-    select option{background:var(--navy-dark);color:#fff}
-    input:focus,textarea:focus,select:focus{border-color:var(--gold);background:rgba(255,255,255,.12)}
-    textarea{resize:vertical;min-height:130px}
-    .fsub{width:100%;background:var(--gold);color:#fff;border:none;padding:16px;border-radius:50px;font-size:.97rem;font-weight:700;cursor:pointer;transition:var(--trans);font-family:'Inter',sans-serif;display:flex;align-items:center;justify-content:center;gap:8px}
-    .fsub:hover{background:#a87420;transform:translateY(-2px)}
-
-    /* FOOTER */
-    footer{background:var(--navy-dark);color:rgba(255,255,255,.72)}
-    .ftop{padding:76px 0 46px}
-    .fgrid{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:44px}
-    .flogo{display:flex;align-items:center;gap:11px;margin-bottom:18px}
-    .flogo .fi2{width:46px;height:46px;background:rgba(255,255,255,.1);border-radius:11px;display:flex;align-items:center;justify-content:center;font-family:var(--font-serif);font-size:1.4rem;color:#fff;font-weight:700}
-    .flogo-t h3{font-family:var(--font-serif);font-size:.97rem;color:#fff}
-    .flogo-t p{font-size:.68rem;color:var(--gold-light)}
-    .fdesc{font-size:.85rem;line-height:1.72;margin-bottom:22px}
-    .fsoc{display:flex;gap:9px}
-    .fsoc a{width:36px;height:36px;background:rgba(255,255,255,.08);border-radius:9px;display:flex;align-items:center;justify-content:center;color:rgba(255,255,255,.55);font-size:.88rem;transition:var(--trans)}
-    .fsoc a:hover{background:var(--gold);color:#fff;transform:translateY(-3px)}
-    footer h4{font-family:var(--font-serif);font-size:.97rem;color:#fff;margin-bottom:18px}
-    .flinks{list-style:none;display:flex;flex-direction:column;gap:9px}
-    .flinks a{font-size:.85rem;transition:var(--trans)}
-    .flinks a:hover{color:var(--gold-light);padding-left:4px}
-    .fbot{border-top:1px solid rgba(255,255,255,.08);padding:26px 0;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;font-size:.78rem}
-
-    /* BACK TO TOP */
-    #btt{position:fixed;bottom:26px;right:26px;width:46px;height:46px;background:var(--gold);color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.05rem;box-shadow:0 4px 20px rgba(200,146,42,.5);opacity:0;transition:var(--trans);z-index:999;transform:translateY(18px)}
-
-    /* RESPONSIVE */
-    @media(max-width:1024px){
-      .g4{grid-template-columns:repeat(2,1fr)}
-      .fgrid{grid-template-columns:1fr 1fr}
-      .mstrip .con{grid-template-columns:repeat(2,1fr)}
-      .mi{border-right:none;border-bottom:1px solid rgba(255,255,255,.1)}
+    /* ═══════════════════════════════════════════════
+       DESIGN TOKENS
+    ═══════════════════════════════════════════════ */
+    :root {
+      --navy: #0f2352;
+      --navy-dark: #081840;
+      --navy-mid: #1a3a6e;
+      --gold: #c8922a;
+      --gold-light: #f0b429;
+      --gold-pale: #fef3e2;
+      --gray-light: #f7f8fc;
+      --gray: #6b7280;
+      --font-serif: 'Playfair Display', Georgia, 'Times New Roman', serif;
+      --r: 16px;
+      --rlg: 28px;
+      --shadow: 0 4px 32px rgba(15,35,82,.10);
+      --shadow-lg: 0 16px 64px rgba(15,35,82,.18);
+      --trans: all .3s cubic-bezier(.4,0,.2,1);
     }
-    @media(max-width:768px){
-      .pad{padding:70px 0}
-      .g2,.g3,.g4{grid-template-columns:1fr}
-      .fgrid{grid-template-columns:1fr}
-      .mstrip .con{grid-template-columns:1fr 1fr}
-      .abadge{right:0;bottom:-12px}
-      .atxt{padding-left:0!important}
-      .nl{display:none;position:absolute;top:100%;left:0;right:0;background:#fff;flex-direction:column;gap:0;padding:12px 0;box-shadow:0 8px 32px rgba(0,0,0,.1)}
-      .nl.open{display:flex}
-      .nl a{padding:13px 22px;font-size:.93rem}
-      .nl a::after{display:none}
-      .hbg{display:flex}
-      .hstats{gap:12px}
-      .hst{border-right:none;border-bottom:1px solid rgba(255,255,255,.12);padding:13px 10px;min-width:120px}
-      .hst:last-child{border-bottom:none}
-      .fr{grid-template-columns:1fr}
-      .dcard{padding:34px 26px}
-      .cform{padding:30px 22px}
-      .dcta{padding:36px 22px}
+
+    /* ═══════════════════════════════════════════════
+       ACCESSIBILITY — Skip link & Focus
+    ═══════════════════════════════════════════════ */
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 16px;
+      background: var(--gold);
+      color: #fff;
+      padding: 12px 24px;
+      border-radius: 0 0 8px 8px;
+      font-weight: 700;
+      font-size: 1rem;
+      z-index: 9999;
+      transition: top .2s;
+      text-decoration: none;
     }
-    @media(max-width:480px){
-      .mstrip .con{grid-template-columns:1fr}
-      .mi{border-bottom:1px solid rgba(255,255,255,.1)}
-      .ht{font-size:2.3rem}
-      .hbtns .btn{padding:12px 22px;font-size:.88rem}
+    .skip-link:focus { top: 0; }
+    :focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+      border-radius: 4px;
     }
-/* Container for the 3 squares */
-.p-gallery {
-  display: flex;
-  gap: 10px;
-  margin-top: 15px;
-}
+    *:focus:not(:focus-visible) { outline: none; }
 
-/* Square thumbnail styling */
-.p-img-wrap {
-  flex: 1;
-  aspect-ratio: 1 / 1;
-  overflow: hidden;
-  cursor: pointer;
-  position: relative;
-}
+    /* ═══════════════════════════════════════════════
+       LAYOUT UTILITIES
+    ═══════════════════════════════════════════════ */
+    .pad { padding: 96px 0; }
+    .con { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
+    .tag {
+      display: inline-block;
+      font-size: .7rem;
+      font-weight: 700;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--gold);
+      border: 1.5px solid var(--gold);
+      border-radius: 50px;
+      padding: 5px 16px;
+      margin-bottom: 16px;
+    }
+    .h2 {
+      font-family: var(--font-serif);
+      font-size: clamp(1.9rem, 3.8vw, 3rem);
+      color: var(--navy-dark);
+      line-height: 1.2;
+    }
+    .sub { font-size: 1.05rem; color: var(--gray); line-height: 1.75; margin-top: 14px; }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 14px 30px;
+      min-height: 44px;
+      border-radius: 50px;
+      font-size: .93rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: var(--trans);
+      border: none;
+      font-family: 'Inter', -apple-system, sans-serif;
+    }
+    .btn-gold { background: var(--gold); color: #fff; box-shadow: 0 4px 20px rgba(200,146,42,.4); }
+    .btn-gold:hover, .btn-gold:focus-visible { background: #a87420; transform: translateY(-2px); box-shadow: 0 8px 30px rgba(200,146,42,.5); }
+    .btn-ghost { background: transparent; color: #fff; border: 2px solid rgba(255,255,255,.65); }
+    .btn-ghost:hover, .btn-ghost:focus-visible { background: rgba(255,255,255,.12); border-color: #fff; }
+    .g2 { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: center; }
+    .g3 { display: grid; grid-template-columns: repeat(3,1fr); gap: 24px; }
+    .g4 { display: grid; grid-template-columns: repeat(4,1fr); gap: 22px; }
+    .tc { text-align: center; }
 
-.p-img-wrap img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover; /* Keeps them as perfect squares */
-  transition: transform 0.3s ease;
-  border-radius: 4px;
-}
+    /* ═══════════════════════════════════════════════
+       ANNOUNCE BAR
+    ═══════════════════════════════════════════════ */
+    .abar {
+      background: var(--navy);
+      color: rgba(255,255,255,.85);
+      text-align: center;
+      padding: 10px 20px;
+      font-size: .85rem;
+      letter-spacing: .02em;
+    }
+    .abar strong { color: var(--gold-light); }
 
-/* Hide the checkbox */
-.p-img-wrap input {
-  display: none;
-}
+    /* ═══════════════════════════════════════════════
+       NAVIGATION
+    ═══════════════════════════════════════════════ */
+    #nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1000;
+      background: rgba(255,255,255,.97);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      border-bottom: 1px solid rgba(15,35,82,.08);
+      transition: var(--trans);
+    }
+    .ni {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 24px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .nav-brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      text-decoration: none;
+    }
+    .nav-brand img { height: 40px; width: auto; object-fit: contain; border-radius: 8px; }
+    .logo-t h1 { font-family: var(--font-serif); font-size: 1.1rem; color: var(--navy-dark); line-height: 1.2; }
+    .logo-t p { font-size: .67rem; color: var(--gold); font-weight: 600; letter-spacing: .05em; margin-top: 1px; }
+    .nl { display: flex; align-items: center; gap: 28px; list-style: none; }
+    .nl a {
+      font-size: .86rem;
+      font-weight: 500;
+      color: #444;
+      transition: var(--trans);
+      position: relative;
+      padding-bottom: 3px;
+      min-height: 44px;
+      display: flex;
+      align-items: center;
+    }
+    .nl a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: var(--gold);
+      border-radius: 2px;
+      transition: var(--trans);
+    }
+    .nl a:hover, .nl a:focus-visible { color: var(--navy-dark); }
+    .nl a:hover::after, .nl a:focus-visible::after { width: 100%; }
+    .nav-cta {
+      background: var(--navy) !important;
+      color: #fff !important;
+      padding: 10px 22px;
+      border-radius: 50px;
+      font-weight: 600 !important;
+      min-height: 44px;
+    }
+    .nav-cta:hover, .nav-cta:focus-visible { background: var(--gold) !important; }
+    .nav-cta::after { display: none !important; }
+    .hbg {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      padding: 10px;
+      background: none;
+      border: none;
+      min-width: 44px;
+      min-height: 44px;
+      align-items: center;
+      justify-content: center;
+    }
+    .hbg span { display: block; width: 24px; height: 2px; background: var(--navy-dark); border-radius: 2px; transition: var(--trans); }
 
-/* The "Enlarge" Effect when clicked */
-.p-img-wrap input:checked + img {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%) scale(1.5);
-  width: 90vw;
-  height: auto;
-  aspect-ratio: auto;
-  z-index: 1000;
-  box-shadow: 0 0 100px rgba(0,0,0,0.8);
-}
+    /* Nav backdrop for mobile */
+    #nav-backdrop {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.45);
+      z-index: 999;
+    }
+    #nav-backdrop.open { display: block; }
 
-/* Darken background when an image is enlarged */
-.p-img-wrap input:checked::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  background: rgba(0,0,0,0.7);
-  z-index: 999;
-}
+    /* ═══════════════════════════════════════════════
+       HERO
+    ═══════════════════════════════════════════════ */
+    #hero {
+      min-height: 100vh;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    /* Hero uses an img tag now for proper LCP & preload */
+    .hero-bg-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: auto%;
+      object-fit: contain;
+      object-position: center;
+      z-index: 0;
+    }
+    .hov {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(8,24,64,.92) 0%, rgba(15,35,82,.80) 55%, rgba(200,146,42,.18) 100%);
+      z-index: 1;
+    }
+    .hc {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      color: #fff;
+      padding: 120px 24px 80px;
+      max-width: 880px;
+      margin: 0 auto;
+    }
+    .hbadge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(200,146,42,.18);
+      border: 1px solid rgba(200,146,42,.45);
+      color: var(--gold-light);
+      padding: 7px 20px;
+      border-radius: 50px;
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-bottom: 26px;
+    }
+    .ht { font-family: var(--font-serif); font-size: clamp(2.6rem,7vw,5.4rem); line-height: 1.08; margin-bottom: 22px; }
+    .ht em { font-style: italic; color: var(--gold-light); display: block; }
+    .hsub { font-size: clamp(1rem,1.8vw,1.18rem); color: rgba(255,255,255,.82); line-height: 1.75; max-width: 620px; margin: 0 auto 14px; }
+    .hverse { font-style: italic; color: rgba(255,255,255,.55); font-size: .9rem; margin-bottom: 40px; }
+    .hbtns { display: flex; flex-wrap: wrap; gap: 14px; justify-content: center; margin-bottom: 64px; }
+    .hstats {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      border-top: 1px solid rgba(255,255,255,.13);
+      padding-top: 44px;
+      gap: 0;
+    }
+    .hst { flex: 1; min-width: 130px; padding: 0 20px; border-right: 1px solid rgba(255,255,255,.13); }
+    .hst:last-child { border-right: none; }
+    .hst-n { font-family: var(--font-serif); font-size: 2rem; color: var(--gold-light); font-weight: 700; }
+    .hst-l { font-size: .78rem; color: rgba(255,255,255,.65); margin-top: 4px; letter-spacing: .05em; }
+    .scroll-d {
+      position: absolute;
+      bottom: 28px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      color: rgba(255,255,255,.45);
+      animation: bob 2s infinite;
+    }
+    @keyframes bob {
+      0%,100% { transform: translateX(-50%) translateY(0); }
+      50% { transform: translateX(-50%) translateY(9px); }
+    }
+
+    /* ═══════════════════════════════════════════════
+       ABOUT
+    ═══════════════════════════════════════════════ */
+    #about { background: #fff; }
+    .aiwrap { position: relative; }
+    .aiwrap img { border-radius: var(--rlg); width: 100%; height: 500px; object-fit: cover; box-shadow: var(--shadow-lg); }
+    .abadge {
+      position: absolute;
+      bottom: -18px;
+      right: -16px;
+      background: var(--gold);
+      color: #fff;
+      border-radius: var(--r);
+      padding: 18px 26px;
+      text-align: center;
+      box-shadow: 0 8px 28px rgba(200,146,42,.4);
+    }
+    .abadge .n { font-family: var(--font-serif); font-size: 2.6rem; font-weight: 700; line-height: 1; }
+    .abadge .l { font-size: .75rem; opacity: .9; margin-top: 3px; }
+    .atxt p { color: #4a5568; line-height: 1.82; font-size: 1rem; margin-bottom: 18px; }
+    .qb {
+      background: var(--gray-light);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 var(--r) var(--r) 0;
+      padding: 22px 26px;
+      margin: 24px 0;
+    }
+    .qb p { font-style: italic; color: var(--navy-mid); font-size: 1rem; line-height: 1.7; }
+    .qb cite { display: block; margin-top: 9px; font-size: .82rem; font-weight: 700; color: var(--gold); font-style: normal; }
+    .chips { display: flex; flex-wrap: wrap; gap: 9px; margin-top: 26px; }
+    .chip {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--gray-light);
+      color: var(--navy-mid);
+      font-size: .8rem;
+      font-weight: 500;
+      padding: 7px 15px;
+      border-radius: 50px;
+      min-height: 36px;
+    }
+    .chip i { color: var(--gold); }
+
+    /* ═══════════════════════════════════════════════
+       MISSION STRIP
+    ═══════════════════════════════════════════════ */
+    .mstrip { background: linear-gradient(135deg, var(--navy-dark), var(--navy-mid)); padding: 64px 0; }
+    .mstrip .con { display: grid; grid-template-columns: repeat(4,1fr); gap: 0; }
+    .mi { text-align: center; padding: 20px 22px; border-right: 1px solid rgba(255,255,255,.1); color: #fff; }
+    .mi:last-child { border-right: none; }
+    .mi i { font-size: 2.1rem; color: var(--gold-light); margin-bottom: 12px; display: block; }
+    .mi h4 { font-family: var(--font-serif); font-size: 1.1rem; margin-bottom: 7px; }
+    .mi p { font-size: .85rem; color: rgba(255,255,255,.68); line-height: 1.6; }
+
+    /* ═══════════════════════════════════════════════
+       MINISTRIES
+    ═══════════════════════════════════════════════ */
+    #ministries { background: var(--gray-light); }
+    .mc { background: #fff; border-radius: var(--rlg); overflow: hidden; box-shadow: var(--shadow); transition: var(--trans); }
+    .mc:hover { transform: translateY(-6px); box-shadow: var(--shadow-lg); }
+    .mc img { height: 250px; object-fit: cover; width: 100%; }
+    .mcb { padding: 34px; }
+    .mc-icon { width: 52px; height: 52px; border-radius: 13px; display: flex; align-items: center; justify-content: center; font-size: 1.4rem; margin-bottom: 18px; }
+    .ic-b { background: #e8f0fe; color: var(--navy); }
+    .ic-g { background: var(--gold-pale); color: var(--gold); }
+    .mcb h3 { font-family: var(--font-serif); font-size: 1.55rem; color: var(--navy-dark); margin-bottom: 18px; }
+    .ml { list-style: none; display: flex; flex-direction: column; gap: 11px; }
+    .ml li { display: flex; align-items: flex-start; gap: 11px; font-size: .95rem; color: #4a5568; line-height: 1.5; }
+    .ml li i { color: var(--gold); margin-top: 2px; flex-shrink: 0; }
+
+    /* ═══════════════════════════════════════════════
+       OUTREACH
+    ═══════════════════════════════════════════════ */
+    #outreach { background: #fff; }
+    .tpills { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 36px; }
+    .pill {
+      background: var(--navy);
+      color: #fff;
+      padding: 9px 18px;
+      border-radius: 50px;
+      font-size: .85rem;
+      font-weight: 500;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      transition: var(--trans);
+      min-height: 44px;
+    }
+    .pill:hover, .pill:focus-visible { background: var(--gold); transform: scale(1.04); }
+    .pill i { font-size: .72rem; color: var(--gold-light); }
+    .pill:hover i, .pill:focus-visible i { color: #fff; }
+    .oimg { border-radius: var(--rlg); width: 100%; height: 430px; object-fit: cover; box-shadow: var(--shadow-lg); }
+
+    /* ═══════════════════════════════════════════════
+       2024 PROJECTS
+    ═══════════════════════════════════════════════ */
+    #projects { background: var(--navy-dark); }
+    #projects .h2 { color: #fff; }
+    #projects .sub { color: rgba(255,255,255,.6); }
+    .pc {
+      background: rgba(255,255,255,.07);
+      border: 1px solid rgba(255,255,255,.11);
+      border-radius: var(--rlg);
+      padding: 34px;
+      transition: var(--trans);
+      position: relative;
+      overflow: hidden;
+    }
+    .pc::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      transform: scaleX(0);
+      transform-origin: left;
+      transition: var(--trans);
+    }
+    .pc:hover { background: rgba(255,255,255,.12); transform: translateY(-4px); }
+    .pc:hover::before { transform: scaleX(1); }
+    .pd { font-size: .7rem; font-weight: 700; letter-spacing: .15em; color: var(--gold-light); text-transform: uppercase; margin-bottom: 10px; }
+    .pc h4 { font-family: var(--font-serif); font-size: 1.35rem; color: #fff; margin-bottom: 14px; }
+    .pc p { font-size: .9rem; color: rgba(255,255,255,.68); line-height: 1.72; }
+    .ptags { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 7px; }
+    .ptag {
+      background: rgba(200,146,42,.2);
+      border: 1px solid rgba(200,146,42,.3);
+      color: var(--gold-light);
+      font-size: .76rem;
+      font-weight: 600;
+      padding: 4px 11px;
+      border-radius: 50px;
+    }
+
+    /* Gallery thumbnails */
+    .p-gallery { display: flex; gap: 8px; margin-top: 14px; }
+    .p-img-wrap {
+      flex: 1;
+      aspect-ratio: 1 / 1;
+      overflow: hidden;
+      cursor: pointer;
+      border-radius: 6px;
+      position: relative;
+    }
+    .p-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .3s ease;
+      border-radius: 6px;
+      display: block;
+    }
+    .p-img-wrap:hover img, .p-img-wrap:focus-visible img { transform: scale(1.06); }
+    .p-img-wrap:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+    /* ═══════════════════════════════════════════════
+       LIGHTBOX MODAL
+    ═══════════════════════════════════════════════ */
+    #lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,.92);
+      z-index: 10000;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    #lightbox.open { display: flex; }
+    #lb-img {
+      max-width: 100%;
+      max-height: 90vh;
+      border-radius: 10px;
+      object-fit: contain;
+      box-shadow: 0 20px 80px rgba(0,0,0,.6);
+    }
+    #lb-close {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      background: rgba(255,255,255,.15);
+      border: none;
+      color: #fff;
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      font-size: 1.5rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .2s;
+      line-height: 1;
+    }
+    #lb-close:hover, #lb-close:focus-visible { background: var(--gold); }
+
+    /* ═══════════════════════════════════════════════
+       IMPACT
+    ═══════════════════════════════════════════════ */
+    #impact { background: #fff; }
+    .sc {
+      background: var(--gray-light);
+      border-radius: var(--rlg);
+      padding: 42px 26px;
+      text-align: center;
+      transition: var(--trans);
+    }
+    .sc:hover { background: var(--navy-dark); }
+    .sc:hover .sn, .sc:hover .sl { color: #fff; }
+    .sc:hover .sd { color: rgba(255,255,255,.55); }
+    .sn { font-family: var(--font-serif); font-size: 3.2rem; font-weight: 700; color: var(--navy-dark); line-height: 1; transition: var(--trans); }
+    .sc:hover .sn { color: var(--gold-light); }
+    .sl { font-size: .95rem; font-weight: 600; color: var(--navy-mid); margin-top: 9px; transition: var(--trans); }
+    .sd { font-size: .82rem; color: var(--gray); margin-top: 7px; transition: var(--trans); }
+    .fc { display: flex; gap: 18px; padding: 28px; background: var(--gray-light); border-radius: var(--rlg); align-items: flex-start; transition: var(--trans); }
+    .fc:hover { background: var(--navy-dark); }
+    .fc:hover h4, .fc:hover p { color: rgba(255,255,255,.9); }
+    .fi { width: 50px; height: 50px; background: var(--navy); border-radius: 13px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; transition: var(--trans); }
+    .fi i { font-size: 1.2rem; color: var(--gold-light); }
+    .fc:hover .fi { background: var(--gold); }
+    .fc h4 { font-family: var(--font-serif); font-size: 1.1rem; color: var(--navy-dark); margin-bottom: 7px; transition: var(--trans); }
+    .fc p { font-size: .9rem; color: var(--gray); line-height: 1.62; transition: var(--trans); }
+
+    /* ═══════════════════════════════════════════════
+       TESTIMONIALS
+    ═══════════════════════════════════════════════ */
+    #test { background: linear-gradient(135deg, var(--navy-dark), var(--navy-mid)); padding: 96px 0; }
+    .tc-card {
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: var(--rlg);
+      padding: 42px;
+      position: relative;
+    }
+    .tq { font-family: var(--font-serif); font-size: 5rem; color: var(--gold); position: absolute; top: 8px; left: 26px; line-height: 1; opacity: .45; aria-hidden: true; }
+    .tt { font-size: 1rem; color: rgba(255,255,255,.88); line-height: 1.82; font-style: italic; margin-top: 18px; }
+    .ta { margin-top: 22px; display: flex; align-items: center; gap: 13px; }
+    .tav {
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      background: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      color: #fff;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .tai h5 { color: #fff; font-size: .93rem; font-weight: 600; }
+    .tai p { color: rgba(255,255,255,.5); font-size: .82rem; }
+
+    /* ═══════════════════════════════════════════════
+       DONATE
+    ═══════════════════════════════════════════════ */
+    #donate { background: var(--gray-light); }
+    .dcard { background: #fff; border-radius: var(--rlg); padding: 54px; box-shadow: var(--shadow-lg); }
+    .dcard h2 { font-family: var(--font-serif); font-size: 1.9rem; color: var(--navy-dark); margin-bottom: 6px; }
+    .dcard .dsub { color: var(--gray); margin-bottom: 36px; font-size: .95rem; }
+
+    /* Bank details reveal */
+    #bank-reveal-btn {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      background: var(--navy-dark);
+      color: #fff;
+      border: none;
+      padding: 14px 26px;
+      border-radius: 50px;
+      font-size: .93rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-bottom: 20px;
+      min-height: 44px;
+      transition: var(--trans);
+      font-family: 'Inter', sans-serif;
+    }
+    #bank-reveal-btn:hover, #bank-reveal-btn:focus-visible { background: var(--gold); }
+    #bank-details { display: none; }
+    #bank-details.open { display: block; }
+
+    /* Mobile-stacking bank table */
+    .btbl { width: 100%; border-collapse: collapse; }
+    .btbl tr { border-bottom: 1px solid #f0f0f0; }
+    .btbl td { padding: 13px 0; vertical-align: top; }
+    .btbl td:first-child { font-size: .73rem; font-weight: 700; color: var(--gray); text-transform: uppercase; letter-spacing: .08em; width: 42%; }
+    .btbl td:last-child { font-weight: 600; color: var(--navy-dark); }
+    .bacct { font-size: 1.4rem !important; color: var(--navy) !important; font-family: var(--font-serif) !important; }
+
+    .durg {
+      background: var(--gold-pale);
+      border: 1px solid rgba(200,146,42,.28);
+      border-radius: var(--r);
+      padding: 18px 22px;
+      margin-top: 30px;
+      font-size: .9rem;
+      color: #7a5c1a;
+      line-height: 1.65;
+    }
+    .durg strong { color: var(--gold); }
+    .dcta { background: var(--navy-dark); border-radius: var(--rlg); padding: 46px; text-align: center; color: #fff; }
+    .dcta h3 { font-family: var(--font-serif); font-size: 1.75rem; margin-bottom: 10px; }
+    .dcta p { color: rgba(255,255,255,.68); margin-bottom: 26px; font-size: .95rem; }
+    .gitem {
+      display: flex;
+      gap: 11px;
+      align-items: center;
+      background: rgba(255,255,255,.08);
+      border-radius: 12px;
+      padding: 13px 16px;
+      margin-bottom: 12px;
+    }
+    .gitem i { color: var(--gold-light); font-size: 1.1rem; flex-shrink: 0; }
+    .gitem span { font-size: .9rem; color: rgba(255,255,255,.8); }
+    .gitem strong { color: #fff; }
+
+    /* ═══════════════════════════════════════════════
+       CONTACT
+    ═══════════════════════════════════════════════ */
+    #contact { background: #fff; }
+    .cr { display: flex; gap: 16px; align-items: flex-start; }
+    .cr .ci {
+      width: 46px;
+      height: 46px;
+      background: var(--navy-dark);
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+    }
+    .cr .ci i { color: var(--gold-light); font-size: 1rem; }
+    .cr h4 { font-weight: 600; color: var(--navy-dark); font-size: .9rem; margin-bottom: 4px; }
+    .cr a, .cr p { color: var(--gray); font-size: .95rem; transition: var(--trans); }
+    .cr a:hover, .cr a:focus-visible { color: var(--gold); }
+    .cform { background: var(--navy-dark); border-radius: var(--rlg); padding: 46px; }
+    .cform h3 { font-family: var(--font-serif); font-size: 1.55rem; color: #fff; margin-bottom: 26px; }
+    .fg { margin-bottom: 18px; }
+    .fr { display: grid; grid-template-columns: 1fr 1fr; gap: 18px; margin-bottom: 18px; }
+    label {
+      display: block;
+      font-size: .78rem;
+      font-weight: 600;
+      color: rgba(255,255,255,.6);
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      margin-bottom: 7px;
+    }
+    input, textarea, select {
+      width: 100%;
+      background: rgba(255,255,255,.08);
+      border: 1px solid rgba(255,255,255,.14);
+      color: #fff;
+      border-radius: var(--r);
+      padding: 13px 16px;
+      font-size: 1rem;
+      font-family: 'Inter', -apple-system, sans-serif;
+      transition: var(--trans);
+      outline: none;
+      min-height: 48px;
+    }
+    input::placeholder, textarea::placeholder { color: rgba(255,255,255,.3); }
+    select option { background: var(--navy-dark); color: #fff; }
+    input:focus-visible, textarea:focus-visible, select:focus-visible {
+      border-color: var(--gold);
+      background: rgba(255,255,255,.12);
+      outline: 2px solid var(--gold);
+      outline-offset: 2px;
+    }
+    textarea { resize: vertical; min-height: 130px; }
+    .fsub {
+      width: 100%;
+      background: var(--gold);
+      color: #fff;
+      border: none;
+      padding: 16px;
+      border-radius: 50px;
+      font-size: 1rem;
+      font-weight: 700;
+      cursor: pointer;
+      transition: var(--trans);
+      font-family: 'Inter', -apple-system, sans-serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      min-height: 52px;
+    }
+    .fsub:hover, .fsub:focus-visible { background: #a87420; transform: translateY(-2px); }
+
+    /* Honeypot — visually hidden but not display:none (bots can't detect) */
+    .hp-field {
+      position: absolute;
+      left: -9999px;
+      top: -9999px;
+      width: 1px;
+      height: 1px;
+      overflow: hidden;
+    }
+
+    /* ═══════════════════════════════════════════════
+       FOOTER
+    ═══════════════════════════════════════════════ */
+    footer { background: var(--navy-dark); color: rgba(255,255,255,.72); }
+    .ftop { padding: 76px 0 46px; }
+    .fgrid { display: grid; grid-template-columns: 2fr 1fr 1fr 1fr; gap: 44px; }
+    .flogo { display: flex; align-items: center; gap: 11px; margin-bottom: 18px; }
+    .flogo .fi2 {
+      width: 46px;
+      height: 46px;
+      background: rgba(255,255,255,.1);
+      border-radius: 11px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font-serif);
+      font-size: 1.4rem;
+      color: #fff;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+    .flogo-t h3 { font-family: var(--font-serif); font-size: .97rem; color: #fff; }
+    .flogo-t p { font-size: .68rem; color: var(--gold-light); }
+    .fdesc { font-size: .87rem; line-height: 1.72; margin-bottom: 22px; }
+    .fsoc { display: flex; gap: 9px; }
+    .fsoc a {
+      width: 44px;
+      height: 44px;
+      background: rgba(255,255,255,.08);
+      border-radius: 9px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,.55);
+      font-size: .88rem;
+      transition: var(--trans);
+    }
+    .fsoc a:hover, .fsoc a:focus-visible { background: var(--gold); color: #fff; transform: translateY(-3px); }
+    footer h4 { font-family: var(--font-serif); font-size: .97rem; color: #fff; margin-bottom: 18px; }
+    .flinks { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .flinks a { font-size: .87rem; transition: var(--trans); min-height: 36px; display: flex; align-items: center; }
+    .flinks a:hover, .flinks a:focus-visible { color: var(--gold-light); padding-left: 4px; }
+    .fbot {
+      border-top: 1px solid rgba(255,255,255,.08);
+      padding: 26px 0;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: .8rem;
+    }
+
+    /* ═══════════════════════════════════════════════
+       FLOATING BUTTONS
+    ═══════════════════════════════════════════════ */
+    /* Back to top */
+    #btt {
+      position: fixed;
+      bottom: 26px;
+      right: 26px;
+      width: 48px;
+      height: 48px;
+      background: var(--gold);
+      color: #fff;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      box-shadow: 0 4px 20px rgba(200,146,42,.5);
+      opacity: 0;
+      transition: var(--trans);
+      z-index: 995;
+      transform: translateY(18px);
+      border: none;
+      cursor: pointer;
+    }
+    #btt:hover, #btt:focus-visible { background: #a87420; }
+
+    /* WhatsApp */
+    #wa-btn {
+      position: fixed;
+      bottom: 84px;
+      right: 20px;
+      background: #25d366;
+      color: #fff;
+      padding: 11px 18px;
+      border-radius: 50px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      font-size: .85rem;
+      font-weight: 700;
+      box-shadow: 0 4px 20px rgba(37,211,102,.45);
+      z-index: 994;
+      transition: transform .2s;
+      text-decoration: none;
+      min-height: 44px;
+    }
+    #wa-btn:hover, #wa-btn:focus-visible { transform: scale(1.06); }
+    #wa-btn svg { flex-shrink: 0; }
+
+    /* Mobile sticky Donate */
+    #mob-donate {
+      display: none;
+      position: fixed;
+      bottom: 26px;
+      left: 50%;
+      transform: translateX(-50%) translateY(90px);
+      background: var(--gold);
+      color: #fff;
+      padding: 14px 36px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 1rem;
+      z-index: 993;
+      box-shadow: 0 6px 28px rgba(200,146,42,.55);
+      transition: transform .35s cubic-bezier(.4,0,.2,1);
+      text-decoration: none;
+      align-items: center;
+      gap: 9px;
+      min-height: 52px;
+      white-space: nowrap;
+    }
+    #mob-donate.show { transform: translateX(-50%) translateY(0); }
+
+    /* ═══════════════════════════════════════════════
+       RESPONSIVE — 1024px
+    ═══════════════════════════════════════════════ */
+    @media (max-width: 1024px) {
+      .g4 { grid-template-columns: repeat(2,1fr); }
+      .fgrid { grid-template-columns: 1fr 1fr; }
+      .mstrip .con { grid-template-columns: repeat(2,1fr); }
+      .mi { border-right: none; border-bottom: 1px solid rgba(255,255,255,.1); }
+    }
+
+    /* ═══════════════════════════════════════════════
+       RESPONSIVE — 768px (Mobile)
+    ═══════════════════════════════════════════════ */
+    @media (max-width: 768px) {
+      .pad { padding: 70px 0; }
+      .g2, .g3, .g4 { grid-template-columns: 1fr; }
+      .fgrid { grid-template-columns: 1fr; }
+      .mstrip .con { grid-template-columns: 1fr 1fr; }
+      .abadge { right: 0; bottom: -12px; }
+      .atxt { padding-left: 0 !important; }
+
+      /* Mobile nav */
+      .nl {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff;
+        flex-direction: column;
+        gap: 0;
+        padding: 12px 0;
+        box-shadow: 0 8px 32px rgba(0,0,0,.12);
+      }
+      .nl.open { display: flex; }
+      .nl a { padding: 14px 22px; font-size: 1rem; }
+      .nl a::after { display: none; }
+      .hbg { display: flex; }
+
+      .hstats { gap: 12px; }
+      .hst { border-right: none; border-bottom: 1px solid rgba(255,255,255,.12); padding: 13px 10px; min-width: 120px; }
+      .hst:last-child { border-bottom: none; }
+
+      .fr { grid-template-columns: 1fr; }
+      .dcard { padding: 34px 22px; }
+      .cform { padding: 30px 18px; }
+      .dcta { padding: 36px 18px; }
+
+      /* Bank table mobile stacking */
+      .btbl, .btbl tbody, .btbl tr, .btbl td { display: block; width: 100%; }
+      .btbl tr { padding: 12px 0; border-bottom: 1px solid #f0f0f0; }
+      .btbl td { padding: 2px 0; border: none; width: 100% !important; }
+      .btbl td:first-child { font-size: .7rem; margin-bottom: 2px; }
+
+      /* Show mobile donate button */
+      #mob-donate { display: flex; }
+
+      /* Push wa-btn and btt up when donate bar shows */
+      #btt { bottom: 90px; }
+      #wa-btn { bottom: 148px; }
+    }
+
+    /* ═══════════════════════════════════════════════
+       RESPONSIVE — 480px
+    ═══════════════════════════════════════════════ */
+    @media (max-width: 480px) {
+      .mstrip .con { grid-template-columns: 1fr; }
+      .mi { border-bottom: 1px solid rgba(255,255,255,.1); }
+      .ht { font-size: 2.3rem; }
+      .hbtns .btn { padding: 12px 22px; font-size: .9rem; }
+      .logo-t h1 { font-size: .92rem; }
+      .logo-t p { display: none; }
+    }
   </style>
 </head>
 <body>
 
-<!-- ANNOUNCE BAR -->
-<div class="abar">
-  <strong>🕊️ Celebrating 20 Years of Ministry (2004–2024)</strong> — Thank you to every volunteer, donor and partner. <strong>Join us for the next chapter →</strong>
-</div>
+  <!-- ═══════════════════════════════════════════════
+       SKIP NAVIGATION (Accessibility)
+  ═══════════════════════════════════════════════ -->
+  <a class="skip-link" href="#main-content">Skip to main content</a>
 
-<!-- NAV -->
-<nav id="nav">
-  <div class="ni">
-<a href="#" class="nav-brand" aria-label="Body Alignment Malmesbury Home">
-            <img src="4.jpeg" alt="VPM" style="height:40px;width:auto;object-fit:contain;">
-            <div class="nav-brand-text"></div>
-      <div class="logo-t">
+  <!-- ═══════════════════════════════════════════════
+       ANNOUNCE BAR
+  ═══════════════════════════════════════════════ -->
+  <div class="abar" role="banner" aria-label="Ministry announcement">
+    <strong><span role="img" aria-label="Dove of peace">🕊️</span> Celebrating 20 Years of Ministry (2004–2024)</strong>
+    — Thank you to every volunteer, donor and partner.
+    <strong>Join us for the next chapter →</strong>
+  </div>
 
-               <h1>Victorious Pilgrim Ministries</h1>
-        <p>Est. 2004 · Wellington, South Africa</p>
+  <!-- ═══════════════════════════════════════════════
+       NAVIGATION
+  ═══════════════════════════════════════════════ -->
+  <nav id="nav" role="navigation" aria-label="Main navigation">
+    <div class="ni">
+      <a href="#hero" class="nav-brand" aria-label="Victorious Pilgrim Ministries — return to top">
+        <img src="4.jpeg" alt="Victorious Pilgrim Ministries logo" width="40" height="40">
+        <div class="logo-t">
+          <h1>Victorious Pilgrim Ministries</h1>
+          <p>Est. 2004 · Wellington, South Africa</p>
+        </div>
+      </a>
 
+      <ul class="nl" id="nl" role="list">
+        <li><a href="#about">About</a></li>
+        <li><a href="#ministries">Ministries</a></li>
+        <li><a href="#outreach">Outreach</a></li>
+        <li><a href="#projects">2024</a></li>
+        <li><a href="#impact">Impact</a></li>
+        <li><a href="#donate">Donate</a></li>
+        <li><a href="#contact" class="nav-cta">Contact</a></li>
+      </ul>
+
+      <button class="hbg" id="hbg" aria-label="Open navigation menu" aria-expanded="false" aria-controls="nl">
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+        <span aria-hidden="true"></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Nav backdrop (mobile) -->
+  <div id="nav-backdrop" aria-hidden="true"></div>
+
+  <!-- ═══════════════════════════════════════════════
+       MAIN CONTENT
+  ═══════════════════════════════════════════════ -->
+  <main id="main-content">
+
+    <!-- HERO -->
+    <header id="hero" role="banner">
+      <!-- LCP image: preloaded, eager, high priority -->
+      <img
+        class="hero-bg-img"
+        src="3.jpeg"
+        alt="VPM volunteers serving communities across the Western Cape"
+        width="1920"
+        height="1080"
+        fetchpriority="high"
+        loading="eager"
+        decoding="sync"
+      >
+      <div class="hov" aria-hidden="true"></div>
+      <div class="hc">
+        <div class="hbadge" aria-label="20th Anniversary 2004 to 2024">
+          <i class="fa-solid fa-star" aria-hidden="true"></i> 20th Anniversary · 2004–2024
+        </div>
+        <h2 class="ht">Serving the Lord<br><em>by Serving Others</em></h2>
+        <p class="hsub">Victorious Pilgrim Ministries brings the Gospel, practical mercy and lasting hope to communities across the Western Cape and beyond.</p>
+        <p class="hverse"><em>"As my Father hath sent me, even so send I you." — John 20:21</em></p>
+        <div class="hbtns">
+          <a href="#donate" class="btn btn-gold"><i class="fa-solid fa-heart" aria-hidden="true"></i> Partner With Us</a>
+          <a href="#projects" class="btn btn-ghost"><i class="fa-solid fa-play" aria-hidden="true"></i> See Our Work</a>
+        </div>
+        <div class="hstats" aria-label="Ministry impact statistics">
+          <div class="hst"><div class="hst-n">7,109</div><div class="hst-l">Books Distributed</div></div>
+          <div class="hst"><div class="hst-n">280</div><div class="hst-l">Bibles Given</div></div>
+          <div class="hst"><div class="hst-n">8,500+</div><div class="hst-l">Clothing Items</div></div>
+          <div class="hst"><div class="hst-n">210</div><div class="hst-l">Food Parcels</div></div>
+          <div class="hst"><div class="hst-n">23</div><div class="hst-l">Towns Reached</div></div>
+        </div>
+      </div>
+      <div class="scroll-d" aria-hidden="true">
+        <i class="fa-solid fa-chevron-down fa-2x"></i>
+      </div>
+    </header>
+
+    <!-- ABOUT -->
+    <section id="about" class="pad" aria-labelledby="about-heading">
+      <div class="con">
+        <div class="g2">
+          <div class="aiwrap">
+            <img
+              src="love.jpg"
+              alt="VPM volunteers sharing love and care with community members in Wellington"
+              loading="lazy"
+              decoding="async"
+              width="600"
+              height="500"
+            >
+            <div class="abadge" aria-hidden="true">
+              <div class="n">20</div>
+              <div class="l">Years of<br>Service</div>
             </div>
-        </a>
+          </div>
+          <div class="atxt" style="padding-left:20px">
+            <span class="tag">Who We Are</span>
+            <h2 class="h2" id="about-heading">Faith in Action Since 2004</h2>
+            <p style="color:var(--gold);font-size:.82rem;font-weight:600;margin:6px 0 20px;letter-spacing:.04em">
+              REG. NO. 2004/028180/08 · WELLINGTON, WESTERN CAPE
+            </p>
+            <p>Founded in 2004 in Wellington, Western Cape, Victorious Pilgrim Ministries exists to obey the Great Commission. Under the leadership of Chairman <strong>Ashwell W. Beaton</strong> and Welfare Director <strong>Wendy Beaton</strong>, VPM combines bold evangelism with practical mercy ministry.</p>
+            <p>We worship and serve alongside local SDA congregations while reaching the wider community with the love of Jesus — through literature, health education, food parcels, clothing and much more. Over two decades, our team has touched thousands of lives across 23 towns in South Africa.</p>
+            <blockquote class="qb">
+              <p>"Where God guides, He will provide. If it is God's will, it becomes His bill."</p>
+              <cite>— Ashwell W. Beaton, VPM Chairman</cite>
+            </blockquote>
+            <div class="chips" aria-label="Organisation details">
+              <div class="chip"><i class="fa-solid fa-map-pin" aria-hidden="true"></i> Wellington, Western Cape</div>
+              <div class="chip"><i class="fa-solid fa-calendar" aria-hidden="true"></i> Est. 2004</div>
+              <div class="chip"><i class="fa-solid fa-registered" aria-hidden="true"></i> Reg. 2004/028180/08</div>
+              <div class="chip"><i class="fa-solid fa-church" aria-hidden="true"></i> SDA-aligned</div>
+              <div class="chip"><i class="fa-solid fa-users" aria-hidden="true"></i> 12–20 Volunteers per project</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-   
-    <ul class="nl" id="nl">
-      <li><a href="#about">About</a></li>
-      <li><a href="#ministries">Ministries</a></li>
-      <li><a href="#outreach">Outreach</a></li>
-      <li><a href="#projects">2024</a></li>
-      <li><a href="#impact">Impact</a></li>
-      <li><a href="#donate">Donate</a></li>
-      <li><a href="#contact">Contact</a></li>
-      
-    </ul>
-    <button class="hbg" id="hbg" aria-label="Menu" aria-expanded="false">
-      <span></span><span></span><span></span>
+    <!-- MISSION STRIP -->
+    <div class="mstrip" aria-label="Our four ministry pillars">
+      <div class="con">
+        <div class="mi">
+          <i class="fa-solid fa-book-bible" aria-hidden="true"></i>
+          <h3>Evangelism</h3>
+          <p>Placing God's Word into searching hearts through books, Bibles, tracts and personal counselling.</p>
+        </div>
+        <div class="mi">
+          <i class="fa-solid fa-hands-holding-heart" aria-hidden="true"></i>
+          <h3>Welfare</h3>
+          <p>Feeding the hungry, clothing the naked and bringing dignity to every person we meet.</p>
+        </div>
+        <div class="mi">
+          <i class="fa-solid fa-stethoscope" aria-hidden="true"></i>
+          <h3>Health</h3>
+          <p>BMI screening, blood pressure checks, medical advice and health education talks.</p>
+        </div>
+        <div class="mi">
+          <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+          <h3>Community</h3>
+          <p>Partnering with local churches and schools to build lasting relationships and Gospel hope.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- MINISTRIES -->
+    <section id="ministries" class="pad" aria-labelledby="ministries-heading">
+      <div class="con">
+        <div class="tc" style="margin-bottom:56px">
+          <span class="tag">What We Do</span>
+          <h2 class="h2" id="ministries-heading">Two Arms · One Mission</h2>
+          <p class="sub" style="margin:12px auto 0;max-width:560px">Everything we do flows from a single calling: to be the hands and feet of Jesus to those in need.</p>
+        </div>
+        <div class="g2" style="align-items:stretch">
+          <article class="mc">
+            <img
+              src="evan.jpg"
+              alt="VPM volunteers distributing Bibles and Christian literature to community members across the Western Cape"
+              loading="lazy"
+              decoding="async"
+              width="600"
+              height="250"
+            >
+            <div class="mcb">
+              <div class="mc-icon ic-b" aria-hidden="true"><i class="fa-solid fa-book-bible"></i></div>
+              <h3>Evangelism Ministry</h3>
+              <ul class="ml" aria-label="Evangelism ministry highlights">
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>7,109 books &amp; 280 Bibles distributed across South Africa</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>42 house visits and 47 personal Bible studies conducted</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>210 gospel tracts, 160 DVDs and 36 counselling sessions</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Preaching, Sabbath School leadership and youth evangelism</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Open-air services in schools, halls and public spaces</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Outreach in 23 towns: Oudtshoorn, Paarl, Vredendal, Montagu &amp; more</span></li>
+              </ul>
+            </div>
+          </article>
+          <article class="mc">
+            <img
+              src="kids.jpg"
+              alt="VPM volunteers preparing food parcels and care packages for families in need"
+              loading="lazy"
+              decoding="async"
+              width="600"
+              height="250"
+            >
+            <div class="mcb">
+              <div class="mc-icon ic-g" aria-hidden="true"><i class="fa-solid fa-heart"></i></div>
+              <h3>Welfare &amp; Health Ministry</h3>
+              <ul class="ml" aria-label="Welfare ministry highlights">
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>8,500+ clothing items donated to those in need</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>210 food parcels, 1,540 plates served &amp; 130L of soup distributed</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Daily sandwiches, pies, muffins, fresh fruit &amp; vegetable parcels</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>BMI testing, blood pressure monitoring &amp; health education talks</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Haircuts, massages and personal hygiene pack distribution</span></li>
+                <li><i class="fa-solid fa-check" aria-hidden="true"></i><span>Medical referrals and ongoing welfare support for families</span></li>
+              </ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUTREACH -->
+    <section id="outreach" class="pad" aria-labelledby="outreach-heading">
+      <div class="con">
+        <div class="g2">
+          <div>
+            <span class="tag">Our Reach</span>
+            <h2 class="h2" id="outreach-heading">23 Towns &amp; Growing</h2>
+            <p class="sub">From the Winelands to the Karoo, VPM has taken the Gospel and practical care across the Western Cape — and beyond South Africa's borders.</p>
+            <div class="tpills" role="list" aria-label="Towns where VPM serves">
+              <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Wellington</div>
+              <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Paarl</div>
+              <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Oudtshoorn</div>
+              <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Montagu</div>
+              <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Robertson</div>
+              <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Vredendal</div>
+              <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Riviersonderend</div>
+              <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Swellendam</div>
+              <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>George</div>
+              <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Stellenbosch</div>
+              <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Worcester</div>
+              <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Ceres</div>
+              <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Tulbagh</div>
+              <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Franschhoek</div>
+              <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Hermanus</div>
+              <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Bredasdorp</div>
+              <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Bonnievale</div>
+              <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Ladismith</div>
+              <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Calitzdorp</div>
+              <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Mossel Bay</div>
+              <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Knysna</div>
+              <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>De Doorns</div>
+              <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>+ More</div>
+            </div>
+          </div>
+          <div>
+            <img
+              class="oimg"
+              src="food.jpg"
+              alt="VPM volunteers distributing food parcels to Western Cape communities"
+              loading="lazy"
+              decoding="async"
+              width="600"
+              height="430"
+            >
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 2024 PROJECTS -->
+    <section id="projects" class="pad" aria-labelledby="projects-heading">
+      <div class="con">
+        <div class="tc" style="margin-bottom:56px">
+          <span class="tag" style="border-color:rgba(200,146,42,.5)">VPM 20th Anniversary Year</span>
+          <h2 class="h2" id="projects-heading">2024 Outreach Highlights</h2>
+          <p class="sub" style="margin:12px auto 0;max-width:540px">A landmark year of celebration and service — four major projects, thousands of lives impacted for the Kingdom.</p>
+        </div>
+        <div class="g4">
+
+          <!-- Robertson -->
+          <article class="pc">
+            <div class="pd">March 2024</div>
+            <h3>Robertson &amp; Montagu</h3>
+            <p>Youth Week of Prayer, Sabbath School leadership, preaching and community health talk. The team served 500+ people with love and the Word.</p>
+            <div class="ptags">
+              <span class="ptag">1,260 Books</span>
+              <span class="ptag">14 Bibles</span>
+              <span class="ptag">500+ Served</span>
+            </div>
+            <div class="p-gallery" role="list" aria-label="Robertson outreach photos">
+              <button class="p-img-wrap" role="listitem" aria-label="View photo: Volunteers distributing Bibles at Robertson outreach, March 2024" tabindex="0">
+                <img src="Robertson1.jpg" alt="Volunteers distributing Bibles at Robertson outreach, March 2024" loading="lazy" decoding="async" width="200" height="200">
+              </button>
+              <button class="p-img-wrap" role="listitem" aria-label="View photo: Community members receiving care packages in Robertson" tabindex="0">
+                <img src="Robertson2.jpg" alt="Community members receiving care packages in Robertson" loading="lazy" decoding="async" width="200" height="200">
+              </button>
+              <button class="p-img-wrap" role="listitem" aria-label="View photo: VPM team at Robertson outreach event" tabindex="0">
+                <img src="Robertson3.jpg" alt="VPM team at Robertson outreach event" loading="lazy" decoding="async" width="200" height="200">
+              </button>
+            </div>
+          </article>
+
+          <!-- Montagu -->
+          <article class="pc">
+            <div class="pd">June 2024</div>
+            <h3>Follow-Up Montagu</h3>
+            <p>Sabbath School leadership, preaching by Pastor Ashwin Beaton, 600 books donated and rich community fellowship with local believers.</p>
+            <div class="ptags">
+              <span class="ptag">600 Books</span>
+              <span class="ptag">Fellowship</span>
+              <span class="ptag">Follow-up</span>
+            </div>
+            <div class="p-gallery" role="list" aria-label="Montagu outreach photos">
+              <button class="p-img-wrap" role="listitem" aria-label="View photo: Outreach ministry at Montagu follow-up visit, June 2024" tabindex="0">
+                <img src="Montagu1.jpg" alt="Outreach ministry at Montagu follow-up visit, June 2024" loading="lazy" decoding="async" width="200" height="200">
+              </button>
+              <button class="p-img-wrap" role="listitem" aria-label="View photo: Pastor Ashwin Beaton preaching at Montagu congregation" tabindex="0">
+                <img src="Montagu2.jpg" alt="Pastor Ashwin Beaton preaching at Montagu congregation" loading="lazy" decoding="async" width="200" height="200">
+              </button>
+              <button class="p-img-wrap" role="listitem" aria-label="View photo: Books and literature distributed at Montagu outreach" tabindex="0">
+                <img src="Montagu3.jpg" alt="Books and literature distributed at Montagu outreach" loading="lazy" decoding="async" width="200" height="200">
+              </button>
+            </div>
+          </article>
+
+          <!-- Riviersonderend -->
+          <article class="pc">
+            <div class="pd">September 2024</div>
+            <h3>Riviersonderend</h3>
+            <p>Sabbath fellowship, health demonstrations and Sunday public outreach in the community hall — 500 people served with food and the Gospel.</p>
+            <div class="ptags">
+              <span class="ptag">1,600 Books</span>
+              <span class="ptag">10 Bibles</span>
+              <span class="ptag">500 Served</span>
+            </div>
+            <div class="p-gallery" role="list" aria-label="Riviersonderend outreach photos">
+              <button class="p-img-wrap" role="listitem" aria-label="View photo: Health demonstrations at Riviersonderend community hall, September 2024" tabindex="0">
+                <img src="Riviersonderend1.jpeg" alt="Health demonstrations at Riviersonderend community hall, September 2024" loading="lazy" decoding="async" width="200" height="200">
+              </button>
+              <button class="p-img-wrap" role="listitem" aria-label="View photo: VPM volunteers serving food to 500 community members" tabindex="0">
+                <img src="Riviersonderend2.jpeg" alt="VPM volunteers serving food to 500 community members at Riviersonderend" loading="lazy" decoding="async" width="200" height="200">
+              </button>
+              <button class="p-img-wrap" role="listitem" aria-label="View photo: Sabbath fellowship at Riviersonderend outreach" tabindex="0">
+                <img src="Riviersonderend3.jpeg" alt="Sabbath fellowship at Riviersonderend outreach" loading="lazy" decoding="async" width="200" height="200">
+              </button>
+            </div>
+          </article>
+
+          <!-- Vredendal -->
+          <article class="pc">
+            <div class="pd">November 2024</div>
+            <h3>Vredendal</h3>
+            <p>Worship with Vredendal North congregation, open-air service, Sunday outreach at Vergenoeg Primary School with 800 books distributed.</p>
+            <div class="ptags">
+              <span class="ptag">800 Books</span>
+              <span class="ptag">School Outreach</span>
+              <span class="ptag">Open-air</span>
+            </div>
+            <div class="p-gallery" role="list" aria-label="Vredendal outreach photos">
+              <button class="p-img-wrap" role="listitem" aria-label="View photo: Open-air service at Vredendal North congregation, November 2024" tabindex="0">
+                <img src="Vredendal1.jpeg" alt="Open-air service at Vredendal North congregation, November 2024" loading="lazy" decoding="async" width="200" height="200">
+              </button>
+              <button class="p-img-wrap" role="listitem" aria-label="View photo: School outreach at Vergenoeg Primary School, Vredendal" tabindex="0">
+                <img src="Vredendal2.jpeg" alt="School outreach at Vergenoeg Primary School, Vredendal" loading="lazy" decoding="async" width="200" height="200">
+              </button>
+              <button class="p-img-wrap" role="listitem" aria-label="View photo: VPM volunteers distributing 800 books at Vredendal" tabindex="0">
+                <img src="evan.jpg" alt="VPM volunteers distributing 800 books at Vredendal outreach" loading="lazy" decoding="async" width="200" height="200">
+              </button>
+            </div>
+          </article>
+
+        </div>
+        <p class="tc" style="margin-top:44px;color:rgba(255,255,255,.45);font-style:italic;font-size:.95rem">
+          "We thank the Lord for His sustaining grace during this great work done."
+        </p>
+      </div>
+    </section>
+
+    <!-- IMPACT -->
+    <section id="impact" class="pad" aria-labelledby="impact-heading">
+      <div class="con">
+        <div class="tc" style="margin-bottom:56px">
+          <span class="tag">20 Years of Impact</span>
+          <h2 class="h2" id="impact-heading">The Numbers Behind the Mission</h2>
+          <p class="sub" style="margin:12px auto 0;max-width:520px">Every number represents a life touched, a family fed, a soul introduced to the hope of Jesus Christ.</p>
+        </div>
+        <div class="g4" id="statGrid" aria-label="Impact statistics">
+          <div class="sc"><div class="sn" data-target="7109">7,109</div><div class="sl">Books Distributed</div><div class="sd">Christian literature across the Western Cape</div></div>
+          <div class="sc"><div class="sn" data-target="280">280</div><div class="sl">Bibles Given Away</div><div class="sd">God's Word gifted to individuals seeking truth</div></div>
+          <div class="sc"><div class="sn" data-target="8500">8,500+</div><div class="sl">Clothing Items</div><div class="sd">Warm, dignified clothing to those in hardship</div></div>
+          <div class="sc"><div class="sn" data-target="15000">15,000+</div><div class="sl">Meals &amp; Parcels</div><div class="sd">Hot meals, food parcels and soup for families</div></div>
+        </div>
+        <div class="g3" style="margin-top:48px">
+          <div class="fc"><div class="fi" aria-hidden="true"><i class="fa-solid fa-hand-holding-heart"></i></div><div><h3>Daily Welfare</h3><p>210 sandwiches, 230 plates, 180 fruit &amp; veg parcels, hygiene packs — every month across Wellington and beyond.</p></div></div>
+          <div class="fc"><div class="fi" aria-hidden="true"><i class="fa-solid fa-church"></i></div><div><h3>Church Partnership</h3><p>VPM worships alongside SDA congregations in every town — strengthening the body of Christ while reaching the lost.</p></div></div>
+          <div class="fc"><div class="fi" aria-hidden="true"><i class="fa-solid fa-users"></i></div><div><h3>Volunteer Powered</h3><p>12–20 volunteers per project — giving haircuts, serving food, singing and sharing testimonies of grace.</p></div></div>
+          <div class="fc"><div class="fi" aria-hidden="true"><i class="fa-solid fa-child"></i></div><div><h3>Youth Engagement</h3><p>Week of Prayer events, youth services and school outreaches investing in the next generation of faith leaders.</p></div></div>
+          <div class="fc"><div class="fi" aria-hidden="true"><i class="fa-solid fa-heart-pulse"></i></div><div><h3>Health Screenings</h3><p>Regular BMI and blood pressure checks, health talks and medical referrals — physical needs met alongside spiritual ones.</p></div></div>
+          <div class="fc"><div class="fi" aria-hidden="true"><i class="fa-solid fa-book-open-reader"></i></div><div><h3>Bible Studies</h3><p>47 structured Bible studies and 36 personal counselling sessions — nurturing spiritual growth long after each outreach.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section id="test" aria-labelledby="testimonials-heading">
+      <div class="con">
+        <div class="tc" style="margin-bottom:54px">
+          <span class="tag" style="border-color:rgba(200,146,42,.5);color:var(--gold-light)">Voices of Faith</span>
+          <h2 class="h2" id="testimonials-heading" style="color:#fff">What Partners &amp; Beneficiaries Say</h2>
+        </div>
+        <div class="g3">
+          <blockquote class="tc-card">
+            <div class="tq" aria-hidden="true">"</div>
+            <p class="tt">We would like to thank each individual for their sacrifice, time, talent, expertise and financial support. You have made a valuable contribution in spreading the gospel throughout South Africa and beyond.</p>
+            <footer class="ta">
+              <div class="tav" aria-hidden="true">A</div>
+              <div class="tai"><h4>Ashwell W. Beaton</h4><p>Chairman, Victorious Pilgrim Ministries</p></div>
+            </footer>
+          </blockquote>
+          <blockquote class="tc-card">
+            <div class="tq" aria-hidden="true">"</div>
+            <p class="tt">The outreach in our community hall was a blessing we will never forget. The food, the music, the Word of God — everything was given with such love. Our congregation was deeply strengthened.</p>
+            <footer class="ta">
+              <div class="tav" aria-hidden="true">R</div>
+              <div class="tai"><h4>Pastor, Riviersonderend</h4><p>SDA Church Partner — September 2024</p></div>
+            </footer>
+          </blockquote>
+          <blockquote class="tc-card">
+            <div class="tq" aria-hidden="true">"</div>
+            <p class="tt">Receiving a food parcel and a Bible on the same day was something I will always remember. The volunteers treated us with so much respect and dignity. God bless VPM and all their donors.</p>
+            <footer class="ta">
+              <div class="tav" aria-hidden="true">M</div>
+              <div class="tai"><h4>Community Member</h4><p>Montagu Outreach Beneficiary</p></div>
+            </footer>
+          </blockquote>
+        </div>
+      </div>
+    </section>
+
+    <!-- DONATE -->
+    <section id="donate" class="pad" aria-labelledby="donate-heading">
+      <div class="con">
+        <div class="tc" style="margin-bottom:54px">
+          <span class="tag">Give &amp; Partner</span>
+          <h2 class="h2" id="donate-heading">Help Us Hasten the Lord's Return</h2>
+          <p class="sub" style="margin:12px auto 0;max-width:520px">Your gift feeds the hungry, clothes the naked and places God's Word into searching hearts. Every rand counts.</p>
+        </div>
+        <div class="g2" style="gap:28px;align-items:start">
+          <div class="dcard">
+            <h3 style="font-family:var(--font-serif);font-size:1.9rem;color:var(--navy-dark);margin-bottom:6px">Bank Transfer (EFT)</h3>
+            <p class="dsub">Donate directly via secure EFT — quick and easy.</p>
+
+            <!-- Secure bank detail reveal -->
+            <div id="bank-reveal">
+              <button id="bank-reveal-btn" aria-expanded="false" aria-controls="bank-details">
+                <i class="fa-solid fa-lock" aria-hidden="true"></i> Show Banking Details
+              </button>
+              <div id="bank-details" aria-live="polite">
+                <table class="btbl" aria-label="VPM bank account details">
+                  <tbody>
+                    <tr><td>Account Name</td><td>Victorious Pilgrim Ministries</td></tr>
+                    <tr><td>Bank</td><td>Standard Bank of South Africa<br><small style="color:#888;font-size:.78rem">Paarl Branch</small></td></tr>
+                    <tr><td>Account Number</td><td class="bacct">072 346 809</td></tr>
+                    <tr><td>Branch Code</td><td>051 001</td></tr>
+                    <tr><td>Reference</td><td>Your Name + Donation</td></tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="durg">
+              <strong>Tax Deductible:</strong> All donations are tax-deductible where applicable. Keep your proof of payment as your receipt. Contact us for Section 18A certificates.
+            </div>
+            <div style="margin-top:24px;text-align:center;padding:18px;background:var(--gray-light);border-radius:var(--r)">
+              <p style="font-size:.85rem;color:#666;margin-bottom:10px">Questions about donating?</p>
+              <!-- Obfuscated email — rendered by JS -->
+              <a class="btn btn-gold em-link" data-u="v.p.m" data-d="mweb.co.za" href="#" style="font-size:.9rem" aria-label="Email VPM about donations">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i> Email Us
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <div class="dcta">
+              <i class="fa-solid fa-heart fa-3x" style="color:var(--gold-light);margin-bottom:14px" aria-hidden="true"></i>
+              <h3 style="font-family:var(--font-serif);font-size:1.75rem;margin-bottom:10px">What Your Gift Does</h3>
+              <p style="color:rgba(255,255,255,.68);margin-bottom:26px;font-size:.95rem">Even a small monthly gift transforms communities for eternity.</p>
+              <div class="gitem"><i class="fa-solid fa-bread-slice" aria-hidden="true"></i><span><strong>R50/month</strong> — provides 5 food parcels for hungry families</span></div>
+              <div class="gitem"><i class="fa-solid fa-bible" aria-hidden="true"></i><span><strong>R100/month</strong> — sponsors Bibles &amp; literature for outreach</span></div>
+              <div class="gitem"><i class="fa-solid fa-van-shuttle" aria-hidden="true"></i><span><strong>R500/month</strong> — helps fund transport for a full outreach mission</span></div>
+              <div class="gitem"><i class="fa-solid fa-shirt" aria-hidden="true"></i><span><strong>Clothing donations</strong> — collected year-round in Wellington</span></div>
+              <a href="tel:+27725952922" class="btn btn-gold" style="width:100%;justify-content:center;margin-top:12px" aria-label="Call VPM to discuss donating">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i> Call To Discuss
+              </a>
+            </div>
+
+            <div style="background:#fff;border-radius:var(--rlg);padding:30px;margin-top:22px;box-shadow:var(--shadow)">
+              <h3 style="font-family:var(--font-serif);font-size:1.15rem;color:var(--navy-dark);margin-bottom:14px">Direct Contact</h3>
+              <div style="display:flex;flex-direction:column;gap:14px">
+                <a href="tel:+27725952922" style="display:flex;gap:9px;align-items:center;color:#4a5568;font-size:.95rem;min-height:44px" aria-label="Phone VPM: plus 27 72 595 2922">
+                  <i class="fa-solid fa-phone" style="color:var(--gold)" aria-hidden="true"></i>+27 72 595 2922
+                </a>
+                <!-- Obfuscated email -->
+                <a class="em-link" data-u="v.p.m" data-d="mweb.co.za" href="#" style="display:flex;gap:9px;align-items:center;color:#4a5568;font-size:.95rem;min-height:44px" aria-label="Email VPM">
+                  <i class="fa-solid fa-envelope" style="color:var(--gold)" aria-hidden="true"></i>v.p.m@mweb.co.za
+                </a>
+                <address style="display:flex;gap:9px;align-items:flex-start;color:#4a5568;font-size:.95rem;font-style:normal">
+                  <i class="fa-solid fa-location-dot" style="color:var(--gold);margin-top:3px" aria-hidden="true"></i>
+                  7 Buitekant Street, Newton, Wellington 7655
+                </address>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="pad" aria-labelledby="contact-heading">
+      <div class="con">
+        <div class="g2">
+          <div>
+            <span class="tag">Get In Touch</span>
+            <h2 class="h2" id="contact-heading">Let's Connect &amp; Partner</h2>
+            <p class="sub">Whether you want to donate, volunteer, request prayer or partner your church with VPM — we'd love to hear from you.</p>
+            <div style="display:flex;flex-direction:column;gap:24px;margin-top:40px">
+              <div class="cr">
+                <div class="ci" aria-hidden="true"><i class="fa-solid fa-phone"></i></div>
+                <div><h3 style="font-weight:600;color:var(--navy-dark);font-size:.9rem;margin-bottom:4px">Phone</h3><a href="tel:+27725952922" aria-label="Call VPM on plus 27 72 595 2922">+27 72 595 2922</a></div>
+              </div>
+              <div class="cr">
+                <div class="ci" aria-hidden="true"><i class="fa-solid fa-envelope"></i></div>
+                <div><h3 style="font-weight:600;color:var(--navy-dark);font-size:.9rem;margin-bottom:4px">Email</h3>
+                  <a class="em-link" data-u="v.p.m" data-d="mweb.co.za" href="#" aria-label="Email VPM">v.p.m@mweb.co.za</a>
+                </div>
+              </div>
+              <div class="cr">
+                <div class="ci" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></div>
+                <div><h3 style="font-weight:600;color:var(--navy-dark);font-size:.9rem;margin-bottom:4px">Postal Address</h3>
+                  <address style="font-style:normal;color:var(--gray);font-size:.95rem">7 Buitekant Street, Newton, Wellington 7655<br>Republic of South Africa</address>
+                </div>
+              </div>
+              <div class="cr">
+                <div class="ci" aria-hidden="true"><i class="fa-solid fa-registered"></i></div>
+                <div><h3 style="font-weight:600;color:var(--navy-dark);font-size:.9rem;margin-bottom:4px">Registration</h3><p>2004/028180/08</p></div>
+              </div>
+            </div>
+            <div style="margin-top:36px;background:var(--gold-pale);border:1px solid rgba(200,146,42,.25);border-radius:var(--r);padding:22px 26px">
+              <p style="font-size:.9rem;color:#7a5c1a;line-height:1.7"><strong style="color:var(--gold)">Want to volunteer?</strong><br>We welcome individuals and teams from all backgrounds. Whether you can cook, preach, give haircuts or simply serve — there is a place for you in VPM's next outreach mission.</p>
+            </div>
+          </div>
+
+          <div class="cform">
+            <h3>Send Us a Message</h3>
+            <form action="https://formsubmit.co/ajax/v.p.m@mweb.co.za" method="POST" id="contact-form" novalidate>
+              <input type="hidden" name="_subject" value="New message from VPM Website">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="table">
+              <!-- Honeypot: visually hidden, traps bots -->
+              <div class="hp-field" aria-hidden="true">
+                <label for="hp-name">Leave this field blank</label>
+                <input type="text" id="hp-name" name="_honey" tabindex="-1" autocomplete="off">
+              </div>
+
+              <div class="fr">
+                <div class="fg">
+                  <label for="nm">Your Name <span aria-hidden="true">*</span></label>
+                  <input type="text" id="nm" name="name" placeholder="John Smith" required aria-required="true" autocomplete="name">
+                </div>
+                <div class="fg">
+                  <label for="em">Email <span aria-hidden="true">*</span></label>
+                  <input type="email" id="em" name="email" placeholder="john@email.com" required aria-required="true" autocomplete="email">
+                </div>
+              </div>
+              <div class="fg">
+                <label for="ph">Phone Number</label>
+                <input type="tel" id="ph" name="phone" placeholder="+27 xx xxx xxxx" autocomplete="tel">
+              </div>
+              <div class="fg">
+                <label for="sb">I want to…</label>
+                <select id="sb" name="subject" aria-label="Select your enquiry type">
+                  <option value="" disabled selected>Select a reason</option>
+                  <option value="donate">Make a donation</option>
+                  <option value="volunteer">Volunteer with VPM</option>
+                  <option value="partner">Partner my church</option>
+                  <option value="prayer">Request prayer</option>
+                  <option value="other">Other enquiry</option>
+                </select>
+              </div>
+              <div class="fg">
+                <label for="msg">Your Message <span aria-hidden="true">*</span></label>
+                <textarea id="msg" name="message" placeholder="How can we help or pray for you?" required aria-required="true"></textarea>
+              </div>
+              <div id="form-status" role="alert" aria-live="polite" style="margin-bottom:14px;font-size:.9rem;display:none"></div>
+              <button type="submit" class="fsub" id="form-submit">
+                <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+                <span>Send Message — We Will Reply Soon</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main><!-- /main -->
+
+  <!-- FOOTER -->
+  <footer role="contentinfo">
+    <div class="ftop">
+      <div class="con">
+        <div class="fgrid">
+          <div>
+            <div class="flogo">
+              <div class="fi2" aria-hidden="true">V</div>
+              <div class="flogo-t">
+                <h3>Victorious Pilgrim Ministries</h3>
+                <p>Wellington, South Africa · Est. 2004</p>
+              </div>
+            </div>
+            <p class="fdesc">"I shall pass through this world but once. If there is any good deed that I can do, let me do it now — for I shall not pass this way again."</p>
+            <nav class="fsoc" aria-label="Social and contact links">
+              <a class="em-link" data-u="v.p.m" data-d="mweb.co.za" href="#" aria-label="Email Victorious Pilgrim Ministries">
+                <i class="fa-solid fa-envelope" aria-hidden="true"></i>
+              </a>
+              <a href="tel:+27725952922" aria-label="Call Victorious Pilgrim Ministries">
+                <i class="fa-solid fa-phone" aria-hidden="true"></i>
+              </a>
+              <a href="#donate" aria-label="Donate to Victorious Pilgrim Ministries">
+                <i class="fa-solid fa-heart" aria-hidden="true"></i>
+              </a>
+            </nav>
+          </div>
+          <div>
+            <h4>Quick Links</h4>
+            <ul class="flinks">
+              <li><a href="#about">About VPM</a></li>
+              <li><a href="#ministries">Our Ministries</a></li>
+              <li><a href="#outreach">Outreach Towns</a></li>
+              <li><a href="#projects">2024 Projects</a></li>
+              <li><a href="#impact">Our Impact</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Get Involved</h4>
+            <ul class="flinks">
+              <li><a href="#donate">Make a Donation</a></li>
+              <li><a href="#contact">Volunteer</a></li>
+              <li><a href="#contact">Partner a Church</a></li>
+              <li><a href="#contact">Request Prayer</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4>Contact</h4>
+            <ul class="flinks">
+              <li><a href="tel:+27725952922" aria-label="Phone VPM">+27 72 595 2922</a></li>
+              <li><a class="em-link" data-u="v.p.m" data-d="mweb.co.za" href="#" aria-label="Email VPM">v.p.m@mweb.co.za</a></li>
+              <li style="color:rgba(255,255,255,.5);font-size:.85rem">7 Buitekant Street, Newton, Wellington 7655</li>
+              <li style="color:rgba(255,255,255,.5);font-size:.85rem">Republic of South Africa</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="con">
+      <div class="fbot">
+        <p>© 2025 Victorious Pilgrim Ministries · Reg. 2004/028180/08 · Wellington, Western Cape, South Africa</p>
+        <p style="color:rgba(255,255,255,.3)">Built to Glorify God · One Page · One Mission</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- LIGHTBOX MODAL -->
+  <div id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer" aria-hidden="true">
+    <img id="lb-img" src="" alt="">
+    <button id="lb-close" aria-label="Close image viewer">
+      <span aria-hidden="true">×</span>
     </button>
   </div>
-</nav>
 
-<!-- HERO -->
-<header id="hero">
-  <div class="hbg-img"></div>
-  <div class="hov"></div>
-  <div class="hc">
-    <div class="hbadge"><i class="fa-solid fa-star"></i> 20th Anniversary · 2004–2024</div>
-    <h1 class="ht">Serving the Lord<br><em>by Serving Others</em></h1>
-    <p class="hsub">Victorious Pilgrim Ministries brings the Gospel, practical mercy and lasting hope to communities across the Western Cape and beyond.</p>
-    <p class="hverse">"As my Father hath sent me, even so send I you." — John 20:21</p>
-    <div class="hbtns">
-      <a href="#donate" class="btn btn-gold"><i class="fa-solid fa-heart"></i> Partner With Us</a>
-      <a href="#projects" class="btn btn-ghost"><i class="fa-solid fa-play"></i> See Our Work</a>
-    </div>
-    <div class="hstats">
-      <div class="hst"><div class="hst-n">7,109</div><div class="hst-l">Books Distributed</div></div>
-      <div class="hst"><div class="hst-n">280</div><div class="hst-l">Bibles Given</div></div>
-      <div class="hst"><div class="hst-n">8,500+</div><div class="hst-l">Clothing Items</div></div>
-      <div class="hst"><div class="hst-n">210</div><div class="hst-l">Food Parcels</div></div>
-      <div class="hst"><div class="hst-n">23</div><div class="hst-l">Towns Reached</div></div>
-    </div>
-  </div>
-  <div class="scroll-d"><i class="fa-solid fa-chevron-down fa-2x"></i></div>
-</header>
+  <!-- BACK TO TOP -->
+  <button id="btt" aria-label="Back to top of page" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
+    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  </button>
 
-<!-- ABOUT -->
-<section id="about" class="pad">
-  <div class="con">
-    <div class="g2">
-      <div class="aiwrap">
-        <img src="love.jpg" loading="lazy" width=100% breath=100%>
-        <div class="abadge"><div class="n">20</div><div class="l">Years of<br>Service</div></div>
-      </div>
-      <div class="atxt" style="padding-left:20px">
-        <span class="tag">Who We Are</span>
-        <h2 class="h2">Faith in Action Since 2004</h2>
-        <p style="color:var(--gold);font-size:.82rem;font-weight:600;margin:6px 0 20px;letter-spacing:.04em">REG. NO. 2004/028180/08 · WELLINGTON, WESTERN CAPE</p>
-        <p>Founded in 2004 in Wellington, Western Cape, Victorious Pilgrim Ministries exists to obey the Great Commission. Under the leadership of Chairman <strong>Ashwell W. Beaton</strong> and Welfare Director <strong>Wendy Beaton</strong>, VPM combines bold evangelism with practical mercy ministry.</p>
-        <p>We worship and serve alongside local SDA congregations while reaching the wider community with the love of Jesus — through literature, health education, food parcels, clothing and much more. Over two decades, our team has touched thousands of lives across 23 towns in South Africa.</p>
-        <div class="qb">
-          <p>"Where God guides, He will provide. If it is God's will, it becomes His bill."</p>
-          <cite>— Ashwell W. Beaton, VPM Chairman</cite>
-        </div>
-        <div class="chips">
-          <div class="chip"><i class="fa-solid fa-map-pin"></i> Wellington, Western Cape</div>
-          <div class="chip"><i class="fa-solid fa-calendar"></i> Est. 2004</div>
-          <div class="chip"><i class="fa-solid fa-registered"></i> Reg. 2004/028180/08</div>
-          <div class="chip"><i class="fa-solid fa-church"></i> SDA-aligned</div>
-          <div class="chip"><i class="fa-solid fa-users"></i> 12–20 Volunteers per project</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- WHATSAPP BUTTON -->
+  <a
+    id="wa-btn"
+    href="https://wa.me/27725952922?text=Hi%20VPM%2C%20I%20would%20like%20to%20enquire%20about%20your%20ministry"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Chat with VPM on WhatsApp"
+  >
+    <svg viewBox="0 0 24 24" width="22" height="22" fill="#fff" aria-hidden="true" focusable="false">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+    </svg>
+    WhatsApp
+  </a>
 
-<!-- MISSION STRIP -->
-<div class="mstrip">
-  <div class="con">
-    <div class="mi"><i class="fa-solid fa-book-bible"></i><h4>Evangelism</h4><p>Placing God's Word into searching hearts through books, Bibles, tracts and personal counselling.</p></div>
-    <div class="mi"><i class="fa-solid fa-hands-holding-heart"></i><h4>Welfare</h4><p>Feeding the hungry, clothing the naked and bringing dignity to every person we meet.</p></div>
-    <div class="mi"><i class="fa-solid fa-stethoscope"></i><h4>Health</h4><p>BMI screening, blood pressure checks, medical advice and health education talks.</p></div>
-    <div class="mi"><i class="fa-solid fa-handshake"></i><h4>Community</h4><p>Partnering with local churches and schools to build lasting relationships and Gospel hope.</p></div>
-  </div>
-</div>
+  <!-- MOBILE STICKY DONATE -->
+  <a id="mob-donate" href="#donate" aria-label="Donate to VPM">
+    <i class="fa-solid fa-heart" aria-hidden="true"></i> Donate Now
+  </a>
 
-<!-- MINISTRIES -->
-<section id="ministries" class="pad">
-  <div class="con">
-    <div class="tc" style="margin-bottom:56px">
-      <span class="tag">What We Do</span>
-      <h2 class="h2">Two Arms · One Mission</h2>
-      <p class="sub" style="margin:12px auto 0;max-width:560px">Everything we do flows from a single calling: to be the hands and feet of Jesus to those in need.</p>
-    </div>
-    <div class="g2" style="align-items:stretch">
-      <div class="mc">
-        <img src="evan.jpg" alt="Volunteers distributing Bibles and Christian literature" loading="lazy">
-        <div class="mcb">
-          <div class="mc-icon ic-b"><i class="fa-solid fa-book-bible"></i></div>
-          <h3>Evangelism Ministry</h3>
-          <ul class="ml">
-            <li><i class="fa-solid fa-check"></i><span>7,109 books &amp; 280 Bibles distributed across South Africa</span></li>
-            <li><i class="fa-solid fa-check"></i><span>42 house visits and 47 personal Bible studies conducted</span></li>
-            <li><i class="fa-solid fa-check"></i><span>210 gospel tracts, 160 DVDs and 36 counselling sessions</span></li>
-            <li><i class="fa-solid fa-check"></i><span>Preaching, Sabbath School leadership and youth evangelism</span></li>
-            <li><i class="fa-solid fa-check"></i><span>Open-air services in schools, halls and public spaces</span></li>
-            <li><i class="fa-solid fa-check"></i><span>Outreach in 23 towns: Oudtshoorn, Paarl, Vredendal, Montagu &amp; more</span></li>
-          </ul>
-        </div>
-      </div>
-      <div class="mc">
-        <img src="kids.jpg" alt="Volunteers preparing food and care packages for the community" loading="lazy">
-        <div class="mcb">
-          <div class="mc-icon ic-g"><i class="fa-solid fa-heart"></i></div>
-          <h3>Welfare &amp; Health Ministry</h3>
-          <ul class="ml">
-            <li><i class="fa-solid fa-check"></i><span>8,500+ clothing items donated to those in need</span></li>
-            <li><i class="fa-solid fa-check"></i><span>210 food parcels, 1,540 plates served &amp; 130L of soup distributed</span></li>
-            <li><i class="fa-solid fa-check"></i><span>Daily sandwiches, pies, muffins, fresh fruit &amp; vegetable parcels</span></li>
-            <li><i class="fa-solid fa-check"></i><span>BMI testing, blood pressure monitoring &amp; health education talks</span></li>
-            <li><i class="fa-solid fa-check"></i><span>Haircuts, massages and personal hygiene pack distribution</span></li>
-            <li><i class="fa-solid fa-check"></i><span>Medical referrals and ongoing welfare support for families</span></li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+  <!-- ═══════════════════════════════════════════════
+       JAVASCRIPT
+  ═══════════════════════════════════════════════ -->
+  <script>
+  (function () {
+    'use strict';
 
-<!-- OUTREACH -->
-<section id="outreach" class="pad">
-  <div class="con">
-    <div class="g2">
-      <div>
-        <span class="tag">Our Reach</span>
-        <h2 class="h2">23 Towns &amp; Growing</h2>
-        <p class="sub">From the Winelands to the Karoo, VPM has taken the Gospel and practical care across the Western Cape — and beyond South Africa's borders.</p>
-        <div class="tpills">
-          <div class="pill"><i class="fa-solid fa-location-dot"></i>Wellington</div>
-          <div class="pill"><i class="fa-solid fa-location-dot"></i>Paarl</div>
-          <div class="pill"><i class="fa-solid fa-location-dot"></i>Oudtshoorn</div>
-          <div class="pill"><i class="fa-solid fa-location-dot"></i>Montagu</div>
-          <div class="pill"><i class="fa-solid fa-location-dot"></i>Robertson</div>
-          <div class="pill"><i class="fa-solid fa-location-dot"></i>Vredendal</div>
-          <div class="pill"><i class="fa-solid fa-location-dot"></i>Riviersonderend</div>
-          <div class="pill"><i class="fa-solid fa-location-dot"></i>Swellendam</div>
-          <div class="pill"><i class="fa-solid fa-location-dot"></i>George</div>
-          <div class="pill"><i class="fa-solid fa-location-dot"></i>Stellenbosch</div>
-          <div class="pill"><i class="fa-solid fa-location-dot"></i>Worcester</div>
-          <div class="pill"><i class="fa-solid fa-location-dot"></i>Ceres</div>
-          <div class="pill"><i class="fa-solid fa-location-dot"></i>Tulbagh</div>
-          <div class="pill"><i class="fa-solid fa-location-dot"></i>Franschhoek</div>
-          <div class="pill"><i class="fa-solid fa-location-dot"></i>Hermanus</div>
-          <div class="pill"><i class="fa-solid fa-location-dot"></i>Bredasdorp</div>
-          <div class="pill"><i class="fa-solid fa-location-dot"></i>Bonnievale</div>
-          <div class="pill"><i class="fa-solid fa-location-dot"></i>Ladismith</div>
-          <div class="pill"><i class="fa-solid fa-location-dot"></i>Calitzdorp</div>
-          <div class="pill"><i class="fa-solid fa-location-dot"></i>Mossel Bay</div>
-          <div class="pill"><i class="fa-solid fa-location-dot"></i>Knysna</div>
-          <div class="pill"><i class="fa-solid fa-location-dot"></i>De Doorns</div>
-          <div class="pill"><i class="fa-solid fa-location-dot"></i>+ More</div>
-        </div>
-      </div>
-      <div>
-        <img class="oimg" src="food.jpg" alt="Western Cape landscape representing communities VPM serves" loading="lazy">
-      </div>
-    </div>
-  </div>
-</section>
+    /* ── MOBILE NAV ── */
+    const hbg = document.getElementById('hbg');
+    const nl  = document.getElementById('nl');
+    const bd  = document.getElementById('nav-backdrop');
 
-<!-- 2024 PROJECTS -->
-<section id="projects" class="pad">
-  <div class="con">
-    <div class="tc" style="margin-bottom:56px">
-      <span class="tag" style="border-color:rgba(200,146,42,.5)">VPM 20th Anniversary Year</span>
-      <h2 class="h2">2024 Outreach Highlights</h2>
-      <p class="sub" style="margin:12px auto 0;max-width:540px">A landmark year of celebration and service — four major projects, thousands of lives impacted for the Kingdom.</p>
-    </div>
-    <div class="g4">
-      <div class="pc">
-        <div class="pd">March 2024</div>
-        <h4>Robertson &amp; Montagu</h4>
-        <p>Youth Week of Prayer, Sabbath School leadership, preaching and community health talk. The team served 500+ people with love and the Word.</p>
-        <div class="ptags"><span class="ptag">1,260 Books</span><span class="ptag">14 Bibles</span><span class="ptag">500+ Served</span></div>
-<div class="p-gallery">
-  <label class="p-img-wrap">
-    <input type="checkbox">
-    <img src="Robertson1.jpg" alt="Outreach 1">
-  </label>
-  <label class="p-img-wrap">
-    <input type="checkbox">
-    <img src="Robertson2.jpg" alt="Outreach 2">
-  </label>
-  <label class="p-img-wrap">
-    <input type="checkbox">
-    <img src="Robertson3.jpg" alt="Outreach 3">
-  </label>
-</div>
-      
-</div>
-      <div class="pc">
-        <div class="pd">June 2024</div>
-        <h4>Follow-Up Montagu</h4>
-        <p>Sabbath School leadership, preaching by Pastor Ashwin Beaton, 600 books donated and rich community fellowship with local believers.</p>
-        <div class="ptags"><span class="ptag">600 Books</span><span class="ptag">Fellowship</span><span class="ptag">Follow-up</span></div>
-<div class="p-gallery">
-  <label class="p-img-wrap">
-    <input type="checkbox">
-    <img src="Montagu1.jpg" alt="Outreach 1">
-  </label>
-  <label class="p-img-wrap">
-    <input type="checkbox">
-    <img src="Montagu2.jpg" alt="Outreach 2">
-  </label>
-  <label class="p-img-wrap">
-    <input type="checkbox">
-    <img src="Montagu3.jpg" alt="Outreach 3">
-  </label>
-</div>     
- </div>
-      <div class="pc">
-        <div class="pd">September 2024</div>
-        <h4>Riviersonderend</h4>
-        <p>Sabbath fellowship, health demonstrations and Sunday public outreach in the community hall — 500 people served with food and the Gospel.</p>
-        <div class="ptags"><span class="ptag">1,600 Books</span><span class="ptag">10 Bibles</span><span class="ptag">500 Served</span></div>
-<div class="p-gallery">
-  <label class="p-img-wrap">
-    <input type="checkbox">
-    <img src="Riviersonderend1.jpeg" alt="Outreach 1">
-  </label>
-  <label class="p-img-wrap">
-    <input type="checkbox">
-    <img src="Riviersonderend2.jpeg" alt="Outreach 2">
-  </label>
-  <label class="p-img-wrap">
-    <input type="checkbox">
-    <img src="Riviersonderend3.jpeg" alt="Outreach 3">
-  </label>
-</div>
-      </div>
-      <div class="pc">
-        <div class="pd">November 2024</div>
-        <h4>Vredendal</h4>
-        <p>Worship with Vredendal North congregation, open-air service, Sunday outreach at Vergenoeg Primary School with 800 books distributed.</p>
-        <div class="ptags"><span class="ptag">800 Books</span><span class="ptag">School Outreach</span><span class="ptag">Open-air</span></div>
-<div class="p-gallery">
-  <label class="p-img-wrap">
-    <input type="checkbox">
-    <img src="Vredendal1.jpeg" alt="Outreach 1">
-  </label>
-  <label class="p-img-wrap">
-    <input type="checkbox">
-    <img src="Vredendal2.jpeg" alt="Outreach 2">
-  </label>
-  <label class="p-img-wrap">
-    <input type="checkbox">
-    <img src="evan.jpg" alt="Outreach 3">
-  </label>
-</div>      
-</div>
+    function navOpen(state) {
+      nl.classList.toggle('open', state);
+      bd.classList.toggle('open', state);
+      hbg.setAttribute('aria-expanded', state);
+      const s = hbg.querySelectorAll('span');
+      s[0].style.transform = state ? 'rotate(45deg) translate(5px,5px)' : '';
+      s[1].style.opacity   = state ? '0' : '1';
+      s[2].style.transform = state ? 'rotate(-45deg) translate(5px,-5px)' : '';
+    }
 
-    </div>
-    <p class="tc" style="margin-top:44px;color:rgba(255,255,255,.45);font-style:italic;font-size:.92rem">"We thank the Lord for His sustaining grace during this great work done."</p>
-  </div>
-</section>
+    hbg.addEventListener('click', () => navOpen(nl.classList.contains('open') ? false : true));
+    bd.addEventListener('click', () => navOpen(false));
+    nl.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navOpen(false)));
 
-<!-- IMPACT -->
-<section id="impact" class="pad">
-  <div class="con">
-    <div class="tc" style="margin-bottom:56px">
-      <span class="tag">20 Years of Impact</span>
-      <h2 class="h2">The Numbers Behind the Mission</h2>
-      <p class="sub" style="margin:12px auto 0;max-width:520px">Every number represents a life touched, a family fed, a soul introduced to the hope of Jesus Christ.</p>
-    </div>
-    <div class="g4" id="statGrid">
-      <div class="sc"><div class="sn" data-target="7109">7,109</div><div class="sl">Books Distributed</div><div class="sd">Christian literature across the Western Cape</div></div>
-      <div class="sc"><div class="sn" data-target="280">280</div><div class="sl">Bibles Given Away</div><div class="sd">God's Word gifted to individuals seeking truth</div></div>
-      <div class="sc"><div class="sn" data-target="8500">8,500+</div><div class="sl">Clothing Items</div><div class="sd">Warm, dignified clothing to those in hardship</div></div>
-      <div class="sc"><div class="sn" data-target="15000">15,000+</div><div class="sl">Meals &amp; Parcels</div><div class="sd">Hot meals, food parcels and soup for families</div></div>
-    </div>
-    <div class="g3" style="margin-top:48px">
-      <div class="fc"><div class="fi"><i class="fa-solid fa-hand-holding-heart"></i></div><div><h4>Daily Welfare</h4><p>210 sandwiches, 230 plates, 180 fruit &amp; veg parcels, hygiene packs — every month across Wellington and beyond.</p></div></div>
-      <div class="fc"><div class="fi"><i class="fa-solid fa-church"></i></div><div><h4>Church Partnership</h4><p>VPM worships alongside SDA congregations in every town — strengthening the body of Christ while reaching the lost.</p></div></div>
-      <div class="fc"><div class="fi"><i class="fa-solid fa-users"></i></div><div><h4>Volunteer Powered</h4><p>12–20 volunteers per project — giving haircuts, serving food, singing and sharing testimonies of grace.</p></div></div>
-      <div class="fc"><div class="fi"><i class="fa-solid fa-child"></i></div><div><h4>Youth Engagement</h4><p>Week of Prayer events, youth services and school outreaches investing in the next generation of faith leaders.</p></div></div>
-      <div class="fc"><div class="fi"><i class="fa-solid fa-heartbeat"></i></div><div><h4>Health Screenings</h4><p>Regular BMI and blood pressure checks, health talks and medical referrals — physical needs met alongside spiritual ones.</p></div></div>
-      <div class="fc"><div class="fi"><i class="fa-solid fa-book-open-reader"></i></div><div><h4>Bible Studies</h4><p>47 structured Bible studies and 36 personal counselling sessions — nurturing spiritual growth long after each outreach.</p></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section id="test">
-  <div class="con">
-    <div class="tc" style="margin-bottom:54px">
-      <span class="tag" style="border-color:rgba(200,146,42,.5);color:var(--gold-light)">Voices of Faith</span>
-      <h2 class="h2" style="color:#fff">What Partners &amp; Beneficiaries Say</h2>
-    </div>
-    <div class="g3">
-      <div class="tc-card"><div class="tq">"</div><p class="tt">We would like to thank each individual for their sacrifice, time, talent, expertise and financial support. You have made a valuable contribution in spreading the gospel throughout South Africa and beyond.</p><div class="ta"><div class="tav">A</div><div class="tai"><h5>Ashwell W. Beaton</h5><p>Chairman, Victorious Pilgrim Ministries</p></div></div></div>
-      <div class="tc-card"><div class="tq">"</div><p class="tt">The outreach in our community hall was a blessing we will never forget. The food, the music, the Word of God — everything was given with such love. Our congregation was deeply strengthened.</p><div class="ta"><div class="tav">R</div><div class="tai"><h5>Pastor, Riviersonderend</h5><p>SDA Church Partner — September 2024</p></div></div></div>
-      <div class="tc-card"><div class="tq">"</div><p class="tt">Receiving a food parcel and a Bible on the same day was something I will always remember. The volunteers treated us with so much respect and dignity. God bless VPM and all their donors.</p><div class="ta"><div class="tav">M</div><div class="tai"><h5>Community Member</h5><p>Montagu Outreach Beneficiary</p></div></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- DONATE -->
-<section id="donate" class="pad">
-  <div class="con">
-    <div class="tc" style="margin-bottom:54px">
-      <span class="tag">Give &amp; Partner</span>
-      <h2 class="h2">Help Us Hasten the Lord's Return</h2>
-      <p class="sub" style="margin:12px auto 0;max-width:520px">Your gift feeds the hungry, clothes the naked and places God's Word into searching hearts. Every rand counts.</p>
-    </div>
-    <div class="g2" style="gap:28px;align-items:start">
-      <div class="dcard">
-        <h2>Bank Transfer (EFT)</h2>
-        <p class="dsub">Donate directly via secure EFT — quick and easy.</p>
-        <table class="btbl">
-          <tr><td>Account Name</td><td>Victorious Pilgrim Ministries</td></tr>
-          <tr><td>Bank</td><td>Standard Bank of South Africa<br><small style="color:#888;font-size:.78rem">Paarl Branch</small></td></tr>
-          <tr><td>Account Number</td><td class="bacct">072 346 809</td></tr>
-          <tr><td>Branch Code</td><td>051 001</td></tr>
-          <tr><td>Reference</td><td>Your Name + Donation</td></tr>
-        </table>
-        <div class="durg"><strong>Tax Deductible:</strong> All donations are tax-deductible where applicable. Keep your proof of payment as your receipt. Contact us for Section 18A certificates.</div>
-        <div style="margin-top:24px;text-align:center;padding:18px;background:var(--gray-light);border-radius:var(--r)">
-          <p style="font-size:.83rem;color:#666;margin-bottom:10px">Questions about donating?</p>
-          <a href="mailto:v.p.m@mweb.co.za" class="btn btn-gold" style="font-size:.88rem"><i class="fa-solid fa-envelope"></i> Email Us</a>
-        </div>
-      </div>
-      <div>
-        <div class="dcta">
-          <i class="fa-solid fa-heart fa-3x" style="color:var(--gold-light);margin-bottom:14px"></i>
-          <h3>What Your Gift Does</h3>
-          <p>Even a small monthly gift transforms communities for eternity.</p>
-          <div class="gitem"><i class="fa-solid fa-bread-slice"></i><span><strong>R50/month</strong> — provides 5 food parcels for hungry families</span></div>
-          <div class="gitem"><i class="fa-solid fa-bible"></i><span><strong>R100/month</strong> — sponsors Bibles &amp; literature for outreach</span></div>
-          <div class="gitem"><i class="fa-solid fa-van-shuttle"></i><span><strong>R500/month</strong> — helps fund transport for a full outreach mission</span></div>
-          <div class="gitem"><i class="fa-solid fa-shirt"></i><span><strong>Clothing donations</strong> — collected year-round in Wellington</span></div>
-          <a href="tel:+27725952922" class="btn btn-gold" style="width:100%;justify-content:center;margin-top:8px"><i class="fa-solid fa-phone"></i> Call To Discuss</a>
-        </div>
-        <div style="background:#fff;border-radius:var(--rlg);padding:30px;margin-top:22px;box-shadow:var(--shadow)">
-          <h4 style="font-family:var(--font-serif);font-size:1.15rem;color:var(--navy-dark);margin-bottom:14px">Direct Contact</h4>
-          <div style="display:flex;flex-direction:column;gap:12px">
-            <a href="tel:+27725952922" style="display:flex;gap:9px;align-items:center;color:#4a5568;font-size:.92rem;transition:var(--trans)" onmouseover="this.style.color='#c8922a'" onmouseout="this.style.color='#4a5568'"><i class="fa-solid fa-phone" style="color:var(--gold)"></i>+27 72 595 2922</a>
-            <a href="mailto:v.p.m@mweb.co.za" style="display:flex;gap:9px;align-items:center;color:#4a5568;font-size:.92rem;transition:var(--trans)" onmouseover="this.style.color='#c8922a'" onmouseout="this.style.color='#4a5568'"><i class="fa-solid fa-envelope" style="color:var(--gold)"></i>v.p.m@mweb.co.za</a>
-            <div style="display:flex;gap:9px;align-items:flex-start;color:#4a5568;font-size:.92rem"><i class="fa-solid fa-location-dot" style="color:var(--gold);margin-top:2px"></i>7 Buitekant street, newton, Wellington 7655</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section id="contact" class="pad">
-  <div class="con">
-    <div class="g2">
-      <div>
-        <span class="tag">Get In Touch</span>
-        <h2 class="h2">Let's Connect &amp; Partner</h2>
-        <p class="sub">Whether you want to donate, volunteer, request prayer or partner your church with VPM — we'd love to hear from you.</p>
-        <div style="display:flex;flex-direction:column;gap:24px;margin-top:40px">
-          <div class="cr"><div class="ci"><i class="fa-solid fa-phone"></i></div><div><h4>Phone</h4><a href="tel:+27725952922">+27 72 595 2922</a></div></div>
-          <div class="cr"><div class="ci"><i class="fa-solid fa-envelope"></i></div><div><h4>Email</h4><a href="mailto:v.p.m@mweb.co.za">v.p.m@mweb.co.za</a></div></div>
-          <div class="cr"><div class="ci"><i class="fa-solid fa-location-dot"></i></div><div><h4>Postal Address</h4><p>7 Buitekant street, newton, Wellington 7655<br>Republic of South Africa</p></div></div>
-          <div class="cr"><div class="ci"><i class="fa-solid fa-registered"></i></div><div><h4>Registration</h4><p>2004/028180/08</p></div></div>
-        </div>
-        <div style="margin-top:36px;background:var(--gold-pale);border:1px solid rgba(200,146,42,.25);border-radius:var(--r);padding:22px 26px">
-          <p style="font-size:.87rem;color:#7a5c1a;line-height:1.7"><strong style="color:var(--gold)">Want to volunteer?</strong><br>We welcome individuals and teams from all backgrounds. Whether you can cook, preach, give haircuts or simply serve — there is a place for you in VPM's next outreach mission.</p>
-        </div>
-      </div>
-      <div class="cform">
-        <h3>Send Us a Message</h3>
-        <form action="https://formsubmit.co/v.p.m@mweb.co.za" method="POST">
-          <input type="hidden" name="_subject" value="New message from VPM Website">
-          <input type="hidden" name="_captcha" value="false">
-          <div class="fr">
-            <div class="fg"><label for="nm">Your Name *</label><input type="text" id="nm" name="name" placeholder="John Smith" required autocomplete="name"></div>
-            <div class="fg"><label for="em">Email *</label><input type="email" id="em" name="email" placeholder="john@email.com" required autocomplete="email"></div>
-          </div>
-          <div class="fg"><label for="ph">Phone Number</label><input type="tel" id="ph" name="phone" placeholder="+27 xx xxx xxxx" autocomplete="tel"></div>
-          <div class="fg">
-            <label for="sb">I want to...</label>
-            <select id="sb" name="subject">
-              <option value="" disabled selected>Select a reason</option>
-              <option value="donate">Make a donation</option>
-              <option value="volunteer">Volunteer with VPM</option>
-              <option value="partner">Partner my church</option>
-              <option value="prayer">Request prayer</option>
-              <option value="other">Other enquiry</option>
-            </select>
-          </div>
-          <div class="fg"><label for="msg">Your Message *</label><textarea id="msg" name="message" placeholder="How can we help or pray for you?" required></textarea></div>
-          <button type="submit" class="fsub"><i class="fa-solid fa-paper-plane"></i> Send Message — We Will Reply Soon</button>
-        </form>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div class="ftop">
-    <div class="con">
-      <div class="fgrid">
-        <div>
-          <div class="flogo">
-            <div class="fi2">V</div>
-            <div class="flogo-t"><h3>Victorious Pilgrim Ministries</h3><p>Wellington, South Africa · Est. 2004</p></div>
-          </div>
-          <p class="fdesc">"I shall pass through this world but once. If there is any good deed that I can do, let me do it now — for I shall not pass this way again."</p>
-          <div class="fsoc">
-            <a href="mailto:v.p.m@mweb.co.za" title="Email VPM"><i class="fa-solid fa-envelope"></i></a>
-            <a href="tel:+27725952922" title="Call VPM"><i class="fa-solid fa-phone"></i></a>
-            <a href="#donate" title="Donate"><i class="fa-solid fa-heart"></i></a>
-          </div>
-        </div>
-        <div>
-          <h4>Quick Links</h4>
-          <ul class="flinks">
-            <li><a href="#about">About VPM</a></li>
-            <li><a href="#ministries">Our Ministries</a></li>
-            <li><a href="#outreach">Outreach Towns</a></li>
-            <li><a href="#projects">2024 Projects</a></li>
-            <li><a href="#impact">Our Impact</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Get Involved</h4>
-          <ul class="flinks">
-            <li><a href="#donate">Make a Donation</a></li>
-            <li><a href="#contact">Volunteer</a></li>
-            <li><a href="#contact">Partner a Church</a></li>
-            <li><a href="#contact">Request Prayer</a></li>
-            <li><a href="#contact">Contact Us</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Contact</h4>
-          <ul class="flinks">
-            <li><a href="tel:+27725952922">+27 72 595 2922</a></li>
-            <li><a href="mailto:v.p.m@mweb.co.za">v.p.m@mweb.co.za</a></li>
-            <li style="color:rgba(255,255,255,.5);font-size:.85rem">7 Buitekant street, newton, Wellington 7655</li>
-            <li style="color:rgba(255,255,255,.5);font-size:.85rem">Republic of South Africa</li>
-          </ul>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="con">
-    <div class="fbot">
-      <p>© 2025 Victorious Pilgrim Ministries · Reg. 2004/028180/08 · Wellington, Western Cape, South Africa</p>
-      <p style="color:rgba(255,255,255,.3)">Built to Glorify God · One Page · One Mission</p>
-    </div>
-  </div>
-</footer>
-
-<!-- BACK TO TOP -->
-<a href="#hero" id="btt" title="Back to top"><i class="fa-solid fa-arrow-up"></i></a>
-
-<script>
-  // Mobile nav toggle
-  const hbg=document.getElementById('hbg'),nl=document.getElementById('nl');
-  hbg.addEventListener('click',()=>{
-    const o=nl.classList.toggle('open');
-    hbg.setAttribute('aria-expanded',o);
-    const s=hbg.querySelectorAll('span');
-    s[0].style.transform=o?'rotate(45deg) translate(5px,5px)':'';
-    s[1].style.opacity=o?'0':'1';
-    s[2].style.transform=o?'rotate(-45deg) translate(5px,-5px)':'';
-  });
-  nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>{
-    nl.classList.remove('open');
-    hbg.setAttribute('aria-expanded','false');
-    hbg.querySelectorAll('span').forEach(s=>{s.style.transform='';s.style.opacity='';});
-  }));
-
-  // Navbar shadow on scroll
-  const nav=document.getElementById('nav');
-  window.addEventListener('scroll',()=>{nav.style.boxShadow=scrollY>60?'0 4px 28px rgba(15,35,82,.13)':''});
-
-  // Back to top
-  const btt=document.getElementById('btt');
-  window.addEventListener('scroll',()=>{
-    if(scrollY>400){btt.style.opacity='1';btt.style.transform='translateY(0)'}
-    else{btt.style.opacity='0';btt.style.transform='translateY(18px)'}
-  });
-
-  // Scroll-in animations
-  const obs=new IntersectionObserver(es=>{
-    es.forEach(e=>{if(e.isIntersecting){e.target.style.opacity='1';e.target.style.transform='translateY(0)';obs.unobserve(e.target)}})
-  },{threshold:.08});
-  document.querySelectorAll('.sc,.fc,.mc,.pc,.tc-card,.cr').forEach(el=>{
-    el.style.opacity='0';el.style.transform='translateY(22px)';el.style.transition='opacity .6s ease, transform .6s ease';obs.observe(el);
-  });
-
-  // Counter animation
-  function countUp(el,target,sfx){
-    let s=0,dur=2200;
-    const step=ts=>{
-      if(!s)s=ts;
-      const p=Math.min((ts-s)/dur,1),ease=1-Math.pow(1-p,3);
-      el.textContent=Math.floor(ease*target).toLocaleString()+sfx;
-      if(p<1)requestAnimationFrame(step);
-    };requestAnimationFrame(step);
-  }
-  const cobs=new IntersectionObserver(es=>{
-    es.forEach(e=>{
-      if(e.isIntersecting){
-        e.target.querySelectorAll('.sn').forEach(n=>{
-          const t=parseInt(n.dataset.target);
-          const sfx=n.textContent.includes('+')?'+':'';
-          if(!isNaN(t))countUp(n,t,sfx);
-        });
-        cobs.unobserve(e.target);
-      }
+    /* Close nav on Escape */
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && nl.classList.contains('open')) navOpen(false);
     });
-  },{threshold:.2});
-  const sg=document.getElementById('statGrid');
-  if(sg)cobs.observe(sg);
-</script>
+
+    /* ── NAV SHADOW ON SCROLL ── */
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.style.boxShadow = scrollY > 60 ? '0 4px 28px rgba(15,35,82,.14)' : '';
+    }, { passive: true });
+
+    /* ── BACK TO TOP ── */
+    const btt = document.getElementById('btt');
+    window.addEventListener('scroll', () => {
+      const show = scrollY > 400;
+      btt.style.opacity   = show ? '1' : '0';
+      btt.style.transform = show ? 'translateY(0)' : 'translateY(18px)';
+    }, { passive: true });
+
+    /* ── MOBILE DONATE BUTTON ── */
+    const mobDonate = document.getElementById('mob-donate');
+    window.addEventListener('scroll', () => {
+      mobDonate.classList.toggle('show', scrollY > window.innerHeight * 0.8);
+    }, { passive: true });
+
+    /* ── BANK DETAILS REVEAL ── */
+    const revBtn = document.getElementById('bank-reveal-btn');
+    const revDet = document.getElementById('bank-details');
+    if (revBtn && revDet) {
+      revBtn.addEventListener('click', () => {
+        const isOpen = revDet.classList.toggle('open');
+        revBtn.setAttribute('aria-expanded', isOpen);
+        revBtn.innerHTML = isOpen
+          ? '<i class="fa-solid fa-lock-open" aria-hidden="true"></i> Hide Banking Details'
+          : '<i class="fa-solid fa-lock" aria-hidden="true"></i> Show Banking Details';
+      });
+    }
+
+    /* ── EMAIL OBFUSCATION ── */
+    document.querySelectorAll('.em-link').forEach(el => {
+      const addr = el.dataset.u + '@' + el.dataset.d;
+      el.setAttribute('href', 'mailto:' + addr);
+      /* Only replace text if it already shows the email address */
+      if (el.textContent.trim().includes('@')) el.textContent = addr;
+    });
+
+    /* ── LIGHTBOX ── */
+    const lb     = document.getElementById('lightbox');
+    const lbImg  = document.getElementById('lb-img');
+    const lbClose= document.getElementById('lb-close');
+
+    function openLightbox(src, alt) {
+      lbImg.src = src;
+      lbImg.alt = alt || '';
+      lb.classList.add('open');
+      lb.setAttribute('aria-hidden', 'false');
+      lbClose.focus();
+      document.body.style.overflow = 'hidden';
+    }
+    function closeLightbox() {
+      lb.classList.remove('open');
+      lb.setAttribute('aria-hidden', 'true');
+      lbImg.src = '';
+      document.body.style.overflow = '';
+    }
+
+    document.querySelectorAll('.p-img-wrap').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const img = btn.querySelector('img');
+        if (img) openLightbox(img.src, img.alt);
+      });
+      btn.addEventListener('keydown', e => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          const img = btn.querySelector('img');
+          if (img) openLightbox(img.src, img.alt);
+        }
+      });
+    });
+
+    lbClose.addEventListener('click', closeLightbox);
+    lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
+    document.addEventListener('keydown', e => {
+      if (e.key === 'Escape' && lb.classList.contains('open')) closeLightbox();
+    });
+
+    /* ── SCROLL-IN ANIMATIONS ── */
+    if ('IntersectionObserver' in window) {
+      const obs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.style.opacity   = '1';
+            e.target.style.transform = 'translateY(0)';
+            obs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.08 });
+
+      document.querySelectorAll('.sc,.fc,.mc,.pc,.tc-card,.cr').forEach(el => {
+        el.style.opacity   = '0';
+        el.style.transform = 'translateY(22px)';
+        el.style.transition= 'opacity .6s ease, transform .6s ease';
+        obs.observe(el);
+      });
+    }
+
+    /* ── COUNTER ANIMATION ── */
+    function countUp(el, target, suffix) {
+      let start = 0;
+      const dur = 2200;
+      const step = ts => {
+        if (!start) start = ts;
+        const progress = Math.min((ts - start) / dur, 1);
+        const ease = 1 - Math.pow(1 - progress, 3);
+        el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
+        if (progress < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    }
+
+    if ('IntersectionObserver' in window) {
+      const cobs = new IntersectionObserver(entries => {
+        entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.querySelectorAll('.sn').forEach(n => {
+              const t = parseInt(n.dataset.target, 10);
+              const sfx = n.textContent.includes('+') ? '+' : '';
+              if (!isNaN(t)) countUp(n, t, sfx);
+            });
+            cobs.unobserve(e.target);
+          }
+        });
+      }, { threshold: 0.2 });
+
+      const sg = document.getElementById('statGrid');
+      if (sg) cobs.observe(sg);
+    }
+
+    /* ── AJAX CONTACT FORM ── */
+    const form   = document.getElementById('contact-form');
+    const status = document.getElementById('form-status');
+    const submitBtn = document.getElementById('form-submit');
+
+    if (form) {
+      form.addEventListener('submit', async e => {
+        e.preventDefault();
+        submitBtn.disabled = true;
+        submitBtn.querySelector('span').textContent = 'Sending…';
+        status.style.display = 'none';
+
+        try {
+          const data = new FormData(form);
+          const res  = await fetch(form.action, {
+            method: 'POST',
+            body: data,
+            headers: { 'Accept': 'application/json' }
+          });
+
+          if (res.ok) {
+            status.style.cssText = 'display:block;color:#4ade80;padding:12px 0';
+            status.textContent = '✓ Thank you! Your message has been sent. We will reply soon.';
+            form.reset();
+          } else {
+            throw new Error('Server error');
+          }
+        } catch {
+          status.style.cssText = 'display:block;color:#f87171;padding:12px 0';
+          status.textContent = '✗ Sorry, there was an error. Please email us directly at v.p.m@mweb.co.za';
+        } finally {
+          submitBtn.disabled = false;
+          submitBtn.querySelector('span').textContent = 'Send Message — We Will Reply Soon';
+        }
+      });
+    }
+
+    /* ── PWA SERVICE WORKER (inline blob — GitHub Pages compatible) ── */
+    if ('serviceWorker' in navigator) {
+      const swCode = `
+        const CACHE_NAME = 'vpm-v1';
+        const SHELL = ['./'];
+        self.addEventListener('install', e =>
+          e.waitUntil(caches.open(CACHE_NAME).then(c => c.addAll(SHELL)))
+        );
+        self.addEventListener('activate', e =>
+          e.waitUntil(
+            caches.keys().then(keys =>
+              Promise.all(keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k)))
+            )
+          )
+        );
+        self.addEventListener('fetch', e => {
+          e.respondWith(
+            caches.match(e.request).then(cached =>
+              cached || fetch(e.request).catch(() => caches.match('./'))
+            )
+          );
+        });
+      `;
+      try {
+        const blob  = new Blob([swCode], { type: 'application/javascript' });
+        const swUrl = URL.createObjectURL(blob);
+        navigator.serviceWorker.register(swUrl).catch(() => {});
+      } catch (_) {}
+    }
+
+  })();
+  </script>
+
 </body>
 </html>
