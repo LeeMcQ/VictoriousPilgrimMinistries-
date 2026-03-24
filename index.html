@@ -34,6 +34,12 @@
   <link rel="canonical" href="https://leemcq.github.io/VictoriousPilgrimMinistries-/">
 
   <!-- ═══════════════════════════════════════════════
+       FAVICON — Tab icon for browsers & bookmarks
+  ═══════════════════════════════════════════════ -->
+  <link rel="icon" type="image/jpeg" href="4.jpeg">
+  <link rel="apple-touch-icon" href="4.jpeg">
+
+  <!-- ═══════════════════════════════════════════════
        OPEN GRAPH — Facebook, WhatsApp, LinkedIn
   ═══════════════════════════════════════════════ -->
   <meta property="og:title" content="Victorious Pilgrim Ministries | 20 Years Serving South Africa">
@@ -65,7 +71,7 @@
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="VPM">
   <!-- Inline PWA manifest as data URI (single-file constraint) -->
-  <link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22Victorious%20Pilgrim%20Ministries%22%2C%22short_name%22%3A%22VPM%22%2C%22start_url%22%3A%22.%2F%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23ffffff%22%2C%22theme_color%22%3A%22%230f2352%22%2C%22description%22%3A%22Gospel%20and%20welfare%20ministry%20serving%20South%20Africa%20since%202004%22%7D">
+  <link rel="manifest" href="data:application/manifest+json,%7B%22name%22%3A%22Victorious%20Pilgrim%20Ministries%22%2C%22short_name%22%3A%22VPM%22%2C%22start_url%22%3A%22.%2F%22%2C%22display%22%3A%22standalone%22%2C%22background_color%22%3A%22%23ffffff%22%2C%22theme_color%22%3A%22%230f2352%22%2C%22description%22%3A%22Gospel%20and%20welfare%20ministry%20serving%20South%20Africa%20since%202004%22%2C%22icons%22%3A%5B%7B%22src%22%3A%224.jpeg%22%2C%22sizes%22%3A%22192x192%22%2C%22type%22%3A%22image%2Fjpeg%22%7D%5D%7D">
 
   <!-- ═══════════════════════════════════════════════
        PERFORMANCE — Preconnect & Preload
@@ -73,7 +79,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <!-- Preload LCP hero image -->
-  <link rel="preload" as="image" href="love.jpg" fetchpriority="high">
+  <link rel="preload" as="image" href="3.jpeg" fetchpriority="high">
 
   <!-- ═══════════════════════════════════════════════
        FONTS & ICONS
@@ -338,13 +344,12 @@
       justify-content: center;
       overflow: hidden;
     }
-    /* Hero uses an img tag now for proper LCP & preload */
     .hero-bg-img {
       position: absolute;
       inset: 0;
       width: 100%;
-      height: auto%;
-      object-fit: contain;
+      height: 100%;
+      object-fit: cover;
       object-position: center;
       z-index: 0;
     }
@@ -461,7 +466,7 @@
     .mi { text-align: center; padding: 20px 22px; border-right: 1px solid rgba(255,255,255,.1); color: #fff; }
     .mi:last-child { border-right: none; }
     .mi i { font-size: 2.1rem; color: var(--gold-light); margin-bottom: 12px; display: block; }
-    .mi h4 { font-family: var(--font-serif); font-size: 1.1rem; margin-bottom: 7px; }
+    .mi h3 { font-family: var(--font-serif); font-size: 1.1rem; margin-bottom: 7px; }
     .mi p { font-size: .85rem; color: rgba(255,255,255,.68); line-height: 1.6; }
 
     /* ═══════════════════════════════════════════════
@@ -504,11 +509,19 @@
     .oimg { border-radius: var(--rlg); width: 100%; height: 430px; object-fit: cover; box-shadow: var(--shadow-lg); }
 
     /* ═══════════════════════════════════════════════
-       2024 PROJECTS
+       2024–2025 PROJECTS
     ═══════════════════════════════════════════════ */
     #projects { background: var(--navy-dark); }
     #projects .h2 { color: #fff; }
     #projects .sub { color: rgba(255,255,255,.6); }
+
+    /* Single unified project grid */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 22px;
+    }
+
     .pc {
       background: rgba(255,255,255,.07);
       border: 1px solid rgba(255,255,255,.11);
@@ -531,7 +544,7 @@
     .pc:hover { background: rgba(255,255,255,.12); transform: translateY(-4px); }
     .pc:hover::before { transform: scaleX(1); }
     .pd { font-size: .7rem; font-weight: 700; letter-spacing: .15em; color: var(--gold-light); text-transform: uppercase; margin-bottom: 10px; }
-    .pc h4 { font-family: var(--font-serif); font-size: 1.35rem; color: #fff; margin-bottom: 14px; }
+    .pc h3 { font-family: var(--font-serif); font-size: 1.35rem; color: #fff; margin-bottom: 14px; }
     .pc p { font-size: .9rem; color: rgba(255,255,255,.68); line-height: 1.72; }
     .ptags { margin-top: 18px; display: flex; flex-wrap: wrap; gap: 7px; }
     .ptag {
@@ -553,6 +566,9 @@
       cursor: pointer;
       border-radius: 6px;
       position: relative;
+      background: none;
+      border: none;
+      padding: 0;
     }
     .p-img-wrap img {
       width: 100%;
@@ -564,6 +580,22 @@
     }
     .p-img-wrap:hover img, .p-img-wrap:focus-visible img { transform: scale(1.06); }
     .p-img-wrap:focus-visible { outline: 3px solid var(--gold); outline-offset: 2px; }
+
+    /* Year divider inside projects grid */
+    .year-divider {
+      grid-column: 1 / -1;
+      text-align: center;
+      padding: 20px 0 8px;
+      border-top: 1px solid rgba(255,255,255,.1);
+      margin-top: 10px;
+    }
+    .year-divider span {
+      font-family: var(--font-serif);
+      font-size: 1.1rem;
+      color: var(--gold-light);
+      letter-spacing: .08em;
+      font-weight: 700;
+    }
 
     /* ═══════════════════════════════════════════════
        LIGHTBOX MODAL
@@ -644,7 +676,7 @@
       padding: 42px;
       position: relative;
     }
-    .tq { font-family: var(--font-serif); font-size: 5rem; color: var(--gold); position: absolute; top: 8px; left: 26px; line-height: 1; opacity: .45; aria-hidden: true; }
+    .tq { font-family: var(--font-serif); font-size: 5rem; color: var(--gold); position: absolute; top: 8px; left: 26px; line-height: 1; opacity: .45; }
     .tt { font-size: 1rem; color: rgba(255,255,255,.88); line-height: 1.82; font-style: italic; margin-top: 18px; }
     .ta { margin-top: 22px; display: flex; align-items: center; gap: 13px; }
     .tav {
@@ -669,7 +701,7 @@
     ═══════════════════════════════════════════════ */
     #donate { background: var(--gray-light); }
     .dcard { background: #fff; border-radius: var(--rlg); padding: 54px; box-shadow: var(--shadow-lg); }
-    .dcard h2 { font-family: var(--font-serif); font-size: 1.9rem; color: var(--navy-dark); margin-bottom: 6px; }
+    .dcard h3 { font-family: var(--font-serif); font-size: 1.9rem; color: var(--navy-dark); margin-bottom: 6px; }
     .dcard .dsub { color: var(--gray); margin-bottom: 36px; font-size: .95rem; }
 
     /* Bank details reveal */
@@ -944,7 +976,7 @@
        RESPONSIVE — 1024px
     ═══════════════════════════════════════════════ */
     @media (max-width: 1024px) {
-      .g4 { grid-template-columns: repeat(2,1fr); }
+      .g4, .projects-grid { grid-template-columns: repeat(2,1fr); }
       .fgrid { grid-template-columns: 1fr 1fr; }
       .mstrip .con { grid-template-columns: repeat(2,1fr); }
       .mi { border-right: none; border-bottom: 1px solid rgba(255,255,255,.1); }
@@ -955,7 +987,7 @@
     ═══════════════════════════════════════════════ */
     @media (max-width: 768px) {
       .pad { padding: 70px 0; }
-      .g2, .g3, .g4 { grid-template-columns: 1fr; }
+      .g2, .g3, .g4, .projects-grid { grid-template-columns: 1fr; }
       .fgrid { grid-template-columns: 1fr; }
       .mstrip .con { grid-template-columns: 1fr 1fr; }
       .abadge { right: 0; bottom: -12px; }
@@ -997,9 +1029,12 @@
       /* Show mobile donate button */
       #mob-donate { display: flex; }
 
-      /* Push wa-btn and btt up when donate bar shows */
-      #btt { bottom: 90px; }
-      #wa-btn { bottom: 148px; }
+      /* Stack floating buttons properly on mobile */
+      #btt { bottom: 90px; right: 16px; }
+      #wa-btn { bottom: 10px; right: 16px; padding: 10px 14px; font-size: .8rem; }
+
+      /* Testimonial cards padding */
+      .tc-card { padding: 30px 22px; }
     }
 
     /* ═══════════════════════════════════════════════
@@ -1012,6 +1047,7 @@
       .hbtns .btn { padding: 12px 22px; font-size: .9rem; }
       .logo-t h1 { font-size: .92rem; }
       .logo-t p { display: none; }
+      .pc { padding: 24px 18px; }
     }
   </style>
 </head>
@@ -1048,7 +1084,7 @@
         <li><a href="#about">About</a></li>
         <li><a href="#ministries">Ministries</a></li>
         <li><a href="#outreach">Outreach</a></li>
-        <li><a href="#projects">2024</a></li>
+        <li><a href="#projects">2024–2025</a></li>
         <li><a href="#impact">Impact</a></li>
         <li><a href="#donate">Donate</a></li>
         <li><a href="#contact" class="nav-cta">Contact</a></li>
@@ -1071,7 +1107,7 @@
   <main id="main-content">
 
     <!-- HERO -->
-    <header id="hero" role="banner">
+    <header id="hero">
       <!-- LCP image: preloaded, eager, high priority -->
       <img
         class="hero-bg-img"
@@ -1264,6 +1300,8 @@
               <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Mossel Bay</div>
               <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Knysna</div>
               <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>De Doorns</div>
+              <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Saldanha</div>
+              <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>Gqeberha</div>
               <div class="pill" role="listitem"><i class="fa-solid fa-location-dot" aria-hidden="true"></i>+ More</div>
             </div>
           </div>
@@ -1282,15 +1320,16 @@
       </div>
     </section>
 
-    <!-- 2024 PROJECTS -->
+    <!-- 2024–2025 PROJECTS -->
     <section id="projects" class="pad" aria-labelledby="projects-heading">
       <div class="con">
         <div class="tc" style="margin-bottom:56px">
           <span class="tag" style="border-color:rgba(200,146,42,.5)">VPM 20th Anniversary Year</span>
-          <h2 class="h2" id="projects-heading">2024 Outreach Highlights</h2>
-          <p class="sub" style="margin:12px auto 0;max-width:540px">A landmark year of celebration and service — four major projects, thousands of lives impacted for the Kingdom.</p>
+          <h2 class="h2" id="projects-heading">2024–2025 Outreach Highlights</h2>
+          <p class="sub" style="margin:12px auto 0;max-width:540px">A landmark year of celebration and service — eight major projects, thousands of lives impacted for the Kingdom.</p>
         </div>
-        <div class="g4">
+
+        <div class="projects-grid">
 
           <!-- Robertson -->
           <article class="pc">
@@ -1384,7 +1423,102 @@
             </div>
           </article>
 
-        </div>
+          <!-- Year divider -->
+          <div class="year-divider"><span>— 2025 Outreach —</span></div>
+
+          <!-- Shauderville, P.E. -->
+          <article class="pc">
+            <div class="pd">January 2025</div>
+            <h3>Shauderville, P.E.</h3>
+            <p>Worship with Shauderville congregation. Visit to INN SAFE HANDS Children's Home — prayer and outreach with the youth.</p>
+            <div class="ptags">
+              <span class="ptag">School Outreach</span>
+              <span class="ptag">Praying at Orphanage</span>
+            </div>
+            <div class="p-gallery" role="list" aria-label="Shauderville outreach photos">
+              <button class="p-img-wrap" role="listitem" aria-label="View photo: Worship service at Shauderville congregation, January 2025" tabindex="0">
+                <img src="Shauderville1.jpeg" alt="Worship service at Shauderville congregation, January 2025" loading="lazy" decoding="async" width="200" height="200">
+              </button>
+              <button class="p-img-wrap" role="listitem" aria-label="View photo: VPM volunteers at INN SAFE HANDS Children's Home" tabindex="0">
+                <img src="Shauderville2.jpeg" alt="VPM volunteers at INN SAFE HANDS Children's Home in Shauderville" loading="lazy" decoding="async" width="200" height="200">
+              </button>
+              <button class="p-img-wrap" role="listitem" aria-label="View photo: Prayer and outreach with youth in Shauderville" tabindex="0">
+                <img src="Shauderville3.jpeg" alt="Prayer and outreach with youth in Shauderville, P.E." loading="lazy" decoding="async" width="200" height="200">
+              </button>
+            </div>
+          </article>
+
+          <!-- Livingstone Hospital, P.E. -->
+          <article class="pc">
+            <div class="pd">February 2025</div>
+            <h3>Livingstone Hospital, P.E.</h3>
+            <p>Visits to patients at Livingstone Hospital in Gqeberha. Praying with patients and providing meals to those in need.</p>
+            <div class="ptags">
+              <span class="ptag">Praying</span>
+              <span class="ptag">Outreach</span>
+              <span class="ptag">Providing a Meal</span>
+            </div>
+            <div class="p-gallery" role="list" aria-label="Livingstone Hospital outreach photos">
+              <button class="p-img-wrap" role="listitem" aria-label="View photo: VPM volunteers visiting patients at Livingstone Hospital" tabindex="0">
+                <img src="Livingstone_Hospital1.jpeg" alt="VPM volunteers visiting patients at Livingstone Hospital, February 2025" loading="lazy" decoding="async" width="200" height="200">
+              </button>
+              <button class="p-img-wrap" role="listitem" aria-label="View photo: Praying with patients at Livingstone Hospital" tabindex="0">
+                <img src="Livingstone_Hospital2.jpeg" alt="Praying with patients at Livingstone Hospital, Gqeberha" loading="lazy" decoding="async" width="200" height="200">
+              </button>
+              <button class="p-img-wrap" role="listitem" aria-label="View photo: Providing meals at Livingstone Hospital" tabindex="0">
+                <img src="Livingstone_Hospital3.jpeg" alt="VPM providing meals to patients at Livingstone Hospital" loading="lazy" decoding="async" width="200" height="200">
+              </button>
+            </div>
+          </article>
+
+          <!-- Gelvandale, P.E. -->
+          <article class="pc">
+            <div class="pd">August 2025</div>
+            <h3>Gelvandale, P.E.</h3>
+            <p>Soup and bread provided in Malabar &amp; Gelvandale, Gqeberha — warm meals and open-air fellowship with the community.</p>
+            <div class="ptags">
+              <span class="ptag">Soup &amp; Bread</span>
+              <span class="ptag">Public Outreach</span>
+              <span class="ptag">Open-air</span>
+            </div>
+            <div class="p-gallery" role="list" aria-label="Gelvandale outreach photos">
+              <button class="p-img-wrap" role="listitem" aria-label="View photo: Open-air soup and bread service in Gelvandale" tabindex="0">
+                <img src="Gelvandale1.jpeg" alt="Open-air soup and bread service in Gelvandale, P.E., August 2025" loading="lazy" decoding="async" width="200" height="200">
+              </button>
+              <button class="p-img-wrap" role="listitem" aria-label="View photo: VPM volunteers serving the Malabar community" tabindex="0">
+                <img src="Gelvandale2.jpeg" alt="VPM volunteers serving the Malabar community in Gqeberha" loading="lazy" decoding="async" width="200" height="200">
+              </button>
+              <button class="p-img-wrap" role="listitem" aria-label="View photo: Community fellowship at Gelvandale outreach" tabindex="0">
+                <img src="Gelvandale3.jpeg" alt="Community fellowship at Gelvandale outreach event" loading="lazy" decoding="async" width="200" height="200">
+              </button>
+            </div>
+          </article>
+
+          <!-- Saldanha -->
+          <article class="pc">
+            <div class="pd">December 2025</div>
+            <h3>Saldanha</h3>
+            <p>Worship with Saldanha congregation and Sunday outreach with 800 books, food and clothing distributed to the community.</p>
+            <div class="ptags">
+              <span class="ptag">Books &amp; Food</span>
+              <span class="ptag">Clothing Outreach</span>
+              <span class="ptag">Medical Care</span>
+            </div>
+            <div class="p-gallery" role="list" aria-label="Saldanha outreach photos">
+              <button class="p-img-wrap" role="listitem" aria-label="View photo: Worship with Saldanha congregation, December 2025" tabindex="0">
+                <img src="Saldanha1.jpeg" alt="Worship with Saldanha congregation, December 2025" loading="lazy" decoding="async" width="200" height="200">
+              </button>
+              <button class="p-img-wrap" role="listitem" aria-label="View photo: Book and food distribution at Saldanha outreach" tabindex="0">
+                <img src="Saldanha2.jpeg" alt="Book and food distribution at Saldanha outreach" loading="lazy" decoding="async" width="200" height="200">
+              </button>
+              <button class="p-img-wrap" role="listitem" aria-label="View photo: Clothing and medical care at Saldanha" tabindex="0">
+                <img src="Saldanha3.jpeg" alt="Clothing distribution and medical care at Saldanha outreach" loading="lazy" decoding="async" width="200" height="200">
+              </button>
+            </div>
+          </article>
+
+        </div><!-- /projects-grid -->
+
         <p class="tc" style="margin-top:44px;color:rgba(255,255,255,.45);font-style:italic;font-size:.95rem">
           "We thank the Lord for His sustaining grace during this great work done."
         </p>
@@ -1406,12 +1540,12 @@
           <div class="sc"><div class="sn" data-target="15000">15,000+</div><div class="sl">Meals &amp; Parcels</div><div class="sd">Hot meals, food parcels and soup for families</div></div>
         </div>
         <div class="g3" style="margin-top:48px">
-          <div class="fc"><div class="fi" aria-hidden="true"><i class="fa-solid fa-hand-holding-heart"></i></div><div><h3>Daily Welfare</h3><p>210 sandwiches, 230 plates, 180 fruit &amp; veg parcels, hygiene packs — every month across Wellington and beyond.</p></div></div>
-          <div class="fc"><div class="fi" aria-hidden="true"><i class="fa-solid fa-church"></i></div><div><h3>Church Partnership</h3><p>VPM worships alongside SDA congregations in every town — strengthening the body of Christ while reaching the lost.</p></div></div>
-          <div class="fc"><div class="fi" aria-hidden="true"><i class="fa-solid fa-users"></i></div><div><h3>Volunteer Powered</h3><p>12–20 volunteers per project — giving haircuts, serving food, singing and sharing testimonies of grace.</p></div></div>
-          <div class="fc"><div class="fi" aria-hidden="true"><i class="fa-solid fa-child"></i></div><div><h3>Youth Engagement</h3><p>Week of Prayer events, youth services and school outreaches investing in the next generation of faith leaders.</p></div></div>
-          <div class="fc"><div class="fi" aria-hidden="true"><i class="fa-solid fa-heart-pulse"></i></div><div><h3>Health Screenings</h3><p>Regular BMI and blood pressure checks, health talks and medical referrals — physical needs met alongside spiritual ones.</p></div></div>
-          <div class="fc"><div class="fi" aria-hidden="true"><i class="fa-solid fa-book-open-reader"></i></div><div><h3>Bible Studies</h3><p>47 structured Bible studies and 36 personal counselling sessions — nurturing spiritual growth long after each outreach.</p></div></div>
+          <div class="fc"><div class="fi" aria-hidden="true"><i class="fa-solid fa-hand-holding-heart"></i></div><div><h4>Daily Welfare</h4><p>210 sandwiches, 230 plates, 180 fruit &amp; veg parcels, hygiene packs — every month across Wellington and beyond.</p></div></div>
+          <div class="fc"><div class="fi" aria-hidden="true"><i class="fa-solid fa-church"></i></div><div><h4>Church Partnership</h4><p>VPM worships alongside SDA congregations in every town — strengthening the body of Christ while reaching the lost.</p></div></div>
+          <div class="fc"><div class="fi" aria-hidden="true"><i class="fa-solid fa-users"></i></div><div><h4>Volunteer Powered</h4><p>12–20 volunteers per project — giving haircuts, serving food, singing and sharing testimonies of grace.</p></div></div>
+          <div class="fc"><div class="fi" aria-hidden="true"><i class="fa-solid fa-child"></i></div><div><h4>Youth Engagement</h4><p>Week of Prayer events, youth services and school outreaches investing in the next generation of faith leaders.</p></div></div>
+          <div class="fc"><div class="fi" aria-hidden="true"><i class="fa-solid fa-heart-pulse"></i></div><div><h4>Health Screenings</h4><p>Regular BMI and blood pressure checks, health talks and medical referrals — physical needs met alongside spiritual ones.</p></div></div>
+          <div class="fc"><div class="fi" aria-hidden="true"><i class="fa-solid fa-book-open-reader"></i></div><div><h4>Bible Studies</h4><p>47 structured Bible studies and 36 personal counselling sessions — nurturing spiritual growth long after each outreach.</p></div></div>
         </div>
       </div>
     </section>
@@ -1429,7 +1563,7 @@
             <p class="tt">We would like to thank each individual for their sacrifice, time, talent, expertise and financial support. You have made a valuable contribution in spreading the gospel throughout South Africa and beyond.</p>
             <footer class="ta">
               <div class="tav" aria-hidden="true">A</div>
-              <div class="tai"><h4>Ashwell W. Beaton</h4><p>Chairman, Victorious Pilgrim Ministries</p></div>
+              <div class="tai"><h5>Ashwell W. Beaton</h5><p>Chairman, Victorious Pilgrim Ministries</p></div>
             </footer>
           </blockquote>
           <blockquote class="tc-card">
@@ -1437,7 +1571,7 @@
             <p class="tt">The outreach in our community hall was a blessing we will never forget. The food, the music, the Word of God — everything was given with such love. Our congregation was deeply strengthened.</p>
             <footer class="ta">
               <div class="tav" aria-hidden="true">R</div>
-              <div class="tai"><h4>Pastor, Riviersonderend</h4><p>SDA Church Partner — September 2024</p></div>
+              <div class="tai"><h5>Pastor, Riviersonderend</h5><p>SDA Church Partner — September 2024</p></div>
             </footer>
           </blockquote>
           <blockquote class="tc-card">
@@ -1445,7 +1579,7 @@
             <p class="tt">Receiving a food parcel and a Bible on the same day was something I will always remember. The volunteers treated us with so much respect and dignity. God bless VPM and all their donors.</p>
             <footer class="ta">
               <div class="tav" aria-hidden="true">M</div>
-              <div class="tai"><h4>Community Member</h4><p>Montagu Outreach Beneficiary</p></div>
+              <div class="tai"><h5>Community Member</h5><p>Montagu Outreach Beneficiary</p></div>
             </footer>
           </blockquote>
         </div>
@@ -1462,7 +1596,7 @@
         </div>
         <div class="g2" style="gap:28px;align-items:start">
           <div class="dcard">
-            <h3 style="font-family:var(--font-serif);font-size:1.9rem;color:var(--navy-dark);margin-bottom:6px">Bank Transfer (EFT)</h3>
+            <h3>Bank Transfer (EFT)</h3>
             <p class="dsub">Donate directly via secure EFT — quick and easy.</p>
 
             <!-- Secure bank detail reveal -->
@@ -1498,8 +1632,8 @@
           <div>
             <div class="dcta">
               <i class="fa-solid fa-heart fa-3x" style="color:var(--gold-light);margin-bottom:14px" aria-hidden="true"></i>
-              <h3 style="font-family:var(--font-serif);font-size:1.75rem;margin-bottom:10px">What Your Gift Does</h3>
-              <p style="color:rgba(255,255,255,.68);margin-bottom:26px;font-size:.95rem">Even a small monthly gift transforms communities for eternity.</p>
+              <h3>What Your Gift Does</h3>
+              <p>Even a small monthly gift transforms communities for eternity.</p>
               <div class="gitem"><i class="fa-solid fa-bread-slice" aria-hidden="true"></i><span><strong>R50/month</strong> — provides 5 food parcels for hungry families</span></div>
               <div class="gitem"><i class="fa-solid fa-bible" aria-hidden="true"></i><span><strong>R100/month</strong> — sponsors Bibles &amp; literature for outreach</span></div>
               <div class="gitem"><i class="fa-solid fa-van-shuttle" aria-hidden="true"></i><span><strong>R500/month</strong> — helps fund transport for a full outreach mission</span></div>
@@ -1510,7 +1644,7 @@
             </div>
 
             <div style="background:#fff;border-radius:var(--rlg);padding:30px;margin-top:22px;box-shadow:var(--shadow)">
-              <h3 style="font-family:var(--font-serif);font-size:1.15rem;color:var(--navy-dark);margin-bottom:14px">Direct Contact</h3>
+              <h4 style="font-family:var(--font-serif);font-size:1.15rem;color:var(--navy-dark);margin-bottom:14px">Direct Contact</h4>
               <div style="display:flex;flex-direction:column;gap:14px">
                 <a href="tel:+27725952922" style="display:flex;gap:9px;align-items:center;color:#4a5568;font-size:.95rem;min-height:44px" aria-label="Phone VPM: plus 27 72 595 2922">
                   <i class="fa-solid fa-phone" style="color:var(--gold)" aria-hidden="true"></i>+27 72 595 2922
@@ -1541,23 +1675,23 @@
             <div style="display:flex;flex-direction:column;gap:24px;margin-top:40px">
               <div class="cr">
                 <div class="ci" aria-hidden="true"><i class="fa-solid fa-phone"></i></div>
-                <div><h3 style="font-weight:600;color:var(--navy-dark);font-size:.9rem;margin-bottom:4px">Phone</h3><a href="tel:+27725952922" aria-label="Call VPM on plus 27 72 595 2922">+27 72 595 2922</a></div>
+                <div><h4>Phone</h4><a href="tel:+27725952922" aria-label="Call VPM on plus 27 72 595 2922">+27 72 595 2922</a></div>
               </div>
               <div class="cr">
                 <div class="ci" aria-hidden="true"><i class="fa-solid fa-envelope"></i></div>
-                <div><h3 style="font-weight:600;color:var(--navy-dark);font-size:.9rem;margin-bottom:4px">Email</h3>
+                <div><h4>Email</h4>
                   <a class="em-link" data-u="v.p.m" data-d="mweb.co.za" href="#" aria-label="Email VPM">v.p.m@mweb.co.za</a>
                 </div>
               </div>
               <div class="cr">
                 <div class="ci" aria-hidden="true"><i class="fa-solid fa-location-dot"></i></div>
-                <div><h3 style="font-weight:600;color:var(--navy-dark);font-size:.9rem;margin-bottom:4px">Postal Address</h3>
+                <div><h4>Postal Address</h4>
                   <address style="font-style:normal;color:var(--gray);font-size:.95rem">7 Buitekant Street, Newton, Wellington 7655<br>Republic of South Africa</address>
                 </div>
               </div>
               <div class="cr">
                 <div class="ci" aria-hidden="true"><i class="fa-solid fa-registered"></i></div>
-                <div><h3 style="font-weight:600;color:var(--navy-dark);font-size:.9rem;margin-bottom:4px">Registration</h3><p>2004/028180/08</p></div>
+                <div><h4>Registration</h4><p>2004/028180/08</p></div>
               </div>
             </div>
             <div style="margin-top:36px;background:var(--gold-pale);border:1px solid rgba(200,146,42,.25);border-radius:var(--r);padding:22px 26px">
@@ -1651,7 +1785,7 @@
               <li><a href="#about">About VPM</a></li>
               <li><a href="#ministries">Our Ministries</a></li>
               <li><a href="#outreach">Outreach Towns</a></li>
-              <li><a href="#projects">2024 Projects</a></li>
+              <li><a href="#projects">2024–2025 Projects</a></li>
               <li><a href="#impact">Our Impact</a></li>
             </ul>
           </div>
@@ -1693,9 +1827,9 @@
     </button>
   </div>
 
-  <!-- BACK TO TOP -->
-  <button id="btt" aria-label="Back to top of page" title="Back to top" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-    <i class="fa-solid fa-arrow-up" aria-hidden="true"></i>
+  <!-- BACK TO TOP BUTTON -->
+  <button id="btt" aria-label="Back to top">
+    <i class="fa-solid fa-chevron-up" aria-hidden="true"></i>
   </button>
 
   <!-- WHATSAPP BUTTON -->
@@ -1739,41 +1873,45 @@
       s[2].style.transform = state ? 'rotate(-45deg) translate(5px,-5px)' : '';
     }
 
-    hbg.addEventListener('click', () => navOpen(nl.classList.contains('open') ? false : true));
-    bd.addEventListener('click', () => navOpen(false));
-    nl.querySelectorAll('a').forEach(a => a.addEventListener('click', () => navOpen(false)));
+    hbg.addEventListener('click', function() { navOpen(!nl.classList.contains('open')); });
+    bd.addEventListener('click', function() { navOpen(false); });
+    nl.querySelectorAll('a').forEach(function(a) { a.addEventListener('click', function() { navOpen(false); }); });
 
     /* Close nav on Escape */
-    document.addEventListener('keydown', e => {
+    document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' && nl.classList.contains('open')) navOpen(false);
     });
 
     /* ── NAV SHADOW ON SCROLL ── */
-    const nav = document.getElementById('nav');
-    window.addEventListener('scroll', () => {
+    var nav = document.getElementById('nav');
+    window.addEventListener('scroll', function() {
       nav.style.boxShadow = scrollY > 60 ? '0 4px 28px rgba(15,35,82,.14)' : '';
     }, { passive: true });
 
     /* ── BACK TO TOP ── */
-    const btt = document.getElementById('btt');
-    window.addEventListener('scroll', () => {
-      const show = scrollY > 400;
+    var btt = document.getElementById('btt');
+    btt.addEventListener('click', function() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    window.addEventListener('scroll', function() {
+      var show = scrollY > 400;
       btt.style.opacity   = show ? '1' : '0';
       btt.style.transform = show ? 'translateY(0)' : 'translateY(18px)';
+      btt.style.pointerEvents = show ? 'auto' : 'none';
     }, { passive: true });
 
     /* ── MOBILE DONATE BUTTON ── */
-    const mobDonate = document.getElementById('mob-donate');
-    window.addEventListener('scroll', () => {
+    var mobDonate = document.getElementById('mob-donate');
+    window.addEventListener('scroll', function() {
       mobDonate.classList.toggle('show', scrollY > window.innerHeight * 0.8);
     }, { passive: true });
 
     /* ── BANK DETAILS REVEAL ── */
-    const revBtn = document.getElementById('bank-reveal-btn');
-    const revDet = document.getElementById('bank-details');
+    var revBtn = document.getElementById('bank-reveal-btn');
+    var revDet = document.getElementById('bank-details');
     if (revBtn && revDet) {
-      revBtn.addEventListener('click', () => {
-        const isOpen = revDet.classList.toggle('open');
+      revBtn.addEventListener('click', function() {
+        var isOpen = revDet.classList.toggle('open');
         revBtn.setAttribute('aria-expanded', isOpen);
         revBtn.innerHTML = isOpen
           ? '<i class="fa-solid fa-lock-open" aria-hidden="true"></i> Hide Banking Details'
@@ -1782,17 +1920,16 @@
     }
 
     /* ── EMAIL OBFUSCATION ── */
-    document.querySelectorAll('.em-link').forEach(el => {
-      const addr = el.dataset.u + '@' + el.dataset.d;
+    document.querySelectorAll('.em-link').forEach(function(el) {
+      var addr = el.dataset.u + '@' + el.dataset.d;
       el.setAttribute('href', 'mailto:' + addr);
-      /* Only replace text if it already shows the email address */
       if (el.textContent.trim().includes('@')) el.textContent = addr;
     });
 
     /* ── LIGHTBOX ── */
-    const lb     = document.getElementById('lightbox');
-    const lbImg  = document.getElementById('lb-img');
-    const lbClose= document.getElementById('lb-close');
+    var lb     = document.getElementById('lightbox');
+    var lbImg  = document.getElementById('lb-img');
+    var lbClose= document.getElementById('lb-close');
 
     function openLightbox(src, alt) {
       lbImg.src = src;
@@ -1809,30 +1946,30 @@
       document.body.style.overflow = '';
     }
 
-    document.querySelectorAll('.p-img-wrap').forEach(btn => {
-      btn.addEventListener('click', () => {
-        const img = btn.querySelector('img');
+    document.querySelectorAll('.p-img-wrap').forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        var img = btn.querySelector('img');
         if (img) openLightbox(img.src, img.alt);
       });
-      btn.addEventListener('keydown', e => {
+      btn.addEventListener('keydown', function(e) {
         if (e.key === 'Enter' || e.key === ' ') {
           e.preventDefault();
-          const img = btn.querySelector('img');
+          var img = btn.querySelector('img');
           if (img) openLightbox(img.src, img.alt);
         }
       });
     });
 
     lbClose.addEventListener('click', closeLightbox);
-    lb.addEventListener('click', e => { if (e.target === lb) closeLightbox(); });
-    document.addEventListener('keydown', e => {
+    lb.addEventListener('click', function(e) { if (e.target === lb) closeLightbox(); });
+    document.addEventListener('keydown', function(e) {
       if (e.key === 'Escape' && lb.classList.contains('open')) closeLightbox();
     });
 
     /* ── SCROLL-IN ANIMATIONS ── */
     if ('IntersectionObserver' in window) {
-      const obs = new IntersectionObserver(entries => {
-        entries.forEach(e => {
+      var obs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
           if (e.isIntersecting) {
             e.target.style.opacity   = '1';
             e.target.style.transform = 'translateY(0)';
@@ -1841,7 +1978,7 @@
         });
       }, { threshold: 0.08 });
 
-      document.querySelectorAll('.sc,.fc,.mc,.pc,.tc-card,.cr').forEach(el => {
+      document.querySelectorAll('.sc,.fc,.mc,.pc,.tc-card,.cr').forEach(function(el) {
         el.style.opacity   = '0';
         el.style.transform = 'translateY(22px)';
         el.style.transition= 'opacity .6s ease, transform .6s ease';
@@ -1851,12 +1988,12 @@
 
     /* ── COUNTER ANIMATION ── */
     function countUp(el, target, suffix) {
-      let start = 0;
-      const dur = 2200;
-      const step = ts => {
+      var start = 0;
+      var dur = 2200;
+      var step = function(ts) {
         if (!start) start = ts;
-        const progress = Math.min((ts - start) / dur, 1);
-        const ease = 1 - Math.pow(1 - progress, 3);
+        var progress = Math.min((ts - start) / dur, 1);
+        var ease = 1 - Math.pow(1 - progress, 3);
         el.textContent = Math.floor(ease * target).toLocaleString() + suffix;
         if (progress < 1) requestAnimationFrame(step);
       };
@@ -1864,12 +2001,12 @@
     }
 
     if ('IntersectionObserver' in window) {
-      const cobs = new IntersectionObserver(entries => {
-        entries.forEach(e => {
+      var cobs = new IntersectionObserver(function(entries) {
+        entries.forEach(function(e) {
           if (e.isIntersecting) {
-            e.target.querySelectorAll('.sn').forEach(n => {
-              const t = parseInt(n.dataset.target, 10);
-              const sfx = n.textContent.includes('+') ? '+' : '';
+            e.target.querySelectorAll('.sn').forEach(function(n) {
+              var t = parseInt(n.dataset.target, 10);
+              var sfx = n.textContent.includes('+') ? '+' : '';
               if (!isNaN(t)) countUp(n, t, sfx);
             });
             cobs.unobserve(e.target);
@@ -1877,30 +2014,28 @@
         });
       }, { threshold: 0.2 });
 
-      const sg = document.getElementById('statGrid');
+      var sg = document.getElementById('statGrid');
       if (sg) cobs.observe(sg);
     }
 
     /* ── AJAX CONTACT FORM ── */
-    const form   = document.getElementById('contact-form');
-    const status = document.getElementById('form-status');
-    const submitBtn = document.getElementById('form-submit');
+    var form   = document.getElementById('contact-form');
+    var status = document.getElementById('form-status');
+    var submitBtn = document.getElementById('form-submit');
 
     if (form) {
-      form.addEventListener('submit', async e => {
+      form.addEventListener('submit', function(e) {
         e.preventDefault();
         submitBtn.disabled = true;
         submitBtn.querySelector('span').textContent = 'Sending…';
         status.style.display = 'none';
 
-        try {
-          const data = new FormData(form);
-          const res  = await fetch(form.action, {
-            method: 'POST',
-            body: data,
-            headers: { 'Accept': 'application/json' }
-          });
-
+        var data = new FormData(form);
+        fetch(form.action, {
+          method: 'POST',
+          body: data,
+          headers: { 'Accept': 'application/json' }
+        }).then(function(res) {
           if (res.ok) {
             status.style.cssText = 'display:block;color:#4ade80;padding:12px 0';
             status.textContent = '✓ Thank you! Your message has been sent. We will reply soon.';
@@ -1908,44 +2043,24 @@
           } else {
             throw new Error('Server error');
           }
-        } catch {
+        }).catch(function() {
           status.style.cssText = 'display:block;color:#f87171;padding:12px 0';
           status.textContent = '✗ Sorry, there was an error. Please email us directly at v.p.m@mweb.co.za';
-        } finally {
+        }).finally(function() {
           submitBtn.disabled = false;
           submitBtn.querySelector('span').textContent = 'Send Message — We Will Reply Soon';
-        }
+        });
       });
     }
 
     /* ── PWA SERVICE WORKER (inline blob — GitHub Pages compatible) ── */
     if ('serviceWorker' in navigator) {
-      const swCode = `
-        const CACHE_NAME = 'vpm-v1';
-        const SHELL = ['./'];
-        self.addEventListener('install', e =>
-          e.waitUntil(caches.open(CACHE_NAME).then(c => c.addAll(SHELL)))
-        );
-        self.addEventListener('activate', e =>
-          e.waitUntil(
-            caches.keys().then(keys =>
-              Promise.all(keys.filter(k => k !== CACHE_NAME).map(k => caches.delete(k)))
-            )
-          )
-        );
-        self.addEventListener('fetch', e => {
-          e.respondWith(
-            caches.match(e.request).then(cached =>
-              cached || fetch(e.request).catch(() => caches.match('./'))
-            )
-          );
-        });
-      `;
+      var swCode = "var CACHE_NAME='vpm-v2';var SHELL=['./'];self.addEventListener('install',function(e){e.waitUntil(caches.open(CACHE_NAME).then(function(c){return c.addAll(SHELL)}))});self.addEventListener('activate',function(e){e.waitUntil(caches.keys().then(function(keys){return Promise.all(keys.filter(function(k){return k!==CACHE_NAME}).map(function(k){return caches.delete(k)}))}))});self.addEventListener('fetch',function(e){e.respondWith(caches.match(e.request).then(function(cached){return cached||fetch(e.request).catch(function(){return caches.match('./')})}))});";
       try {
-        const blob  = new Blob([swCode], { type: 'application/javascript' });
-        const swUrl = URL.createObjectURL(blob);
-        navigator.serviceWorker.register(swUrl).catch(() => {});
-      } catch (_) {}
+        var blob  = new Blob([swCode], { type: 'application/javascript' });
+        var swUrl = URL.createObjectURL(blob);
+        navigator.serviceWorker.register(swUrl).catch(function() {});
+      } catch (ex) { /* silent */ }
     }
 
   })();
